@@ -1,7 +1,30 @@
 PREDEF:
 
 CHAPS:
-  - djangogirls-tutorial-book.re
+  - readme.re
+  - chromebook_setup.re
+  - how_the_internet_works.re
+  - intro_to_command_line.re
+  - python_installation.re
+  - code_editor.re
+  - python_introduction.re
+  - django.re
+  - django_installation.re
+  - django_start_project.re
+  - django_models.re
+  - django_admin.re
+  - deploy.re
+  - django_urls.re
+  - django_views.re
+  - html.re
+  - django_orm.re
+  - dynamic_data_in_templates.re
+  - django_templates.re
+  - css.re
+  - template_extending.re
+  - extend_your_application.re
+  - django_forms.re
+  - whats_next.re
 
 APPENDIX:
 
