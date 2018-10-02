@@ -2,7 +2,7 @@
 = Chromebook のセットアップ
 
 //quote{
-@<strong>{注意}既にインストール手順を実行している場合は、これをやり直す必要はありません。すぐにスキップして@<chapref>{python_introduction}へ進んでください。
+@<strong>{注意：}既にインストール手順を実行している場合は、これをやり直す必要はありません。すぐにスキップして@<chapref>{python_introduction}へ進んでください。
 
 //}
 

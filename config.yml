@@ -280,7 +280,7 @@ epubmaker:
   # epubmaker:階層を使うものはここまで
 
 # LaTeX用のスタイルファイル(styディレクトリ以下に置くこと)
-texstyle: [reviewmacro, starter, mystyle]
+texstyle: [reviewmacro, framed, starter, mystyle]
 #
 # LaTeX用のdocumentclassを指定する
 #texdocumentclass: ["jsbook", "uplatex,twoside,b5j,10pt,openright"] # B5 10pt 右起こし
