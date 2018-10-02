@@ -2,12 +2,12 @@
 = Chromebook のセットアップ
 
 //quote{
-@<strong>{注意}既にインストール手順を実行している場合は、これをやり直す必要はありません。すぐにスキップして@<href>{../python_introduction/README.md, Python入門}へ進んでください。
+@<strong>{注意}既にインストール手順を実行している場合は、これをやり直す必要はありません。すぐにスキップして@<chapref>{python_introduction}へ進んでください。
 
 //}
 
 
-Chromebookをお持ちでない場合は、@<href>{http://tutorial.djangogirls.org/en/installation/#install-python,このセクションをスキップ} できます。 もし利用している場合は、普通のインストールの作業とは少し異なります。 インストール手順の残りの部分は無視できます。
+Chromebookをお持ちでない場合は、このセクションをスキップできます。 もし利用している場合は、普通のインストールの作業とは少し異なります。 インストール手順の残りの部分は無視できます。
 
 
 === Cloud 9
@@ -27,11 +27,7 @@ Cloud 9 はコードエディタや、インストール、書き込み、およ
 インターフェイスには、サイドバー、テキストが書かれた大きなメインウィンドウ、下部に小さなウィンドウがあり、次の表示が見えると思います。
 
 
-
-{% filename %}Cloud 9{% endfilename %}
-
-
-//emlist{
+//cmd{
 yourusername:~/workspace $
 //}
 
@@ -49,11 +45,7 @@ yourusername:~/workspace $
 Cloud 9のインターフェイスのうち、下部のターミナルで次を実行します。
 
 
-
-{% filename %}Cloud 9{% endfilename %}
-
-
-//emlist{
+//cmd{
 sudo apt update
 sudo apt install python3.6-venv
 //}
@@ -66,11 +58,7 @@ sudo apt install python3.6-venv
 次に、以下を実行します：
 
 
-
-{% filename %}Cloud 9{% endfilename %}
-
-
-//emlist{
+//cmd{
 mkdir djangogirls
 cd djangogirls
 python3.6 -mvenv myvenv
