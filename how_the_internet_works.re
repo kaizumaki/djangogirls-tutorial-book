@@ -6,7 +6,7 @@
 
 
 
-この章は、ジェシカ・マッケラー（http://web.mit.edu/jesstess/www/ ）による「インターネットの仕組み」を参照しています。
+この章は、ジェシカ・マッケラー（http://web.mit.edu/jesstess/www/）による「インターネットの仕組み」を参照しています。
 
 //}
 
@@ -35,7 +35,7 @@
 
 
 
-//image[internet_1][図 1.1]{
+//image[internet_1][]{
 //}
 
 
@@ -45,7 +45,7 @@
 
 
 
-//image[internet_3][図 1.2]{
+//image[internet_3][]{
 //}
 
 
@@ -59,7 +59,7 @@
 
 
 
-//image[internet_2][図 1.3]{
+//image[internet_2][]{
 //}
 
 
@@ -73,7 +73,7 @@
 
 
 
-//image[internet_4][図 1.4]{
+//image[internet_4][]{
 //}
 
 

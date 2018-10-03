@@ -46,7 +46,7 @@ Django Girlsのチュートリアルにようこそ！ お会いできて嬉し�
 
 
 
-//image[application][図 0.1]{
+//image[application][]{
 //}
 
 

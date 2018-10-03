@@ -35,23 +35,15 @@
 では、実際にコマンドラインを開いて、触ってみることとしましょう。
 
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Opening: Windows" data-id="windows_prompt" data-collapse=true ces-->
-//}
+//openmemo[Windows]{
 
 
 ［スタート］→［Windowsシステムツール］→［コマンドプロンプト］を選択しましょう
 
 
-//quote{
-Windowsの古いバージョンの場合、[スタート] → [アクセサリ] → [コマンドプロンプト] です。
+@<strong>{備考：} Windowsの古いバージョンの場合、[スタート] → [アクセサリ] → [コマンドプロンプト] です。
 
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
 //}
 
 //emlist{
