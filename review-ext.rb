@@ -18,7 +18,7 @@ module ReVIEW
   Compiler.defblock :textright, 0       ## 右寄せ
   Compiler.defblock :textcenter, 0      ## 中央揃え
 
-  Compiler.defblock :openmemo, 1..2
+  Compiler.defblock :openmemo, 0..1
 
   ## LaTeX用の定義
   class LATEXBuilder
@@ -49,9 +49,9 @@ module ReVIEW
       puts '\end{center}'
     end
 
-    def openmemo(lines, caption = '')
+    def openmemo(lines, caption)
       blank
-      puts '\begin{tcolorbox}[title=#{caption}]'
+      puts '\begin{tcolorbox}[title=' + caption + ']'
       lines.each do |line|
         puts detab(line)
       end
@@ -90,9 +90,6 @@ module ReVIEW
       puts '<div style="text-align:center">'
       puts lines
       puts '</div>'
-    end
-
-    def openmemo(lines, caption = '')
     end
 
   end
