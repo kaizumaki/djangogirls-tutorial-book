@@ -11,11 +11,11 @@
 
 
 //quote{
-@<strong>{補足：}　Choromebookを使っている方は、このチャプターは飛ばして、 @<href>{../chromebook_setup/README.md,Chromebook Setup} の説明に従ってセットアップしてください。
+@<strong>{補足：} Choromebookを使っている方は、このチャプターは飛ばして、 @<chapref>{chromebook_setup} の説明に従ってセットアップしてください。
 
 
 
-@<strong>{注意} インストールの章で、コードエディタのインストールを前もって済ませた人もいるかもしれません。もしそうなら、飛ばして次の章に進んでください！
+@<strong>{注意：} インストールの章で、コードエディタのインストールを前もって済ませた人もいるかもしれません。もしそうなら、飛ばして次の章に進んでください！
 
 //}
 
@@ -34,7 +34,7 @@ Geditはオープン ソースの無料エディタで、すべてのOSで利用
 
 
 
-@<href>{https://wiki.gnome.org/Apps/Gedit#Download,ダウンロード}
+@<href>{https://wiki.gnome.org/Apps/Gedit#Download,https://wiki.gnome.org/Apps/Gedit#Download}
 
 
 == Sublime Text 3
@@ -44,7 +44,7 @@ Sublime Textは非常に人気のあるエディタで、無料の試用期間�
 
 
 
-@<href>{https://www.sublimetext.com/3,ダウンロード}
+@<href>{https://www.sublimetext.com/3,https://www.sublimetext.com/3}
 
 
 == Atom
@@ -54,7 +54,7 @@ Atom は、GitHubによる新しいエディタです。無料で、オープン
 
 
 
-@<href>{https://atom.io/,ダウンロード}
+@<href>{https://atom.io/,https://atom.io/}
 
 
 == なんでコードエディタをインストールするの？

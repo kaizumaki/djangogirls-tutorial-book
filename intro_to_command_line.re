@@ -34,8 +34,8 @@
 
 では、実際にコマンドラインを開いて、触ってみることとしましょう。
 
-
-//panelsection[Windows]{
+//blankline
+//panelsection[Opening: Windows]{
 
 
 ［スタート］→［Windowsシステムツール］→［コマンドプロンプト］を選択しましょう
@@ -46,32 +46,22 @@
 
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Opening: OS X" data-id="OSX_prompt" data-collapse=true ces-->
-//}
+//blankline
+//panelsection[Opening: OS X]{
 
 
 ［アプリケーション］→［ユーティリティ］→［ターミナル］を選択しましょう。
 
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Opening: Linux" data-id="linux_prompt" data-collapse=true ces-->
-//}
+//blankline
+//panelsection[Opening: Linux]{
 
 
 おそらく ［アプリケーション］→［アクセサリ］→［ターミナル］と選択し起動できるでしょう。あなたのシステムによってはこの通りではないことがあります。見つからないときは、Google先生にきいてみましょう. :)
 
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
 //}
 
 == プロンプト
@@ -79,49 +69,31 @@ XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
 
 おそらく今、真っ白または真っ黒な画面が開かれていることでしょう。この画面はあなたの命令を待っています。
 
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Prompt: OS X and Linux" data-id="OSX_Linux_prompt" data-collapse=true ces-->
-//}
+//blankline
+//panelsection[Prompt: OS X and Linux]{
 
 
 MacあるいはLinuxの方は、次のように @<tt>{$} と表示されているのがわかりますか？
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Prompt: Windows" data-id="windows_prompt2" data-collapse=true ces-->
-//}
+//blankline
+//panelsection[Prompt: Windows]{
 
 
 Windowsの方は、 @<tt>{>} という記号が表示されていることでしょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
->
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+
+//cmd{
+>
 //}
 
 
@@ -146,52 +118,29 @@ XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
 
 次のようにコマンドを入力してみましょう。:
 
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Your first command: OS X and Linux" data-id="OSX_Linux_whoami" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Your first command: OS X and Linux]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ whoami
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Your first command: Windows" data-id="windows_whoami" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Your first command: Windows]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > whoami
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+
 //}
 
 
 そして最後にEnterキーを押して下さい。このような結果が返ってきます
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ whoami
 olasitarska
 //}
@@ -216,19 +165,15 @@ OSによってコマンドが若干違います。あなたのコンピュータ
 
 今どこのディレクトリにいるか（どのフォルダで作業をしているか）、知りたいですよね？では、このようにキーボードで入力して、@<tt>{Enterキー}をおしてください。
 
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Current directory: OS X and Linux" data-id="OSX_Linux_pwd" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Current directory: OS X and Linux]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ pwd
+
 /Users/olasitarska
+
+
 //}
 
 //quote{
@@ -236,23 +181,15 @@ $ pwd
 
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Current directory: Windows" data-id="windows_cd" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Current directory: Windows]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > cd
+
 C:\Users\olasitarska
+
+
 //}
 
 //quote{
@@ -260,154 +197,106 @@ C:\Users\olasitarska
 
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
 
 おそらく、似たようなものがあなたの画面に表示されたのではないでしょうか。コマンドラインを起動した最初は、通常ユーザーのホームディレクトリが表示されます。
 
-
-//hr
 
 === ファイルとディレクトリの一覧
 
 
 では、その中には何があるのでしょうか？表示させてみましょう。
 
+//blankline
+//codepanelsection[List files and directories: OS X and Linux]{
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="List files and directories: OS X and Linux" data-id="OSX_Linux_ls" data-collapse=true ces-->
-//}
-
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ ls
+
 Applications
+
 Desktop
+
 Downloads
+
 Music
+
 ...
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="List files and directories: Windows" data-id="windows_dir" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[List files and directories: Windows]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > dir
+
  Directory of C:\Users\olasitarska
+
 05/08/2014 07:28 PM <DIR>      Applications
+
 05/08/2014 07:28 PM <DIR>      Desktop
+
 05/08/2014 07:28 PM <DIR>      Downloads
+
 05/08/2014 07:28 PM <DIR>      Music
+
 ...
+
+
 //}
 
 //quote{
-補足：Powershellでは、lsコマンドをLinux や Mac OS X同様に使えます。 <!--endsec-->
+補足：Powershellでは、lsコマンドをLinux や Mac OS X同様に使えます。
 
 //}
 
-//hr
 
 === カレントディレクトリの変更
 
 
 次に、デスクトップのディレクトリに移動してみましょう。
 
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Change current directory: OS X and Linux" data-id="OSX_Linux_move_to" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Change current directory: OS X and Linux]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ cd Desktop
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Change current directory: Windows" data-id="windows_move_to" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Change current directory: Windows]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > cd Desktop
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+
 //}
 
 
 本当に変更されたかどうか確認してみてください：
 
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Check if changed: OS X and Linux" data-id="OSX_Linux_pwd2" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Check if changed: OS X and Linux]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ pwd
+
 /Users/olasitarska/Desktop
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Check if changed: Windows" data-id="windows_cd2" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Check if changed: Windows]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > cd
-C:\Users\olasitarska\Desktop
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+C:\Users\olasitarska\Desktop
+
+
 //}
 
 
@@ -419,48 +308,28 @@ PRO tip: @<tt>{cd D}と入力して、キーボードの@<tt>{tab}ボタンを�
 
 //}
 
-//hr
 
 === ディレクトリの作成
 
 
 それでは、Django Girlsのディレクトリをデスクトップに新規作成してみましょう。
 
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Create directory: OS X and Linux" data-id="OSX_Linux_mkdir" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Create directory: OS X and Linux]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ mkdir practice
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Create directory: Windows" data-id="windows_mkdir" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Create directory: Windows]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > mkdir practice
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+
 //}
 
 
@@ -472,7 +341,6 @@ PRO tip: 同じコマンドを何度もなんども入力したくない時は�
 
 //}
 
-//hr
 
 === エクササイズ！
 
@@ -482,53 +350,39 @@ PRO tip: 同じコマンドを何度もなんども入力したくない時は�
 
 ==== 解答:
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Exercise solution: OS X and Linux" data-id="OSX_Linux_test_dir" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Exercise solution: OS X and Linux]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ cd practice
+
 $ mkdir test
+
 $ ls
+
 test
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Exercise solution: Windows" data-id="windows_test_dir" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Exercise solution: Windows]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > cd practice
-> mkdir test
-> dir
-05/08/2014 07:28 PM <DIR>      test
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+> mkdir test
+
+> dir
+
+05/08/2014 07:28 PM <DIR>      test
+
+
 //}
 
 
 おめでとうございます！よくできました！
 
-
-//hr
 
 === クリーンアップ
 
@@ -539,41 +393,22 @@ XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
 
 はじめに、作業するディレクトリをデスクトップに戻しましょう。
 
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Clean up: OS X and Linux" data-id="OSX_Linux_back" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Clean up: OS X and Linux]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ cd ..
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Clean up: Windows" data-id="windows_back" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Clean up: Windows]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > cd ..
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+
 //}
 
 
@@ -583,43 +418,26 @@ XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
 
 現在の作業ディレクトリを確認しておきましょう。
 
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Check location: OS X and Linux" data-id="OSX_Linux_pwd3" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Check location: OS X and Linux]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ pwd
+
 /Users/olasitarska/Desktop
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Check location: Windows" data-id="windows_cd3" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Check location: Windows]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > cd
-C:\Users\olasitarska\Desktop
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+C:\Users\olasitarska\Desktop
+
+
 //}
 
 
@@ -631,123 +449,69 @@ XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
 
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Delete directory: Windows Powershell, OS X and Linux" data-id="OSX_Linux_rm" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Delete directory: Windows Powershell、OS X and Linux]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ rm -r practice
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Delete directory: Windows Command Prompt" data-id="windows_rmdir" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Delete directory: Windows Command Prompt]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > rmdir /S practice
-practice, Are you sure <Y/N>? Y
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+practice, Are you sure <Y/N>? Y
+
+
 //}
 
 
 できました! 本当に削除されたか、確認してみましょう。:
 
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Check deletion: OS X and Linux" data-id="OSX_Linux_ls2" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Check deletion: OS X and Linux]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ ls
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Check deletion: Windows" data-id="windows_dir2" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Check deletion: Windows]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > dir
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
 === 終了
 
 
 ここまでです。それではコマンドラインを終了しましょう。かっこいいやり方で終わりたいですよね? :)
 
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Exit: OS X and Linux" data-id="OSX_Linux_exit" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Exit: OS X and Linux]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 $ exit
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Exit: Windows" data-id="windows_exit" data-collapse=true ces-->
-//}
+//blankline
+//codepanelsection[Exit: Windows]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
 > exit
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+
 //}
 
 
@@ -759,6 +523,7 @@ XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
 
 ここに学んだコマンドをまとめておきます。
 
+//tsize[15,15,35,35]
 //table[tbl1][]{
 コマンド (Windows)	コマンド (Mac OS / Linux)	説明	例
 -----------------
@@ -785,4 +550,3 @@ rmdir /S	rm -r	ディレクトリを削除	@<strong>{rm -r testdirectory}
 
 
 よし、次はPythonを勉強していきましょう!
-

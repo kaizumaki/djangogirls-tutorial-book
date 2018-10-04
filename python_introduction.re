@@ -1,8 +1,4 @@
 
-
-{% set warning_icon = '<span class="glyphicon glyphicon-exclamation-sign" style="color: red;" aria-hidden="true" data-toggle="tooltip" title="An error is expected when you run this command!" ></span>' %}
-
-
 = Python入門
 
 //quote{
@@ -22,7 +18,7 @@
 //}
 
 
-Pythonであそぶために、@<b>{コマンドライン} を開きましょう。 やり方は、チャプター @<href>{../intro_to_command_line/README.md,Intro to Command Line} で学びましたね。
+Pythonであそぶために、@<b>{コマンドライン} を開きましょう。 やり方は、チャプター @<chapref>{intro_to_command_line} で学びましたね。
 
 
 
@@ -34,10 +30,7 @@ Pythonコンソールを開きましょう。Windowsなら @<tt>{python} 、Mac 
 
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3
 Python 3.6.1 (...)
 Type "help", "copyright", "credits" or "license" for more information.
@@ -59,10 +52,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> 2 + 3
 5
 //}
@@ -76,10 +66,10 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-2の3乗のような指数の計算は、次のようにタイプします。{% filename %}command-line{% endfilename %}
+2の3乗のような指数の計算は、次のようにタイプします。
 
 
-//emlist[][python]{
+//cmd{
 >>> 2 ** 3
 8
 //}
@@ -99,10 +89,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> "Ola"
 'Ola'
 //}
@@ -116,10 +103,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> "Hi there " + "Ola"
 'Hi there Ola'
 //}
@@ -129,10 +113,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> "Ola" * 3
 'OlaOlaOla'
 //}
@@ -146,10 +127,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> "Runnin' down the hill"
 "Runnin' down the hill"
 //}
@@ -158,11 +136,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 あるいは、バックスラッシュ (``) を使う方法もあります。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> 'Runnin\' down the hill'
 "Runnin' down the hill"
 //}
@@ -172,10 +146,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> "Ola".upper()
 'OLA'
 //}
@@ -189,10 +160,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> len("Ola")
 3
 //}
@@ -222,11 +190,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 さて、新しいことをやってみましょう。あなたの名前の文字数を数えたように、数字の文字数は数えられるでしょうか？ @<tt>{len(304023)} と記述して、@<tt>{Enter} キーを押してみましょう。
 
 
-
-{% filename %}{{ warning_icon }} command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> len(304023)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -234,18 +198,14 @@ TypeError: object of type 'int' has no len()
 //}
 
 
-はじめてのエラーがでました！ {{ warning_icon }} アイコンのついたコードは思ったように動かないコードです。 （今回はチュートリアルで用意されていましたが）思ったように動かないことは学ぶ上で大事です！
+はじめてのエラーがでました！（今回はチュートリアルで用意されていましたが）思ったように動かないことは学ぶ上で大事です！
 
 
 
 オブジェクトタイプ"int" (integers, 数値) は文字数がありませんと言っています。では、どうすればよいでしょうか？この数字を文字列として扱えれば、文字数を数えられるはずですよね？
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> len(str(304023))
 6
 //}
@@ -272,11 +232,7 @@ TypeError: object of type 'int' has no len()
 変数 @<tt>{name} を新しくつくってみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> name = "Ola"
 //}
 
@@ -288,11 +244,7 @@ name イコール（=）"Ola" とタイプします。
 見てのとおり、プログラムは、なにも返してくれませんね。では、変数がきちんとあるか、どうやって確かめたらいいのでしょうか？ @<tt>{name} とタイプして、@<tt>{Enter} キーを押してください。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> name
 'Ola'
 //}
@@ -301,11 +253,7 @@ name イコール（=）"Ola" とタイプします。
 やりました！あなたのはじめての変数ができましたね！代入する値を変えることもできます。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> name = "Sonja"
 >>> name
 'Sonja'
@@ -315,11 +263,7 @@ name イコール（=）"Ola" とタイプします。
 変数には関数も使えます。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> len(name)
 5
 //}
@@ -328,11 +272,7 @@ name イコール（=）"Ola" とタイプします。
 素晴らしいですね！変数は、数値にも使えますよ。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> a = 4
 >>> b = 6
 >>> a * b
@@ -343,11 +283,7 @@ name イコール（=）"Ola" とタイプします。
 もしも、間違えた変数名を使ってしまったら、どうなるでしょうか？予想できますか？やってみましょう！
 
 
-
-{% filename %}{{ warning_icon }} command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> city = "Tokyo"
 >>> ctiy
 Traceback (most recent call last):
@@ -369,11 +305,7 @@ NameError: name 'ctiy' is not defined
 次に挑戦してみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> name = 'Maria'
 >>> name
 'Maria'
@@ -399,11 +331,7 @@ Maria
 まずはリストを作りましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> []
 []
 //}
@@ -413,10 +341,7 @@ Maria
 
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> lottery = [3, 42, 12, 19, 30, 59]
 //}
 
@@ -424,11 +349,7 @@ Maria
 よし、これでリストができました！このリストで何をしましょうか？では、くじ引きの番号がいくつあるか、数えてみましょう。何の関数を使えばいいか、予想できますか？すでに知っていますよね！
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> len(lottery)
 6
 //}
@@ -437,11 +358,7 @@ Maria
 そうです！@<tt>{len()} がリストにあるオブジェクトの数を取得できます。便利ですね。では、くじ引きの番号をソートしてみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> lottery.sort()
 //}
 
@@ -449,11 +366,7 @@ Maria
 これは何も返してきません。これはリストに表示される番号を、順番に並べ替えただけです。再度出力して、確かめてみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> print(lottery)
 [3, 12, 19, 30, 42, 59]
 //}
@@ -466,11 +379,7 @@ Maria
 逆順に並び替えてみたくなりましたか？やってみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> lottery.reverse()
 >>> print(lottery)
 [59, 42, 30, 19, 12, 3]
@@ -480,11 +389,7 @@ Maria
 リストに何かを追加したいときは、次のようにコマンドを記述してください。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> lottery.append(199)
 >>> print(lottery)
 [59, 42, 30, 19, 12, 3, 199]
@@ -494,11 +399,7 @@ Maria
 最初の数字だけを出力したいときは、@<strong>{インデックス(index)} を使って指定することができます。 インデックスは、アイテムがリストのどこにあるかを指す番号です。 リストの先頭の要素から順に「０」、次に「１」と割り当てられています。 次のとおり試してみてください。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> print(lottery[0])
 59
 >>> print(lottery[1])
@@ -513,11 +414,7 @@ Maria
 リストから要素を消すには、これまで学んできたインデックスと @<tt>{pop()} メソッドを使います。 例で試してみましょう。リストの最初の要素を削除しています。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> print(lottery)
 [59, 42, 30, 19, 12, 3, 199]
 >>> print(lottery[0])
@@ -551,11 +448,7 @@ Maria
 辞書(ディクショナリ)について確認しましょう。リストに似ていますが、インデックスのかわりにキーと呼ばれる識別子で値を参照します。キーは文字列も数値も使えます。ディクショナリは次のように @<tt>{{\}} 括弧で囲んで作成します。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> {}
 {}
 //}
@@ -568,11 +461,7 @@ Maria
 では、つぎのコマンドを記述してみましょう。 (あなた自身の情報に値をおきかえてみてもいいですよ）
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> participant = {'name': 'Ola', 'country': 'Poland', 'favorite_numbers': [7, 42, 92]}
 //}
 
@@ -588,11 +477,7 @@ Maria
 次のように書くと各キーの値を確認できます。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> print(participant['name'])
 Ola
 //}
@@ -605,11 +490,7 @@ Ola
 もし存在しないキーを参照しようとすると、どうなるでしょうか？予想できますか？実際にやってみましょう！
 
 
-
-{% filename %}{{ warning_icon }} command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> participant['age']
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -631,11 +512,7 @@ KeyError: 'age'
 ディクショナリやリストは、作ったあとに変更できるオブジェクトです。これを @<b>{mutable} と呼びます。次のように、ディクショナリを作ったあとで、新しいキーと値を追加することができます。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> participant['favorite_language'] = 'Python'
 //}
 
@@ -643,11 +520,7 @@ KeyError: 'age'
 リストと同様に、@<tt>{len()} 関数をディクショナリに使ってみましょう。ディクショナリでは、キーと値のペアの数を返します。コマンドを入力してやってみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> len(participant)
 4
 //}
@@ -660,11 +533,7 @@ KeyError: 'age'
 ディクショナリの要素を削除する時は、@<tt>{pop()} メソッドを使います。 例えば、 キー @<tt>{'favorite_numbers'} の要素を削除するには、次のように記述してください。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> participant.pop('favorite_numbers')
 [7, 42, 92]
 >>> participant
@@ -679,11 +548,7 @@ KeyError: 'age'
 同様に、次のように記述することで、すでにあるキーの値を変更することができます。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> participant['country'] = 'Germany'
 >>> participant
 {'country': 'Germany', 'favorite_language': 'Python', 'name': 'Ola'}
@@ -719,11 +584,7 @@ KeyError: 'age'
 比較することは、プログラミングの醍醐味の１つです。簡単に比較できるものといえば、何でしょうか？そうです、数字ですね。さっそくやってみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> 5 > 2
 True
 >>> 3 < 1
@@ -748,11 +609,7 @@ Pythonにいくつか比較する数字をあたえてみました。数字を�
 次の２つはどうでしょうか。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> 6 >= 12 / 2
 True
 >>> 3 <= 2
@@ -772,11 +629,7 @@ False
 すばらしい! もう少しやってみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> 6 > 2 and 2 < 3
 True
 >>> 3 > 2 and 2 < 1
@@ -796,11 +649,7 @@ True
 "comparing apples to oranges"という英語の表現を聞いたことはありますか？文字通り訳すと「リンゴとオレンジを比較する」となり、「比較にならないものを比較する」という意味です。Pythonでも同じようなことをやってみましょう。
 
 
-
-{% filename %}{{ warning_icon }} command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> 1 > 'django'
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -832,11 +681,7 @@ Pythonを記述するときは、Trueの最初は大文字のT、残りは小文
 ブール型は、次のように変数に代入することもできます。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> a = True
 >>> a
 True
@@ -846,11 +691,7 @@ True
 このようなこともできます。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> a = 2 > 5
 >>> a
 False
@@ -869,7 +710,7 @@ False
 おめでとうございます！ブール型を理解することは、プログラミングでとても大事です。ここまでできましたね！
 
 
-= 保存しよう！
+== 保存しよう！
 
 //quote{
 家で１人でこのパートに挑戦している方へ：このパートと続くパートは、動画（英語）もあるので参考にしてください。@<href>{https://www.youtube.com/watch?v=dOAg6QVAxyk,Python Basics: Saving files and "If" statement}
@@ -889,11 +730,7 @@ False
 これまで使っていたPythonインタプリタを終了しましょう。@<tt>{exit()} 関数を記述してください。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 >>> exit()
 $
 //}
@@ -906,11 +743,7 @@ $
 前のチャプター @<href>{../code_editor/README.md,コードエディタ} で、エディタを紹介しました。エディタを起動して、新しいファイルにコードを書いてみましょう。
 
 
-
-{% filename %}editor{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[editor][python]{
 print('Hello, Django girls!')
 //}
 
@@ -931,94 +764,59 @@ print('Hello, Django girls!')
 ファイルを保存したら、実行してみましょう！コマンドラインのセクションで学んだことを思い出して、ターミナルの @<strong>{ディレクトリを変更} して、デスクトップにしましょう。
 
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Change directory: OS X" data-id="python_OSX"
-data-collapse=true ces-->
-//}
+//panelsection[Change directory: OS X]{
 
 
 Macでは、コマンドは次のようになります。
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 $ cd ~/Desktop
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Change directory: Linux" data-id="python_linux"
-data-collapse=true ces-->
-//}
+//panelsection[Change directory: Linux]{
 
 
 Linuxでは、次のようになります。("Desktop"のところは"デスクトップ"と表示されているかも知れません)
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 $ cd ~/Desktop
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Change directory: Windows Command Prompt" data-id="python_windows" data-collapse=true ces-->
-//}
+//panelsection[Change directory: Windows Command Prompt]{
 
 
 Windowsのコマンドプロンプトでは、次のようになります。
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 > cd %HomePath%\Desktop
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Change directory: Windows Powershell" data-id="python_windowsPSH" data-collapse=true ces-->
-//}
+//panelsection[Change directory: Windows Powershell]{
 
 
 WindowsのPowerShellでは、次のようになります。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
-> cd $Home\Desktop
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+
+//cmd{
+> cd $Home\Desktop
 //}
 
 
@@ -1029,11 +827,7 @@ XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
 次に、ファイルのコードを実行します。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 python_intro.py
 Hello, Django girls!
 //}
@@ -1042,11 +836,7 @@ Hello, Django girls!
 メモ：Windowsでファイルのコードを実行するときは、'python3' の代わりに 'python' とタイプしましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 > python python_intro.py
 //}
 
@@ -1068,11 +858,7 @@ Hello, Django girls!
 では、@<strong>{python_intro.py} ファイルのコードを次のように書き換えてください。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 if 3 > 2:
 //}
 
@@ -1080,11 +866,7 @@ if 3 > 2:
 これを保存して実行すると、次のようなエラーがでます。
 
 
-
-{% filename %}{{ warning_icon }} command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 python_intro.py
 File "python_intro.py", line 2
          ^
@@ -1095,11 +877,7 @@ SyntaxError: unexpected EOF while parsing
 条件式 @<tt>{3 > 2} が @<tt>{True} の時、どのように処理をすべきかが記述されていませんね。 では、Python に “It works!” と出力してもらいましょう。 @<strong>{python_intro.py} ファイルの中身を、次のとおりに書き換えてください。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 if 3 > 2:
     print('It works!')
 //}
@@ -1113,10 +891,7 @@ if 3 > 2:
 
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][python]{
+//cmd{
 $ python3 python_intro.py
 It works!
 //}
@@ -1131,11 +906,7 @@ It works!
 前述の例では、if文の条件式が True の時だけ、コードが実行されました。Pythonは、@<tt>{elif} や @<tt>{else} といった記述もできます。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 if 5 > 2:
     print('5 is indeed greater than 2')
 else:
@@ -1146,11 +917,7 @@ else:
 これを実行した場合、次のように出力されます。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 python_intro.py
 5 is indeed greater than 2
 //}
@@ -1159,11 +926,7 @@ $ python3 python_intro.py
 もし２が５より大きかったら、４行目のコマンドが実行されます。では、@<tt>{elif} はどうなるのでしょうか？
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 name = 'Sonja'
 if name == 'Ola':
     print('Hey Ola!')
@@ -1177,11 +940,7 @@ else:
 実行すると...
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 python_intro.py
 Hey Sonja!
 //}
@@ -1194,11 +953,7 @@ Hey Sonja!
 最初の @<tt>{if} の条件分岐の後に、好きなだけ @<tt>{elif} を追加する事ができます。例えば...
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 volume = 57
 if volume < 20:
     print("It's kinda quiet.")
@@ -1218,11 +973,7 @@ else:
 Pythonは上から順番に各条件をテスト、実行し、出力します。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 python_intro.py
 Perfect, I can hear all the details
 //}
@@ -1237,11 +988,7 @@ Perfect, I can hear all the details
 コメントを書いてみましょう。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 # ボリュームが大きすぎたり小さすぎたりしたら変更する
 if volume < 20 or volume > 80:
     volume = 50
@@ -1283,11 +1030,7 @@ Pythonには @<tt>{len()} のように関数があったのを覚えています
 実行する処理をひとまとめにしたものを関数といいます。 Pythonでは、関数は @<tt>{def} というキーワードからはじまり、引数（ひきすう）を含むことができます。 簡単なものからはじめてみましょう。 @<strong>{python_intro.py} の中身を下記のコードに置き換えてください。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 def hi():
     print('Hi there!')
     print('How are you?')
@@ -1307,11 +1050,7 @@ hi()
 では実行して、どうなるか見てみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 python_intro.py
 Hi there!
 How are you?
@@ -1329,11 +1068,7 @@ How are you?
 次に引数をつかった関数を作ってみましょう。先ほどの例を使います。'hi' という挨拶をする関数に、挨拶をする人の名前をいれてみます。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 def hi(name):
 //}
 
@@ -1341,11 +1076,7 @@ def hi(name):
 このとおり、関数に @<tt>{name} という引数を足します。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 def hi(name):
     if name == 'Ola':
         print('Hi Ola!')
@@ -1361,11 +1092,7 @@ hi()
 @<tt>{if} 文では @<tt>{print} 関数は４つのスペースでインデントしていましたね。条件式が True のときに print 関数が実行されました。関数の中の if 文で実行する print 関数の前には、上記のように、スペースを８ついれて２回分インデントします。 実行して、どのように動くか見てみましょう。
 
 
-
-{% filename %}{{ warning_icon }} command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 python_intro.py
 Traceback (most recent call last):
 File "python_intro.py", line 10, in <module>
@@ -1377,11 +1104,7 @@ TypeError: hi() missing 1 required positional argument: 'name'
 おっと、エラーがでてしまいました。 Pythonがエラーメッセージを表示してくれています。 定義した関数 @<tt>{hi()} は、@<tt>{name} という引数が必要ですが、関数を呼び出す時に引数を忘れてしまっています。 最後の行を修正しましょう。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 hi("Ola")
 //}
 
@@ -1389,11 +1112,7 @@ hi("Ola")
 実行してください。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 python_intro.py
 Hi Ola!
 //}
@@ -1402,11 +1121,7 @@ Hi Ola!
 では、名前を変えてみたらどうなりますか？
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 hi("Sonja")
 //}
 
@@ -1414,11 +1129,7 @@ hi("Sonja")
 再度実行してください。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 python_intro.py
 Hi Sonja!
 //}
@@ -1427,11 +1138,7 @@ Hi Sonja!
 では、OlaやSonja以外の名前を入れた時、どうなるかわかりますか？やってみて、予測が正しいか確認して下さい。このように出力されましたか。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 Hi anonymous!
 //}
 
@@ -1443,11 +1150,7 @@ Hi anonymous!
 もっとスマートなやり方を試してみましょう – ２人以上の名前があり、それぞれに対して条件をつけるのは大変ですよね。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 def hi(name):
     print('Hi ' + name + '!')
 
@@ -1458,11 +1161,7 @@ hi("Rachel")
 では、実行してみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 python_intro.py
 Hi Rachel!
 //}
@@ -1490,11 +1189,7 @@ Hi Rachel!
 リストを覚えていますか？女の子の名前をリストにしてみましょう。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 girls = ['Rachel', 'Monica', 'Phoebe', 'Ola', 'You']
 //}
 
@@ -1502,11 +1197,7 @@ girls = ['Rachel', 'Monica', 'Phoebe', 'Ola', 'You']
 名前を呼んで、全員にあいさつをしてみましょう。@<tt>{hi} 関数が使えますね。ループの中で使いましょう。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 for name in girls:
 //}
 
@@ -1518,11 +1209,7 @@ for name in girls:
 ファイルに書かれるコードはこのようになります。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 def hi(name):
     print('Hi ' + name + '!')
 
@@ -1536,11 +1223,7 @@ for name in girls:
 実行してみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 python_intro.py
 Hi Rachel!
 Next girl
@@ -1562,11 +1245,7 @@ Next girl
 @<tt>{for} 文では、@<tt>{range} 関数を使って指定した回数だけ繰り返すこともできます。
 
 
-
-{% filename %}python_intro.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[python_intro.py][python]{
 for i in range(1, 6):
     print(i)
 //}
@@ -1575,11 +1254,7 @@ for i in range(1, 6):
 これを実行すると、次のように出力されます。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 1
 2
 3
@@ -1610,7 +1285,7 @@ for i in range(1, 6):
 
 
 
-//image[cupcake][カップケーキ]{
+//image[cupcake][]{
 //}
 
 

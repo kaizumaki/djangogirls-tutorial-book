@@ -19,6 +19,7 @@ module ReVIEW
   Compiler.defblock :textcenter, 0      ## 中央揃え
 
   Compiler.defblock :panelsection, 0..1  ## panel-collapse
+  Compiler.defblock :codepanelsection, 0..1  ## panel-collapse（コマンドのみ）
 
   ## LaTeX用の定義
   class LATEXBuilder
@@ -51,7 +52,27 @@ module ReVIEW
 
     def panelsection(lines, heading)
       blank
-      puts '\begin{tcolorbox}[title=' + heading + ']'
+      puts '\begin{tcolorbox}[sharp corners,
+                              colframe=gray,
+                              colback=white,
+                              colbacktitle=gray,
+                              coltitle=white, fonttitle=\ttfamily\bfseries, title=' + heading + ']'
+      lines.each do |line|
+        puts detab(line)
+      end
+      puts '\end{tcolorbox}'
+      blank
+    end
+
+    def codepanelsection(lines, heading)
+      blank
+      puts '\begin{tcolorbox}[sharp corners,
+                              colframe=gray,
+                              colback=black,
+                              coltext=white,
+                              fontupper=\ttfamily\small,
+                              colbacktitle=gray,
+                              coltitle=white, fonttitle=\ttfamily\bfseries, title=' + heading + ']'
       lines.each do |line|
         puts detab(line)
       end
