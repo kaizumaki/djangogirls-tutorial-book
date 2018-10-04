@@ -35,7 +35,7 @@
 では、実際にコマンドラインを開いて、触ってみることとしましょう。
 
 
-//openmemo[Windows]{
+//panelsection[Windows]{
 
 
 ［スタート］→［Windowsシステムツール］→［コマンドプロンプト］を選択しましょう

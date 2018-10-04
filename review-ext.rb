@@ -18,7 +18,7 @@ module ReVIEW
   Compiler.defblock :textright, 0       ## 右寄せ
   Compiler.defblock :textcenter, 0      ## 中央揃え
 
-  Compiler.defblock :openmemo, 0..1
+  Compiler.defblock :panelsection, 0..1  ## panel-collapse
 
   ## LaTeX用の定義
   class LATEXBuilder
@@ -49,9 +49,9 @@ module ReVIEW
       puts '\end{center}'
     end
 
-    def openmemo(lines, caption)
+    def panelsection(lines, heading)
       blank
-      puts '\begin{tcolorbox}[title=' + caption + ']'
+      puts '\begin{tcolorbox}[title=' + heading + ']'
       lines.each do |line|
         puts detab(line)
       end
