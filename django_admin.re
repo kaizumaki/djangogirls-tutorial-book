@@ -9,11 +9,7 @@
 @<tt>{blog/admin.py}ファイルをエディタで開いて、内容をこのように変えて下さい：
 
 
-
-{% filename %}blog/admin.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/admin.py][python]{
 from django.contrib import admin
 from .models import Post
 
@@ -44,26 +40,28 @@ Webサーバーを実行しているときに新しいコマンドを入力し�
 //}
 
 
-{% filename %}Mac OS X または Linux:{% endfilename %}
+//codepanelsection[Mac OS X または Linux:]{
 
 
-//emlist{
 (myvenv) ~/djangogirls$ python manage.py createsuperuser
+
+
 //}
 
 
-{% filename %}Windows:{% endfilename %}
+//codepanelsection[Windows:]{
 
 
-//emlist{
 (myvenv) C:\Users\Name\djangogirls> python manage.py createsuperuser
+
+
 //}
 
 
 プロンプトが表示されたら、ユーザー名 (小文字、スペースなし)、電子メール アドレス、およびパスワードを入力します。 @<strong>{タイプしてる間パスワードは見えなくても大丈夫、それが正常です。}タイプして@<tt>{Enter}を押して続けましょう。 そうすればこのように見えるはずです。（ユーザーネームとパスワードは今あなたがタイプしたものです。）
 
 
-//emlist{
+//cmd{
 Username: admin
 Email address: admin@admin.com
 Password:
@@ -101,4 +99,3 @@ Django adminについてもっと知りたいときは、Djangoのドキュメ�
 
 
 ここでそろそろコーヒー（または紅茶）か何か食べるものを摂って自分を元気づけるのにいいタイミングでしょう。最初のDjangoモデルを作ったのだから、少し休みをとっていいところです！
-

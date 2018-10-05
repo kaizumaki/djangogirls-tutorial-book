@@ -30,11 +30,7 @@ blog
 このファイルをエディタで開き、次のコードを入力してください。
 
 
-
-{% filename %}blog/forms.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/forms.py][python]{
 from django import forms
 
 from .models import Post
@@ -76,11 +72,7 @@ class PostForm(forms.ModelForm):
 @<tt>{blog/templates/blog/base.html}をエディタで開きましょう。@<tt>{page-header}と名付けた@<tt>{div}中に次のリンクを追加します：
 
 
-
-{% filename %}blog/templates/blog/base.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/base.html][html]{
 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 //}
 
@@ -92,11 +84,7 @@ class PostForm(forms.ModelForm):
 行を追加すると、このような html ファイルになります。
 
 
-
-{% filename %}blog/templates/blog/base.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/base.html][html]{
 {% load static %}
 <html>
     <head>
@@ -133,11 +121,7 @@ class PostForm(forms.ModelForm):
 @<tt>{blog/urls.py}をエディタで開き、次の内容を追加します。
 
 
-
-{% filename %}blog/urls.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/urls.py][python]{
 path('post/new', views.post_new, name='post_new'),
 //}
 
@@ -145,11 +129,7 @@ path('post/new', views.post_new, name='post_new'),
 すると最終的なコードは次のようになります:
 
 
-
-{% filename %}blog/urls.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/urls.py][python]{
 from django.urls import path 
 from . import views
 
@@ -170,11 +150,7 @@ urlpatterns = [
 @<tt>{blog/views.py}をエディタで開き、@<tt>{from}の行の後に次の内容を追加してみましょう。
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 from .forms import PostForm
 //}
 
@@ -182,11 +158,7 @@ from .forms import PostForm
 その後に@<b>{ビュー}を追加します。
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 def post_new(request):
     form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
@@ -208,7 +180,7 @@ def post_new(request):
 
 
 
-//image[csrf2][CSFR 禁止のページ]{
+//image[csrf2][]{
 //}
 
 
@@ -217,11 +189,7 @@ def post_new(request):
 では、@<tt>{post_edit.html} のHTMLがどのようになるか見てみましょう:
 
 
-
-{% filename %}blog/templates/blog/post_edit.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_edit.html][html]{
 {% extends 'blog/base.html' %}
 
 {% block content %}
@@ -238,7 +206,7 @@ def post_new(request):
 
 
 
-//image[new_form2][New form]{
+//image[new_form2][]{
 //}
 
 
@@ -261,11 +229,7 @@ def post_new(request):
 @<tt>{blog/views.py} をもう一度エディタで開きます。現在の @<tt>{post_new} ビューはこうなっています。
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 def post_new(request):
     form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
@@ -279,11 +243,7 @@ def post_new(request):
 私たちの @<b>{ビュー} では、扱わなくてはならない２つの別々のシチュエーションがあります: １つ目は、最初にページにアクセスしてきた時で空白のフォームが必要な場合。２つ目はすべてのフォームデータが入力された状態で@<b>{ビュー}に戻ってくる場合です。 したがって条件分岐を追加する必要があります（そのために@<tt>{if}を使います）：
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 if request.method == "POST":
     [...]
 else:
@@ -294,11 +254,7 @@ else:
 ドット @<tt>{[...]} の部分を埋めていきましょう。 @<tt>{method}が@<tt>{POST}の場合、フォームのデータを使って@<tt>{PostForm}を構築します。 私たちはそれを次のようにします：
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 form = PostForm(request.POST)
 //}
 
@@ -310,11 +266,7 @@ form = PostForm(request.POST)
 フォームをチェックして、フォームの値が有効であれば保存できます。
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 if form.is_valid():
     post = form.save(commit=False)
     post.author = request.user
@@ -330,11 +282,7 @@ if form.is_valid():
 最後に、新しく作成された記事の @<tt>{post_detail} ページを表示できれば良いですよね? そのために次のインポートを追加します:
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 from django.shortcuts import redirect
 //}
 
@@ -342,11 +290,7 @@ from django.shortcuts import redirect
 ファイルの先頭に追加します。これで新しく作成されたポストの @<tt>{post_detail} ページに移動する処理を書けます。
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 return redirect('post_detail', pk=post.pk)
 //}
 
@@ -358,11 +302,7 @@ return redirect('post_detail', pk=post.pk)
 ふー、たくさんのことを話してきましたが、そろそろ @<b>{ビュー} の全体がどんな感じか見てみたい頃じゃないでしょうか？
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
@@ -395,7 +335,7 @@ def post_new(request):
 //}
 
 
-//image[post_create_error][ログインエラー]{
+//image[post_create_error][]{
 //}
 
 
@@ -411,7 +351,7 @@ def post_new(request):
 
 
 
-//image[form_validation2][フォームのバリデーション(検証)]{
+//image[form_validation2][]{
 //}
 
 
@@ -430,11 +370,7 @@ Djangoはフォームのすべてのフィールドが正しいことを検証�
 @<tt>{blog/templates/blog/post_detail.html} をエディタで開いて次の行を追加します
 
 
-
-{% filename %}blog/templates/blog/post_detail.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_detail.html][html]{
 <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
 //}
 
@@ -442,11 +378,7 @@ Djangoはフォームのすべてのフィールドが正しいことを検証�
 テンプレートは次のようになります:
 
 
-
-{% filename %}blog/templates/blog/post_detail.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_detail.html][html]{
 {% extends 'blog/base.html' %}
 
 {% block content %}
@@ -467,11 +399,7 @@ Djangoはフォームのすべてのフィールドが正しいことを検証�
 @<tt>{blog/urls.py}をエディタで開き、次の内容を追加します。
 
 
-
-{% filename %}blog/urls.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/urls.py][python]{
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
 //}
 
@@ -483,11 +411,7 @@ Djangoはフォームのすべてのフィールドが正しいことを検証�
 @<tt>{blog/views.py} をエディタで開いて次の内容をファイルの最後に追加します：
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
@@ -507,11 +431,7 @@ def post_edit(request, pk):
 @<tt>{post_new} とほとんど同じに見えますか? しかし完全に同じではありません。 まずURLから追加の @<tt>{pk} パラメータを渡します。 次に編集したい@<tt>{Post} モデルを @<tt>{get_object_or_404(Post, pk=pk)} で取得し、フォームを作るときは以下の2つのケースのようにそのポストを@<tt>{instance（インスタンス）}として渡します。フォームを保存するときは…
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 form = PostForm(request.POST, instance=post)
 //}
 
@@ -519,11 +439,7 @@ form = PostForm(request.POST, instance=post)
 …このポストを編集するためにただフォームを開く場合は:
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 form = PostForm(instance=post)
 //}
 
@@ -532,7 +448,7 @@ form = PostForm(instance=post)
 
 
 
-//image[edit_button2][編集ボタン]{
+//image[edit_button2][]{
 //}
 
 
@@ -542,7 +458,7 @@ form = PostForm(instance=post)
 
 
 
-//image[edit_form2][編集フォーム]{
+//image[edit_form2][]{
 //}
 
 
@@ -569,11 +485,7 @@ Djangoのフォームについてもっと知りたい場合、Django Projectの
 @<tt>{blog/templates/blog/base.html} をエディタで開き、@<tt>{page-header} と名付けた @<tt>{div} とそこに以前に入力したアンカータグを見つけます。 これは次のようになります。
 
 
-
-{% filename %}blog/templates/blog/base.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/base.html][html]{
 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 //}
 
@@ -581,11 +493,7 @@ Djangoのフォームについてもっと知りたい場合、Django Projectの
 これに@<tt>{{% if %\}}タグを追加し、管理者でログインしているユーザーのみにリンクを表示します。 今は、あなただけです！ @<tt>{<a>} タグを以下のように変更します：
 
 
-
-{% filename %}blog/templates/blog/base.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/base.html][html]{
 {% if user.is_authenticated %}
     <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 {% endif %}
@@ -603,11 +511,7 @@ Djangoのフォームについてもっと知りたい場合、Django Projectの
 @<tt>{blog/templates/blog/post_detail.html} をエディタで開いて次の行を見つけてください：
 
 
-
-{% filename %}blog/templates/blog/post_detail.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_detail.html][html]{
 <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
 //}
 
@@ -615,11 +519,7 @@ Djangoのフォームについてもっと知りたい場合、Django Projectの
 以下のように変更してください：
 
 
-
-{% filename %}blog/templates/blog/post_detail.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_detail.html][html]{
 {% if user.is_authenticated %}
      <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
 {% endif %}
@@ -637,25 +537,18 @@ Djangoのフォームについてもっと知りたい場合、Django Projectの
  * まず、Githubにあなたの新しく書いたコードをCommitして、Pushしてみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git status
 $ git add --all .
 $ git status
 $ git commit -m "Added views to create/edit blog post inside the site."
 $ git push
 //}
+
  * それから、@<href>{https://www.pythonanywhere.com/consoles/,PythonAnywhereのbashコンソール}で：
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ cd ~/<your-pythonanywhere-username>.pythonanywhere.com
 $ git pull
 [...]
@@ -669,4 +562,3 @@ $ git pull
 
 
 うまくいってるはずです！おめでとう :)
-

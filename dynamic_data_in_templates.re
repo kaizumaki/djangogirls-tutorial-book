@@ -17,11 +17,7 @@
 まず@<tt>{blog/views.py}をコードエディタで開きます。今のところ @<tt>{post_list}@<b>{ビュー} は、以下のようになっているでしょう。
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 from django.shortcuts import render
 
 def post_list(request):
@@ -32,11 +28,7 @@ def post_list(request):
 少し前に、別のファイルに用意したコードをどうやってインクルードするか説明したのですけれど、覚えていますか？ それでは @<tt>{models.py} のモデルを、インクルードしてみましょう。 @<tt>{from .models import Post} という行を追加してみます。
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 from django.shortcuts import render
 from .models import Post
 //}
@@ -59,11 +51,7 @@ from .models import Post
 公開したブログ記事を @<tt>{published_date}で並べ替えをしたいですね。これも、クエリセットの章でやったので、大丈夫ですね？
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 //}
 
@@ -71,11 +59,7 @@ Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date
 それでは @<tt>{blog/views.py}をコードエディタで開いて、このコードを@<tt>{def post_list(request)}関数の中に加えましょう。@<tt>{from django.utils import timezone}を最初に追加するのを忘れないでくださいね。
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Post
@@ -101,11 +85,7 @@ def post_list(request):
 最終的に @<tt>{blog/views.py}は、以下の様になるはずです。
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Post
@@ -121,4 +101,3 @@ def post_list(request):
 
 
 Djangoのクエリセットについて、もっと知りたければこちらも読んでみてくださいね。 https://docs.djangoproject.com/ja/2.0/ref/models/querysets/
-

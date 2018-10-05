@@ -1,8 +1,4 @@
 
-
-{% set warning_icon = '<span class="glyphicon glyphicon-exclamation-sign" style="color: red;" aria-hidden="true" data-toggle="tooltip" title="An error is expected when you run this code!" ></span>' %}
-
-
 = アプリケーションを拡張しよう
 
 
@@ -24,10 +20,10 @@
 == 投稿の詳細へのテンプレートリンクを作成する
 
 
-@<tt>{blog/templates/blog/post_list.html}ファイルにリンクを追加していきましょう。 コードエディタで開いたら、次のようになっていますよね： {% filename %}blog/templates/blog/post_list.html{% endfilename %}
+@<tt>{blog/templates/blog/post_list.html}ファイルにリンクを追加していきましょう。 コードエディタで開いたら、次のようになっていますよね：
 
 
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 {% extends 'blog/base.html' %}
 
 {% block content %}
@@ -47,11 +43,7 @@
 {% raw %}投稿リストの投稿のタイトルから投稿の詳細ページへのリンクを作りたいです。 投稿の詳細ページにリンクするように@<tt>{<h1><a href="">{{ post.title \}\}</a></h1>}を変更しましょう。{% endraw %}
 
 
-
-{% filename %}{{ warning@<b>{icon \}\} blog/templates/blog/post}list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
 //}
 
@@ -72,7 +64,7 @@
 
 
 
-//image[no_reverse_match2][NoReverseMatch error]{
+//image[no_reverse_match2][]{
 //}
 
 
@@ -91,11 +83,7 @@
 投稿の内容を表示する@<tt>{post_detail}という@<b>{ビュー}をDjangoに示すように、@<tt>{blog/urls.py}ファイルでURLを作りましょう。 @<tt>{blog/urls.py}をコードエディタで開いて、@<tt>{path('post/<int:pk>)/', views.post_detail, name='post_detail'),}という行を追加しましょう。ファイルは次のようになるでしょう。
 
 
-
-{% filename %}{{ warning_icon }} blog/urls.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/urls.py][python]{
 from django.urls import path
 from . import views
 
@@ -122,7 +110,7 @@ urlpatterns = [
 
 
 
-//image[attribute_error2][AttributeError]{
+//image[attribute_error2][]{
 //}
 
 
@@ -141,11 +129,7 @@ urlpatterns = [
 今、私たちは1つだけブログ投稿を取得したいと考えています。 これを行うには、次のようなクエリセットが使用できます。
 
 
-
-{% filename %}{{ warning_icon }} blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 Post.objects.get(pk=pk)
 //}
 
@@ -154,7 +138,7 @@ Post.objects.get(pk=pk)
 
 
 
-//image[does_not_exist2][DoesNotExist error]{
+//image[does_not_exist2][]{
 //}
 
 
@@ -164,7 +148,7 @@ Post.objects.get(pk=pk)
 
 
 
-//image[404_2][Page not found]{
+//image[404_2][]{
 //}
 
 
@@ -185,11 +169,7 @@ Post.objects.get(pk=pk)
 @<tt>{blog/views.py}をコードエディタで開き、他の@<tt>{from}行の近くに次のコードを追加する必要があります。
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 from django.shortcuts import render, get_object_or_404
 //}
 
@@ -197,11 +177,7 @@ from django.shortcuts import render, get_object_or_404
 ファイルの最後に@<b>{ビュー}を追加します：
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
@@ -212,7 +188,7 @@ def post_detail(request, pk):
 
 
 
-//image[post_list2][Post list view]{
+//image[post_list2][]{
 //}
 
 
@@ -222,7 +198,7 @@ def post_detail(request, pk):
 
 
 
-//image[template_does_not_exist2][TemplateDoesNotExist error]{
+//image[template_does_not_exist2][]{
 //}
 
 
@@ -242,10 +218,7 @@ def post_detail(request, pk):
 
 
 
-{% filename %}blog/templates/blog/post_detail.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_detail.html][html]{
 {% extends 'blog/base.html' %}
 
 {% block content %}
@@ -274,7 +247,7 @@ def post_detail(request, pk):
 
 
 
-//image[post_detail2][Post detail page]{
+//image[post_detail2][]{
 //}
 
 
@@ -283,17 +256,13 @@ def post_detail(request, pk):
 イェーイ！うまくできていますね！
 
 
-= デプロイの時間です！
+== デプロイの時間です！
 
 
 あなたのウェブサイトがまだPythonAnywhere上で動くとしたらいいでしょう？またデプロイしてみましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git status
 $ git add --all .
 $ git status
@@ -305,11 +274,7 @@ $ git push
 それから、@<href>{https://www.pythonanywhere.com/consoles/,PythonAnywhere Bash コンソール}で：
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ cd ~/<your-pythonanywhere-username>.pythonanywhere.com
 $ git pull
 [...]
@@ -329,11 +294,7 @@ PythonAnywhereのようなサーバは、（CSSファイルのような）「静
 もし仮想環境（virtualenv）が有効になっていなければ有効化するところから始めましょう (PythonAnywhereではこれを行うために@<tt>{workon}というコマンドを使用します。これはあなたが自身のコンピュータで使用している@<tt>{source myenv/bin/activate}コマンドと同じようなものです) 。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ workon <your-pythonanywhere-username>.pythonanywhere.com
 (ola.pythonanywhere.com)$ python manage.py collectstatic
 [...]
@@ -349,4 +310,3 @@ $ workon <your-pythonanywhere-username>.pythonanywhere.com
 
 
 うまくいってるはずです！おめでとう :)
-

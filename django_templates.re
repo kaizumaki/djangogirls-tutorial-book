@@ -25,11 +25,7 @@ HTML中で本当はPythonのコードを書くことはできません。なぜ�
 Djangoテンプレートで変数を表示するためには、次のように変数の名前を二重中括弧で括ります。
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 {{ posts }}
 //}
 
@@ -38,7 +34,7 @@ Djangoテンプレートで変数を表示するためには、次のように�
 
 
 
-//image[step1-2][図 13.1]{
+//image[step1-2][]{
 //}
 
 
@@ -47,11 +43,7 @@ Djangoテンプレートで変数を表示するためには、次のように�
 見たとおり、このようになります。
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <QuerySet [<Post: My second post>, <Post: My first post>]>
 //}
 
@@ -59,11 +51,7 @@ Djangoテンプレートで変数を表示するためには、次のように�
 Djangoはposts変数をオブジェクトのリストと認識します。 @<strong>{Python入門}でどうやってリストを表示できたか覚えていますか？ ループを使ってリストを表示しましたよね。 Djangoテンプレートではこう書きます：
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 {% for post in posts %}
     {{ post }}
 {% endfor %}
@@ -74,7 +62,7 @@ Djangoはposts変数をオブジェクトのリストと認識します。 @<str
 
 
 
-//image[step2-2][図 13.2]{
+//image[step2-2][]{
 //}
 
 
@@ -83,11 +71,7 @@ Djangoはposts変数をオブジェクトのリストと認識します。 @<str
 動きましたね。 しかし、本当は@<strong>{HTML入門}で作った静的な記事のように表示してほしいところです。 そこで、HTMLとテンプレートタグを混ぜてみましょう。 @<tt>{body} タグの中を次のように書いてください：
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <div>
     <h1><a href="/">Django Girls Blog</a></h1>
 </div>
@@ -106,7 +90,7 @@ Djangoはposts変数をオブジェクトのリストと認識します。 @<str
 
 
 
-//image[step3-2][図 13.3]{
+//image[step3-2][]{
 //}
 
 
@@ -123,11 +107,7 @@ post変数がさっきと違って、@<tt>{{{ post.title \}\}} や @<tt>{{{ post
  * まず、GithubにあなたのコードをPushしましょう
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git status
 [...]
 $ git add --all .
@@ -137,18 +117,16 @@ $ git commit -m "Modified templates to display posts from database."
 [...]
 $ git push
 //}
+
  * そしたら、@<href>{https://www.pythonanywhere.com/consoles/,PythonAnywhere}に戻って、@<strong>{Bashコンソール}（か、新しいコンソール）に入って、次のようにコマンドを打ちましょう：
 
 
-
-{% filename %}PythonAnywhere command-line{% endfilename %}
-
-
-//emlist{
+//emlist[PythonAnywhere command-line]{
 $ cd $USER.pythonanywhere.com
 $ git pull
 [...]
 //}
+
  * 最後に@<href>{https://www.pythonanywhere.com/web_app_setup/,「Web」ページ}を開いてアプリを@<strong>{リロード}します。 （コンソールから他のPythonAnywhereページにアクセスするには、右上のメニューボタンを使います。）更新された内容がhttps://yourname.pythonanywhere.comに公開されているはずです。ブラウザで確認しましょう！ PythonAnywhereサイトで表示されるブログの記事が、あなたのパソコンの中のローカルサーバーのものと違っていても大丈夫です。 ローカルコンピュータにあるデータベースと、PythonAnywhere上のデータベースは同期していません。
 
 
@@ -161,7 +139,5 @@ $ git pull
 
 
 
-//image[donut][図 13.4]{
+//image[donut][]{
 //}
-
-

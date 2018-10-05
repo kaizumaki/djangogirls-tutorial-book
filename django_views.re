@@ -19,11 +19,7 @@
 では、早速 blog/views.py をコードエディタで開いてみましょう：
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 from django.shortcuts import render
 
 # Create your views here.
@@ -41,11 +37,7 @@ from django.shortcuts import render
 それでは、次のようなちょっとした @<b>{ビュー} を作ってみましょう。
 
 
-
-{% filename %}blog/views.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/views.py][python]{
 def post_list(request):
     return render(request, 'blog/post_list.html', {})
 //}
@@ -63,7 +55,7 @@ def post_list(request):
 
 
 
-//image[error][エラー]{
+//image[error][]{
 //}
 
 

@@ -22,7 +22,7 @@
 これら3つの場所が重要になります。 ローカルコンピューターは、開発およびテストを行う場所になります。 変更に満足したら、GitHub上にプログラムのコピーを配置します。 あなたのウェブサイトはPythonAnywhereで公開され、GitHub からコードの新しいコピーを取得することによって更新されます。
 
 
-= Git
+== Git
 
 //quote{
 @<strong>{注：}もし、すでにインストールしていた場合は再度行う必要はありません。次のセクションに進んであなたのGitリポジトリを作り始められます。
@@ -33,30 +33,29 @@
 Gitはたくさんのプログラマが利用する「バージョン管理システム」です。 このソフトウェアは、特定のバージョンを後で呼び出すことができるように、時間の経過とともにファイルへの変更を追跡することができます。 Microsoft Wordの”トラックの変更（track changes)"のようですが、はるかに強力です。
 
 
-== Gitのインストール
+=== Gitのインストール
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Installing Git: Windows" data-id="git_install_windows"
-data-collapse=true ces-->
-//}
+
+//panelsection[Installing Git: Windows]{
 
 
 @<href>{https://git-scm.com/,git-scm.com} からGitをダウンロードすることができます。 1つのステップを除いて「次へ」を押して進んで大丈夫です。「PATH環境を調整する(Adjusting your PATH environment)」というステップでは、「WindowsコマンドプロンプトからGitとオプションのUnixツールを使用する(Use Git and optional Unix tools from the Windows Command Prompt)」（一番下の選択肢）を選択します。 それ以外はデフォルトの設定値で構いません。 改行コードの変換(Configuring the line ending conversions)については、「Checkout Windows-style, commit Unix-style line endings」の選択で大丈夫です。
 
 
 
-インストールが正常に終了した後、コマンドプロンプトまたはPowerShellを再起動することを忘れないでください。<!--endsec-->
+インストールが正常に終了した後、コマンドプロンプトまたはPowerShellを再起動することを忘れないでください。
 
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Installing Git: OS X" data-id="git_install_OSX"
-data-collapse=true ces-->
 //}
 
 
+//panelsection[Installing Git: OS X]{
+
+
 @<href>{https://git-scm.com/,git-scm.com} からGitをダウンロードし、指示に従ってください。
+
+
+//}
 
 
 //quote{
@@ -64,69 +63,35 @@ data-collapse=true ces-->
 
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Installing Git: Debian or Ubuntu" data-id="git_install_debian_ubuntu"
-data-collapse=true ces-->
-//}
+//codepanelsection[Installing Git: Debian or Ubuntu]{
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist[][bash]{
 $ sudo apt install git
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Installing Git: Fedora" data-id="git_install_fedora"
-data-collapse=true ces-->
 //}
 
 
-{% filename %}command-line{% endfilename %}
+//codepanelsection[Installing Git: Fedora]{
 
 
-//emlist[][bash]{
 $ sudo dnf install git
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Installing Git: openSUSE" data-id="git_install_openSUSE"
-data-collapse=true ces-->
 //}
 
 
-{% filename %}command-line{% endfilename %}
+//codepanelsection[Installing Git: openSUSE]{
 
 
-//emlist[][bash]{
 $ sudo zypper install git
+
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
-== Gitリポジトリを始める
+=== Gitリポジトリを始める
 
 
 Gitはコードリポジトリ（または略して「リポジトリ」）というものの中に置かれる特定のファイルへの変更を追跡します。 私たちのプロジェクトを開始しましょう。 あなたのコンソールを開き、@<tt>{djangogirls} ディレクトリでこれらのコマンドを実行します。
@@ -138,10 +103,7 @@ Gitはコードリポジトリ（または略して「リポジトリ」）と�
 //}
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git init
 Initialized empty Git repository in ~/djangogirls/.git/
 $ git config --global user.name "Your Name"
@@ -156,11 +118,7 @@ gitリポジトリを初期化することは、プロジェクトごとに1回�
 Git はこのディレクトリ内のすべてのファイルとフォルダの変更を追跡しますが、無視してほしいいくつかのファイルがあります。 ベースディレクトリ内で @<tt>{.gitignore} という名前のファイルを作成することによってこれを行います。 あなたのエディターを開き、次の内容で新しいファイルを作成します。
 
 
-
-{% filename %}.gitignore{% endfilename %}
-
-
-//emlist{
+//emlist[.gitignore]{
 *.pyc
 *~
 __pycache__
@@ -187,11 +145,7 @@ db.sqlite3
 @<tt>{git add} コマンドを実行する前や、どのような変更を加えたか定かでない時は、 @<tt>{git status} コマンドを使用する事をおすすめします。 これは間違ったファイルを追加またはコミットなど思いもかけない事を止めるために役立ちます。 @<tt>{git status} コマンドは、あらゆる追跡されていない/変更されている/ステージされている（untracked/modifed/staged）ファイルや、ブランチの状態などさまざまな情報を返します。 出力は次のようになります。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git status
 On branch master
 
@@ -213,11 +167,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 最後に、変更内容を保存します。コンソールに移動し、これらのコマンドを実行します。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git add --all .
 $ git commit -m "My Django Girls app, first commit"
  [...]
@@ -227,7 +177,8 @@ $ git commit -m "My Django Girls app, first commit"
  create mode 100644 mysite/wsgi.py
 //}
 
-== GitHubにコードをプッシュする
+
+=== GitHubにコードをプッシュする
 
 
 @<href>{https://www.github.com, GitHub.com }にアクセスし、新しい無料のユーザーアカウントを登録します。 （もしあなたがすでにワークショップの準備でそれをしていたら、それは素晴らしいことです！）
@@ -266,11 +217,7 @@ $ git commit -m "My Django Girls app, first commit"
 コンソールに次のように入力します（@<tt>{<your-github-username>}をGitHubアカウントの作成時に入力したユーザー名に置き換えます。山カッコ&lt;&gt;を残さないでください。このURLはさっき見たクローンURLと一致する必要があります）。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git remote add origin https://github.com/<your-github-username>/my-first-blog.git
 $ git push -u origin master
 //}
@@ -279,11 +226,7 @@ $ git push -u origin master
 あなたのGitHubのユーザー名とパスワードを入力すると、次のように表示されます：
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 Username for 'https://github.com': ola
 Password for 'https://ola@github.com':
 Counting objects: 6, done.
@@ -295,18 +238,13 @@ To https://github.com/ola/my-first-blog.git
 Branch master set up to track remote branch master from origin.
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--TODO: maybe do ssh keys installs in install party, and point ppl who dont have it to an extension -->
-//}
-
 
 あなたのコードは今GitHub上にあります。 見に行きましょう！ @<href>{https://github.com/django/django, Django }や@<href>{https://github.com/DjangoGirls/tutorial, Django Girls Tutorial }、その他たくさんの素晴らしいオープンソースソフトウェアプロジェクトもGitHubでコードをホストしています。 :)
 
 
-= PythonAnywhereでブログを設定する
+== PythonAnywhereでブログを設定する
 
-== PythonAnywhere アカウントにサインアップする
+=== PythonAnywhere アカウントにサインアップする
 
 //quote{
 @<strong>{備考：}あなたがすでにPythonAnywhereのアカウントを以前に作成しインストールの手順をふんでいたら、再びそれを行う必要はありません。
@@ -324,36 +262,36 @@ PythonAnywhere で「Beginner」アカウントにサインアップしましょ
 
 
 
-//image[pythonanywhere_beginner_account_button][PythonAnywhere サインアップページが表示する無料の「Beginner」アカウント作成ボタン]{
+//image[pythonanywhere_beginner_account_button][]{
 //}
 
 
 
 //quote{
-@<strong>{注} ユーザー名を選ぶとき、あなたのブログのURLが@<tt>{あなたのユーザー名.pythonanywhere.com}になることを覚えておいて下さい。ですから、自分のニックネームかあなたのブログが何についてのブログか分かるような名前を選んでみて下さい。
+@<strong>{注：} ユーザー名を選ぶとき、あなたのブログのURLが@<tt>{あなたのユーザー名.pythonanywhere.com}になることを覚えておいて下さい。ですから、自分のニックネームかあなたのブログが何についてのブログか分かるような名前を選んでみて下さい。
 
 //}
 
-== PythonAnywhere APIトークンの作成
+=== PythonAnywhere APIトークンの作成
 
 
 これはあなたが一度だけ行う必要があるものです。 PythonAnywhere にサインアップしたとき、ダッシュボードページが表示されます。 右上にある「Account」ページへのリンクをクリックし、それから「API Token」タブを選択し、「Create new API token」ボタンをクリックします。
 
 
 
-//image[pythonanywhere_create_api_token][アカウントページのAPIトークンタブ]{
+//image[pythonanywhere_create_api_token][]{
 //}
 
 
 
-== PythonAnywhere でサイトを設定する
+=== PythonAnywhere でサイトを設定する
 
 
 ロゴをクリックしてメインの@<href>{https://www.pythonanywhere.com/,PythonAnywhere Dashboard}に戻り、「Bash」コンソールを起動するボタンをクリックします。これはPythonAnywhereバージョンのコマンドラインで、ちょうどあなたのコンピューターのコマンドラインと同じようなものです。
 
 
 
-//image[pythonanywhere_bash_console][PythonAnywhereのウェブインターフェースの「New Console」、「bash」ボタン]{
+//image[pythonanywhere_bash_console][]{
 //}
 
 
@@ -367,11 +305,7 @@ PythonAnywhere で「Beginner」アカウントにサインアップしましょ
 PythonAnywhereにWebアプリケーションをデプロイするには、コードをGitHubからプルし、PythonAnywhereがそれを認識してWebアプリケーションのサーバを動かし始めるように設定する必要があります。 それを手動で行う方法もありますが、PythonAnywhereはそれをすべて行うヘルパーツールを提供しています。 まず、インストールしてみましょう。
 
 
-
-{% filename %}PythonAnywhere command-line{% endfilename %}
-
-
-//emlist{
+//emlist[PythonAnywhere command-line]{
 $ pip3.6 install --user pythonanywhere
 //}
 
@@ -383,11 +317,7 @@ $ pip3.6 install --user pythonanywhere
 GitHub からアプリを自動的に構成するためのヘルパーを実行します。 PythonAnywhereのコンソールに次のように入力します（GitHubからクローンしたときのURLと一致するように、@<tt>{<your-github-username>}の代わりにGitHubユーザー名を使用することを忘れないでください）：
 
 
-
-{% filename %}PythonAnywhere command-line{% endfilename %}
-
-
-//emlist{
+//emlist[PythonAnywhere command-line]{
 $ pa_autoconfigure_django.py https://github.com/<your-github-username>/my-first-blog.git
 //}
 
@@ -410,11 +340,7 @@ PythonAnywhereではこれらすべてのステップは自動化されていま
 その結果、自分のコンピュータで行ったように、@<tt>{createsuperuser}で管理者アカウントを初期化する必要があります。 PythonAnywhereがあなたのためにあなたのvirtualenvを自動的に起動したので、あなたがする必要があるのは以下の通りです：
 
 
-
-{% filename %}PythonAnywhere command-line{% endfilename %}
-
-
-//emlist{
+//emlist[PythonAnywhere command-line]{
 (ola.pythonanywhere.com) $ python manage.py createsuperuser
 //}
 
@@ -426,11 +352,7 @@ PythonAnywhereではこれらすべてのステップは自動化されていま
 PythonAnywhereのコードを@<tt>{ls}を使って見てみることもできます：
 
 
-
-{% filename %}PythonAnywhere command-line{% endfilename %}
-
-
-//emlist{
+//emlist[PythonAnywhere command-line]{
 (ola.pythonanywhere.com) $ ls
 blog db.sqlite3 manage.py mysite requirements.txt static
 (ola.pythonanywhere.com) $ ls blog/
@@ -475,7 +397,7 @@ templates tests.py urls.py views.py
 つまづいた時は、コーチに助けを求めましょう。
 
 
-= あなたのサイトをチェック！
+== あなたのサイトをチェック！
 
 
 サイトのデフォルトページでは、ローカルコンピュータと同じように「It worked！」と表示されます。 URLの最後に@<tt>{/admin/}を追加すると、管理サイトに移動します。 ユーザー名とパスワードでログインすると、新しい投稿をサーバーに追加することができます。
@@ -487,4 +409,3 @@ templates tests.py urls.py views.py
 
 
 自分を@<b>{すっごく}褒めてあげてください！ サーバーのデプロイはWeb開発の最も難しい部分の1つで、ちゃんと動くようになるまで数日かかることもよくあります。 しかし、あなたは実際のインターネット上で、あなたのサイトを動かす事ができました！
-

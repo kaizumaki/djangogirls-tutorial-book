@@ -31,11 +31,7 @@ blog
 それからコードエディタで開いて、以下のように@<tt>{post_list.html}から@<tt>{base.html}ファイルにすべてコピーしましょう。
 
 
-
-{% filename %}blog/templates/blog/base.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/base.html][html]{
 {% load static %}
 <html>
     <head>
@@ -73,11 +69,7 @@ blog
 それから@<tt>{base.html}内の@<tt>{<body>}全体(@<tt>{<body>}と@<tt>{</body>}の間のすべて)を次で置き換えます。
 
 
-
-{% filename %}blog/templates/blog/base.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/base.html][html]{
 <body>
     <div class="page-header">
         <h1><a href="/">Django Girls Blog</a></h1>
@@ -97,11 +89,7 @@ blog
 {% raw %}@<tt>{{% for post in posts %\}} から @<tt>{{% endfor %\}} が以下のように置き換えられたことに気づいたでしょうか。 {% endraw %}
 
 
-
-{% filename %}blog/templates/blog/base.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/base.html][html]{
 {% block content %}
 {% endblock %}
 //}
@@ -114,11 +102,7 @@ blog
 @<tt>{base.html}を保存し、もう一度@<tt>{blog/templates/blog/post_list.html}をコードエディタで開きます。 {% raw %} @<tt>{{% for post in posts %\}} の上と @<tt>{{% endfor %\}} の下すべてを削除しましょう。 それが終わったら以下のようになっていると思います。{% endraw %}
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 {% for post in posts %}
     <div class="post">
         <div class="date">
@@ -138,11 +122,7 @@ blog
 {% raw %}追加するblockタグは @<tt>{base.html} ファイル中のタグにマッチしてほしいですよね。 また、blockタグにはcontentブロックに属するすべてのコードを含めたいですよね。 そうするには、すべてを @<tt>{{% block content %\}} と @<tt>{{% endblock %\}} の間に入れてあげればよいです。 このように:{% endraw %}
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 {% block content %}
     {% for post in posts %}
         <div class="post">
@@ -160,11 +140,7 @@ blog
 あとやることは一つだけです。これら二つのテンプレートをくっつけてあげる必要があります。これがテンプレートを拡張するということのすべてです！そうするにはこのファイルの先頭にextendsタグを追加します。次のように：
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 {% extends 'blog/base.html' %}
 
 {% block content %}

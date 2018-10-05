@@ -98,20 +98,21 @@ Djangoのモデルは特別なオブジェクトで、@<tt>{データベース} 
 全部をきちんと整理しておくため、プロジェクトの中に別のアプリケーションを作ります。 初めから全てを整理しておくのはとっても良いことです。 アプリケーションを作るために、次のコマンドをコンソールの中で走らせましょう。（@<tt>{manage.py} ファイルがある @<tt>{djangogirls} ディレクトリでコマンドをタイプしてくださいね）
 
 
+//codepanelsection[Mac OS X and Linux:]{
 
-{% filename %}Mac OS X and Linux:{% endfilename %}
 
-
-//emlist{
 (myvenv) ~/djangogirls$ python manage.py startapp blog
+
+
 //}
 
 
-{% filename %}Windows:{% endfilename %}
+//codepanelsection[Windows:]{
 
 
-//emlist{
 (myvenv) C:\Users\Name\djangogirls> python manage.py startapp blog
+
+
 //}
 
 
@@ -143,11 +144,7 @@ djangogirls
 アプリケーションを作ったら、Djangoにそれを使うように伝えないといけません。 それは @<tt>{mysite/settings.py} でします。エディタでこれを開いてください。 まず @<tt>{INSTALLED_APPS} を見つけて @<tt>{]} の上に @<tt>{'blog'} という一行を追加します。 そうすると、最終的には以下のようになりますね。
 
 
-
-{% filename %}mysite/settings.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[mysite/settings.py][python]{
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -169,11 +166,7 @@ INSTALLED_APPS = [
 @<tt>{blog/models.py} をエディタで開いて全部削除し、下のコードを書きましょう。
 
 
-
-{% filename %}blog/models.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/models.py][python]{
 from django.db import models
 from django.utils import timezone
 
@@ -251,11 +244,7 @@ class Post(models.Model):
 最後のステップは新しいモデルをデータベースに追加することです。 まず、モデルに少し変更があったこと（今作ったこと）をDjangoに知らせましょう。 コンソールで @<tt>{python manage.py makemigrations blog} とタイプします。 こんな感じですね。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 (myvenv) ~/djangogirls$ python manage.py makemigrations blog
 Migrations for 'blog':
   blog/migrations/0001_initial.py:
@@ -271,11 +260,7 @@ Migrations for 'blog':
 Djangoが作ってくれた移行ファイルを私たちがデータベースに追加すれば完了です。@<tt>{python manage.py migrate blog} とタイプするとこうなるでしょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 (myvenv) ~/djangogirls$ python manage.py migrate blog
 Operations to perform:
   Apply all migrations: blog
@@ -285,4 +270,3 @@ Running migrations:
 
 
 やった～！ポストモデルがデータベースに入りました。どうなったか見たいでしょ？次へ進みましょう！
-

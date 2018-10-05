@@ -57,7 +57,7 @@ blog
 //}
 
 
-//image[step1][図 11.1]{
+//image[step1][]{
 //}
 
 
@@ -70,11 +70,7 @@ blog
 この新しく作ったファイルをコードエディタで開いて、次の内容を書き加えます。
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <html>
 <body>
     <p>Hi there!</p>
@@ -88,7 +84,7 @@ blog
 
 
 
-//image[step3][図 11.2]{
+//image[step3][]{
 //}
 
 
@@ -117,11 +113,7 @@ blog
 例えば、ウェブページのタイトル要素は@<tt>{<head>}の中に書きます。こんな感じですね。
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <html>
     <head>
         <title>Ola's blog</title>
@@ -138,7 +130,7 @@ blog
 
 
 
-//image[step4][図 11.3]{
+//image[step4][]{
 //}
 
 
@@ -180,11 +172,7 @@ blog
 いろんな要素をまとめたテンプレートの例がこれです。コピーして@<tt>{blog/templates/blog/post_list.html}に貼り付けてみましょう:
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <html>
     <head>
         <title>Django Girls blog</title>
@@ -221,7 +209,7 @@ blog
 
 
 
-//image[step6][図 11.4]{
+//image[step6][]{
 //}
 
 
@@ -246,11 +234,7 @@ blog
 まずは、最後に実行したときから、どのファイルを変更したか見てみましょう(以下のコマンドを、PythonAnywhereではなく、自分のパソコンで実行してください。)。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git status
 //}
 
@@ -258,11 +242,7 @@ $ git status
 @<tt>{djangogirls} ディレクトリにいることを確認して、 @<tt>{git} に対してこのディレクトリ内の変更を全て反映させるよう指示してください:
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git add --all .
 //}
 
@@ -275,11 +255,7 @@ $ git add --all .
 全てのファイルをアップロードする前に、@<tt>{git}が何をアップロードするのかチェックしておきましょう(@<tt>{git}がアップロードする全ファイルは緑で表示されます):
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git status
 //}
 
@@ -287,11 +263,7 @@ $ git status
 ほぼ完了です。どこを変更したかを履歴に保存するよう指示してみましょう。 何を変更したのか説明するコミットメッセージを残しましょう。 この時、どんな内容を好みで打ち込んでも構いませんが、何をしたかを具体的に書き込んでおけば、将来、作業内容を思い出す助けになるでしょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git commit -m "Changed the HTML for the site."
 //}
 
@@ -304,11 +276,7 @@ $ git commit -m "Changed the HTML for the site."
 ここまで終われば、GitHubに変更部分をアップロード(push) しましょう。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ git push
 //}
 
@@ -316,11 +284,7 @@ $ git push
  * @<href>{https://www.pythonanywhere.com/consoles/,PythonAnywhereのコンソールページ}を開き、@<strong>{Bash コンソール}に移動してください (または新たなBash コンソールを開始してください)。それから次を実行してください。
 
 
-
-{% filename %}PythonAnywhere command-line{% endfilename %}
-
-
-//emlist{
+//emlist[PythonAnywhere command-line]{
 $ cd ~/<your-pythonanywhere-username>.pythonanywhere.com
 $ git pull
 [...]
@@ -338,4 +302,3 @@ $ git pull
 
 
 あなたのアプリが更新され、動いています！ウェブサイトを開いて、再読込してみましょう。どう変わったのか、見えるはずです。:)
-

@@ -2,7 +2,7 @@
 = CSSでカワイくしよう!
 
 
-ブログは作ったものの、まだなんかダサいですよね。かわいくしましょう！　そのためにはCSSを使います。
+ブログは作ったものの、まだなんかダサいですよね。かわいくしましょう！そのためにはCSSを使います。
 
 
 == CSSとは？
@@ -31,11 +31,7 @@ Bootstrap は美しいWebサイトを開発するためのHTMLとCSSのフレー
 Bootstrap をインストールするため、@<tt>{.html} ファイル (blog/templates/blog/post_list.html) をコードエディタで開き @<tt>{<head>} の中にこれを追加しましょう:
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 //}
@@ -45,7 +41,7 @@ Bootstrap をインストールするため、@<tt>{.html} ファイル (blog/te
 
 
 
-//image[bootstrap1][図 14.1]{
+//image[bootstrap1][]{
 //}
 
 
@@ -113,11 +109,7 @@ djangogirls
 @<tt>{blog/static/css/blog.css} ファイルに、次のコードを追加しましょう。
 
 
-
-{% filename %}blog/static/css/blog.css{% endfilename %}
-
-
-//emlist[][css]{
+//emlist[blog/static/css/blog.css][css]{
 h1 a {
     color: #FCA205;
 }
@@ -143,11 +135,7 @@ CSSセレクタについては@<href>{http://www.w3schools.com/cssref/css_select
 さて、CSSを追加したことをHTMLテンプレートに教えないといけません。@<tt>{blog/templates/blog/post_list.html} を開いて、先頭にこの行を追加しましょう：
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 {% load static %}
 //}
 
@@ -155,11 +143,7 @@ CSSセレクタについては@<href>{http://www.w3schools.com/cssref/css_select
 これで、このテンプレートに静的ファイルを読み込むことができました^^。そして、@<tt>{<head>} と @<tt>{</head>} の中にあるBootstrap CSSファイルのリンクの下に、この行を追加しましょう：
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 //}
 
@@ -171,11 +155,7 @@ CSSセレクタについては@<href>{http://www.w3schools.com/cssref/css_select
 ファイルは次のようになっているはずです：
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 {% load static %}
 <html>
     <head>
@@ -205,7 +185,7 @@ CSSセレクタについては@<href>{http://www.w3schools.com/cssref/css_select
 
 
 
-//image[color2][図 14.2]{
+//image[color2][]{
 //}
 
 
@@ -214,11 +194,7 @@ CSSセレクタについては@<href>{http://www.w3schools.com/cssref/css_select
 素晴らしいですね！あとは、左サイドの余白幅を少し広げて、余裕を持たせてあげたらもっと良くなると思いませんか？やってみましょう！
 
 
-
-{% filename %}blog/static/css/blog.css{% endfilename %}
-
-
-//emlist[][css]{
+//emlist[blog/static/css/blog.css][css]{
 body {
     padding-left: 15px;
 }
@@ -229,7 +205,7 @@ body {
 
 
 
-//image[margin2][図 14.3]{
+//image[margin2][]{
 //}
 
 
@@ -238,11 +214,7 @@ body {
 ヘッダーのフォントを変えてみませんか？ファイル @<tt>{blog/templates/blog/post_list.html} の @<tt>{<head>} タグの中に次の一行を貼り付けましょう。
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 //}
 
@@ -254,11 +226,7 @@ body {
 @<tt>{blog/static/css/blog.css} ファイルの中の、 @<tt>{h1 a} という宣言ブロックを見つけてください（コードは @<tt>{{} と @<tt>{\}} で囲まれています）。 そして、そのカッコの中に @<tt>{font-family: 'Lobster';} と１行追加して、webサイトを更新してみましょう：
 
 
-
-{% filename %}blog/static/css/blog.css{% endfilename %}
-
-
-//emlist[][css]{
+//emlist[blog/static/css/blog.css][css]{
 h1 a {
     color: #FCA205;
     font-family: 'Lobster';
@@ -266,7 +234,7 @@ h1 a {
 //}
 
 
-//image[font][図 14.3]{
+//image[font][]{
 //}
 
 
@@ -283,11 +251,7 @@ h1 a {
 先に進んで、HTMLコードの一部に名前をつけましょう。ヘッダーを含む@<tt>{div} 要素に、@<tt>{page-header} というクラス名をつけましょう：
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <div class="page-header">
     <h1><a href="/">Django Girls Blog</a></h1>
 </div>
@@ -297,11 +261,7 @@ h1 a {
 さらにブログ投稿を含む @<tt>{div} 要素に @<tt>{post} というクラス名をつけましょう。
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <div class="post">
     <p>published: {{ post.published_date }}</p>
     <h1><a href="">{{ post.title }}</a></h1>
@@ -313,11 +273,7 @@ h1 a {
 そして、さまざまなセレクタに宣言ブロックを追加します。 @<tt>{.} で始まるセレクタはクラスに関連します。 Web上にはCSSに関する多くのチュートリアルがあり、それらは以下に示すコードを理解する手助けになるはずです。 今のところは、@<tt>{blog/static/css/blog.css} のファイルに以下の内容をコピー＆ペーストしましょう：
 
 
-
-{% filename %}blog/static/css/blog.css{% endfilename %}
-
-
-//emlist[][css]{
+//emlist[blog/static/css/blog.css][css]{
 .page-header {
     background-color: #ff9400;
     margin-top: 0;
@@ -370,11 +326,7 @@ h1, h2, h3, h4 {
 では、投稿を表示しているHTMLコードをクラス宣言で囲みましょう。 @<tt>{blog/templates/blog/post_list.html} 中のこの部分を
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 {% for post in posts %}
     <div class="post">
         <p>published: {{ post.published_date }}</p>
@@ -388,11 +340,7 @@ h1, h2, h3, h4 {
 これで置き換えて下さい：
 
 
-
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
-
-
-//emlist[][html]{
+//emlist[blog/templates/blog/post_list.html][html]{
 <div class="content container">
     <div class="row">
         <div class="col-md-8">
@@ -415,7 +363,7 @@ h1, h2, h3, h4 {
 
 
 
-//image[final][図 14.4]{
+//image[final][]{
 //}
 
 

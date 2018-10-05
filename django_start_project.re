@@ -27,24 +27,24 @@ virtualenv（仮想環境）を実行しているでしょうか。 もしコン
 
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Create project: OS X or Linux" data-id="django_start_project_OSX_Linux" data-collapse=true ces-->
-//}
+
+//panelsection[Create project: OS X or Linux]{
 
 
 MacOS や Linux の場合は、コンソールで以下のコマンドを実行します。最後のピリオド(ドット) @<tt>{.} を忘れないようにしてください！
 
 
+//}
 
-{% filename %}コマンドライン{% endfilename %}
 
-
-//emlist{
+//cmd{
 (myvenv) ~/djangogirls$ django-admin startproject mysite .
 //}
 
-//quote{
+
+//panelsection[]{
+
+
 コマンドの最後にピリオド @<tt>{.} を入力したことを確認してくださいね。このピリオドは、現在の作業ディレクトリに Django をインストールするということを示しています (ピリオド @<tt>{.} は、現在のディレクトリを表す省略表記です)。
 
 
@@ -53,40 +53,28 @@ MacOS や Linux の場合は、コンソールで以下のコマンドを実行�
 
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Create project: Windows" data-id="django_start_project_windows" data-collapse=true ces-->
-//}
+//panelsection[Create project: Windows]{
 
 
 Windows の場合は、以下のコマンドを実行しないといけません。(最後にピリオド (ドット) @<tt>{.\} を書いてください)
 
 
+//}
 
-{% filename %}コマンドライン{% endfilename %}
 
-
-//emlist{
+//cmd{
 (myvenv) C:\Users\Name\djangogirls> django-admin.exe startproject mysite .
 //}
 
-//quote{
+
+//panelsection[]{
 コマンドの最後にピリオド (.) があることを確認してくださいね。これば、現在の作業ディレクトリにDjangoをインストールするということを示すので、とても重要なのです。(ピリオドは簡略表記です).
 
 
 
 @<strong>{メモ:} 上記のコマンドを入力するときは、@<tt>{django-admin} で始まる部分のみを入力することを忘れないでください。 ここに書いた @<tt>{(myvenv) ~/djangogirls$} の部分は、コマンドライン上で入力を受け付けることを示しているプロンプトの一例なので、人によって違うかもしれません。
 
-//}
-
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
 //}
 
 
@@ -143,11 +131,7 @@ djangogirls
 @<tt>{settings.py} の中から @<tt>{TIME_ZONE} と書かれた行を探してください。この行はタイムゾーンを表しているので、自分が住んでいるタイムゾーンに合わせて修正しましょう。たとえば、次のように書きます。
 
 
-
-{% filename %}mysite/settings.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[mysite/settings.py][python]{
 TIME_ZONE = 'Asia/Tokyo'
 //}
 
@@ -159,11 +143,7 @@ TIME_ZONE = 'Asia/Tokyo'
 別の言語を使用する場合は、次の行を変更して言語コードを変更します。
 
 
-
-{% filename %}mysite/settings.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[mysite/settings.py][python]{
 LANGUAGE_CODE = 'ja'
 //}
 
@@ -171,11 +151,7 @@ LANGUAGE_CODE = 'ja'
 静的ファイルのパスも追加する必要があります。 （静的ファイルとCSSについては、後ほどチュートリアルで説明します）。ファイルの@<b>{一番下}に移動し、@<tt>{STATIC_URL}の下に @<tt>{STATIC_ROOT}を追加します。：
 
 
-
-{% filename %}mysite/settings.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[mysite/settings.py][python]{
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 //}
@@ -184,11 +160,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 @<tt>{DEBUG} が @<tt>{True} に設定されていて、@<tt>{ALLOWED_HOSTS} が空のリストの時は、自動的に @<tt>{['localhost', '127.0.0.1', '[::1]']} という3つのホストに対してチェックが行われます。 このままの設定では、これから私たちがデプロイして使う PythonAnywhere のホストネームが含まれていません。ですから、次のように設定を変更します。
 
 
-
-{% filename %}mysite/settings.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[mysite/settings.py][python]{
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 //}
 
@@ -211,11 +183,7 @@ cloud9 のサービスを使っている人は、@<tt>{.c9users.io} も @<tt>{AL
 この設定はすでに @<tt>{mysite/settings.py} ファイルの中に次のように書かれています。
 
 
-
-{% filename %}mysite/settings.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[mysite/settings.py][python]{
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -228,11 +196,7 @@ DATABASES = {
 ブログのデータベースを作成するには、コンソールで次のコードを実行してみましょう： @<tt>{python manage.py migrate} (@<tt>{manage.py}ファイルのある@<tt>{djangogirls}ディレクトリにいる必要があります) 。 うまくいったら次のように表示されるでしょう：
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 (myvenv) ~/djangogirls$ python manage.py migrate
 Operations to perform:
   Apply all migrations: auth, admin, contenttypes, sessions
@@ -262,11 +226,7 @@ Running migrations:
 コマンドラインやコマンドプロンプトで@<tt>{manage.py}ファイルを含むディレクトリ（@<tt>{djangogirls}ディレクトリ）に移動してください。 @<tt>{python manage.py runserver}を実行してWebサーバーを起動できます。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 (myvenv) ~/djangogirls$ python manage.py runserver
 //}
 
@@ -274,11 +234,7 @@ Running migrations:
 Chromebookを使用している場合は、代わりに次のコマンドを使用します。
 
 
-
-{% filename %}Cloud 9{% endfilename %}
-
-
-//emlist{
+//emlist[Cloud 9]{
 (myvenv) ~/djangogirls$ python manage.py runserver 0.0.0.0:8080
 //}
 
@@ -286,11 +242,7 @@ Chromebookを使用している場合は、代わりに次のコマンドを使�
 Windows上で、@<tt>{UnicodeDecodeError}で失敗した場合は、代わりに次のコマンドを使用します。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 (myvenv) ~/djangogirls$ python manage.py runserver 0:8000
 //}
 
@@ -298,11 +250,7 @@ Windows上で、@<tt>{UnicodeDecodeError}で失敗した場合は、代わりに
 これであなたのウェブサイトが稼働していることを確認するだけです。 ブラウザ（Firefox、Chrome、Safari、Internet Explorerなど）を開き、次のアドレスを入力します。
 
 
-
-{% filename %}ブラウザ{% endfilename %}
-
-
-//emlist{
+//emlist[ブラウザ]{
 http://127.0.0.1:8000/
 //}
 
@@ -310,11 +258,7 @@ http://127.0.0.1:8000/
 Chromebookを使用している場合は、次のURLからテストサーバーにアクセスします。
 
 
-
-{% filename %}ブラウザ{% endfilename %}
-
-
-//emlist{
+//emlist[ブラウザ]{
 https://django-girls-<your cloud9 username>.c9users.io
 //}
 
@@ -333,7 +277,7 @@ Webサーバーが稼働している間は、追加のコマンドを入力す�
 
 
 //quote{
-Webサーバーの仕組みについては、「インターネットの仕組み」の章を参照してください。
+Webサーバーの仕組みについては、@<chapref>{how_the_internet_works}の章を参照してください。
 
 //}
 
@@ -343,4 +287,3 @@ Webサーバーの実行中に追加のコマンドを入力するには、新�
 
 
 次のステップに進む準備はできましたか？ 今度は実際にコンテンツを作り始めましょう！
-

@@ -5,7 +5,7 @@
 おめでとうございます。@<strong>{素晴らしいです。}よくやりました！ <3
 
 
-=== 今何をする？
+== 今何をする？
 
 
 休憩してリラックスしてください。 あなたは本当に大きなことを成し遂げました。
@@ -15,7 +15,7 @@
 休んだ後は、@<href>{http://facebook.com/djangogirls,Facebook}や@<href>{https://twitter.com/djangogirls,Twitter}でDjango Girlsをぜひフォローしてくださいね。最新の情報を入手できます。
 
 
-=== さらにオススメの資料はありますか？
+== さらにオススメの資料はありますか？
 
 
 このチュートリアルの拡張版である、@<href>{https://tutorial-extensions.djangogirls.org/,Django Girls Tutorial: Extensions}を試してみてください。

@@ -2,11 +2,11 @@
 = Djangoのインストール
 
 //quote{
-@<strong>{補足：}　Chromebookを使っている方は、このチャプターは飛ばして、 @<href>{../chromebook_setup/README.md,Chromebook Setup} の説明に従ってセットアップしてください。
+@<strong>{補足：} Chromebookを使っている方は、このチャプターは飛ばして、 @<chapref>{chromebook_setup} の説明に従ってセットアップしてください。
 
 
 
-@<strong>{補足：}インストールのチャプターで既にインストール済みの方は、このチャプターは飛ばして次に進みましょう。
+@<strong>{補足：} インストールのチャプターで既にインストール済みの方は、このチャプターは飛ばして次に進みましょう。
 
 
 
@@ -33,7 +33,7 @@ Django をインストールする前に、あなたのコーディング環境�
 
 
 //quote{
-@<strong>{補足：}　Windowsの方は、ディレクトリ名に特殊文字やアクセント記号を含まないよう気をつけてください。もし、ユーザー名が特殊文字を含む場合は、@<tt>{C:\djangogirls} のようなディレクトリを作成してください。
+@<strong>{補足：} Windowsの方は、ディレクトリ名に特殊文字やアクセント記号を含まないよう気をつけてください。もし、ユーザー名が特殊文字を含む場合は、@<tt>{C:\djangogirls} のようなディレクトリを作成してください。
 
 //}
 
@@ -41,11 +41,7 @@ Django をインストールする前に、あなたのコーディング環境�
 このチュートリアルのために、ホームディレクトリに新しいディレクトリ@<tt>{djangogirls}を作成します。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ mkdir djangogirls
 $ cd djangogirls
 //}
@@ -54,138 +50,140 @@ $ cd djangogirls
 @<tt>{myvenv}という仮想環境（virtual environment）を作成します。一般的なコマンドは以下のようになります：
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 $ python3 -m venv myvenv
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Virtual environment: Windows" data-id="virtualenv_installation_windows"
-data-collapse=true ces-->
-//}
+
+//panelsection[Virtual environment: Windows]{
 
 
 新しい@<tt>{virtualenv}を作成するために、コマンドプロンプトを開き（コマンドプロンプトについては何章か前にお話ししましたね。覚えてますか？）、@<tt>{python -m venv myvenv}を実行して下さい。たとえばこのように入力します：
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 C:\Users\Name\djangogirls> python -m venv myvenv
 //}
+
+
+//panelsection[]{
 
 
 @<tt>{myvenv} というところが、あなたの@<tt>{virtualenv（仮想環境）} の名前です。 どんな名前でも使うことができますが、必ず小文字で表記し、スペース・アクセント記号・特殊文字は入れないでください。 短い名前にしておくのもいいアイデアですーあなたはこの名前を何度も参照しますから！
 
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Virtual environment: Linux and OS X" data-id="virtualenv_installation_linuxosx"
-data-collapse=true ces-->
-//}
+
+//panelsection[Virtual environment: Linux and OS X]{
 
 
 LinuxやOS Xで@<tt>{virtualenv}を作るときは、@<tt>{python3 -m venv myvenv}と実行するだけです。 たとえばこんな感じです：
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 $ python3 -m venv myvenv
 //}
+
+
+//panelsection[]{
 
 
 @<tt>{myvenv} は、あなたの @<tt>{仮想環境(virtualenvironment)} の名前です。 どんな名前でも使うことができますが、必ず小文字で表記し、スペースは入れないでください。 短い名前にしておくのもいいアイデアですーあなたはこの名前を何度も参照しますから！
 
 
+//}
+
+
 //quote{
-@<strong>{補足：}DebianやUbuntuのバージョンによっては、以下のエラーが出ることがあります。
+@<strong>{補足：} DebianやUbuntuのバージョンによっては、以下のエラーが出ることがあります。
+
+//}
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 The virtual environment was not created successfully because ensurepip is not available.  On Debian/Ubuntu systems, you need to install the python3-venv package using the following command.
    apt install python3-venv
 You may need to use sudo with that command.  After installing the python3-venv package, recreate your virtual environment.
 //}
 
 
-この場合、エラー内の指示にしたがって、@<tt>{python3-venv}のパッケージをインストールしましょう。 {% filename %}command-line{% endfilename %}
+//panelsection[]{
 
 
-//emlist{
+この場合、エラー内の指示にしたがって、@<tt>{python3-venv}のパッケージをインストールしましょう。
+
+
+//}
+
+
+//cmd{
 $ sudo apt install python3-venv
 //}
+
+
+//panelsection[]{
 
 
 @<strong>{補足：}DebianやUbuntuのバージョンによっては、この仮想環境を実行すると、次のようなエラーがでます。
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 Error: Command '['/home/eddie/Slask/tmp/venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1
 //}
+
+
+//panelsection[]{
 
 
 このエラーを回避するために、代わりに@<tt>{virtualenv}コマンドを使います。
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 $ sudo apt install python-virtualenv
 $ virtualenv --python=python3.6 myvenv
 //}
 
 
+//panelsection[]{
+
+
 @<strong>{補足：}もし以下のようなエラーがでたら、
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 E: Unable to locate package python3-venv
 //}
+
+
+//panelsection[]{
 
 
 代わりに次のコマンドを実行してください。
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 sudo apt install python3.6-venv
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
 == 仮想環境の操作
 
@@ -193,80 +191,69 @@ XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
 上に示したコマンドは仮想環境（基本的には一連のディレクトリとファイル）を含む@<tt>{myvenv} という名前（あるいはあなたが選んだ名前）のディレクトリを生成します。次に我々がしたいのは、これを実行し、開始することです。
 
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Working with virtualenv: Windows" data-id="virtualenv_windows"
-data-collapse=true ces-->
-//}
+//panelsection[Working with virtualenv: Windows]{
 
 
 実行して、仮想環境を起動します。
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 C:\Users\Name\djangogirls > myvenv\Scripts\activate
 //}
+
 
 //quote{
 @<strong>{補足：}Windows 10では、@<tt>{execution of scripts is disabled on this system}というエラーがWindows PowerShellに出ることがあります。 その場合は、Windows PowerShellを「管理者として開く」で、管理者権限で新しくウィンドウを開いてください。 そして、仮想環境を開始する前に、以下のコマンドを入力してください。
 
+//}
 
 
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 C:\WINDOWS\system32> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
     Execution Policy Change
     The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic at http://go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy? [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
 //emlist{
 XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
 <!--sec data-title="Working with virtualenv: Linux and OS X" data-id="virtualenv_linuxosx"
 data-collapse=true ces-->
 //}
+//panelsection[Working with virtualenv: Linux and OS X]{
 
 
 実行して、仮想環境を起動します。
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 $ source myvenv/bin/activate
 //}
+
+
+//panelsection[]{
 
 
 @<tt>{myvenv}のところをあながた選んだ@<tt>{仮想環境(virtualenvironment)}名に置き換えることを忘れないで下さいね！
 
 
+//}
+
+
 //quote{
 @<strong>{備考:} @<tt>{source} ではできない場合もあります。その場合は、代わりに以下のように入力してみてください：
 
-
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
-$ . myvenv/bin/activate
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
+
+//cmd{
+$ . myvenv/bin/activate
 //}
 
 
@@ -291,13 +278,10 @@ OK,これでDjangoのインストール前に入れておきたい依存関係�
 これを行う前に、Djangoのインストールに使用する最新バージョンの@<tt>{pip}がインストールされている必要があります。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 (myvenv) ~$ python3 -m pip install --upgrade pip
 //}
+
 
 === Requirementsファイルによってパッケージをインストールする
 
@@ -318,11 +302,7 @@ djangogirls
 @<tt>{djangogirls/requirements.txt} ファイル中に以下のテキストを追加します:
 
 
-
-{% filename %}djangogirls/requirements.txt{% endfilename %}
-
-
-//emlist{
+//emlist[djangogirls/requirements.txt]{
 Django~={{ book.django_version }}
 //}
 
@@ -330,11 +310,7 @@ Django~={{ book.django_version }}
 そして、@<tt>{pip install -r requirements.txt} を実行してDjangoをインストールします。
 
 
-
-{% filename %}command-line{% endfilename %}
-
-
-//emlist{
+//cmd{
 (myvenv) ~$ pip install -r requirements.txt
 Collecting Django~={{ book.django_version }} (from -r requirements.txt (line 1))
   Downloading Django-{{ book.django_version }}-py3-none-any.whl (7.1MB)
@@ -342,61 +318,37 @@ Installing collected packages: Django
 Successfully installed Django-{{ book.django_version }}
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Installing Django: Windows" data-id="django_err_windows"
-data-collapse=true ces-->
-//}
 
-//quote{
+//panelsection[Installing Django: Windows]{
+
+
 Windowsでpipを呼んだときにエラーが起きた場合は、あなたのプロジェクトのパス名がスペース・アクセント・特殊文字を含んでいないか確認してみて下さい （例 @<tt>{C:\Users\User Name\djangogirls}）。 もし含まれている場合は、ディレクトリを他のスペース・アクセント・特殊文字が含まれていない場所（@<tt>{C:\djangogirls}など）で作成することを検討してみてください。 新しいディレクトリに新しい仮想環境を作成してから、古いディレクトリを削除して、上記のコマンドを試してください。 （仮想環境のディレクトリは、絶対パスが使われているので、移動させてもうごきません。）
 
+
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Installing Django: Windows 8 and Windows 10" data-id="django_err_windows8and10"
-data-collapse=true ces-->
-//}
+//panelsection[Installing Django: Windows 8 and Windows 10]{
 
-//quote{
+
 Djangoをインストールしようとしてコマンドラインがフリーズして動かなくなってしまうことがあります。その時は、以下のコマンドを代わりに入力してみてください。
 
 
+//}
 
-{% filename %}command-line{% endfilename %}
 
-
-//emlist{
+//cmd{
 C:\Users\Name\djangogirls> python -m pip install -r requirements.txt
 //}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Installing Django: Linux" data-id="django_err_linux"
-data-collapse=true ces-->
-//}
+//panelsection[Installing Django: Linux]{
 
-//quote{
+
 Ubuntu 12.04でpipを呼んだときにエラーが起きた場合は、仮想環境(virtualenv) 内にpipを再インストールするために@<tt>{python -m pip install -U --force-reinstall pip} を実行して下さい。
 
-//}
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--endsec-->
 //}
 
 
 以上です！あなたは（ついに）Djangoアプリケーションを作成する準備が整いました！
-

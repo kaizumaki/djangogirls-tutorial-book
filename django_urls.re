@@ -12,7 +12,7 @@ URLはWeb上のアドレスです。 サイトのURLは、ブラウザのアド�
 
 
 
-//image[url][URL]{
+//image[url][]{
 //}
 
 
@@ -27,11 +27,7 @@ URLはWeb上のアドレスです。 サイトのURLは、ブラウザのアド�
 @<tt>{mysite/urls.py} を開いて、中身をみてみると：
 
 
-
-{% filename %}mysite/urls.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[mysite/urls.py][python]{
 """mysite URL Configuration
 
 [...]
@@ -56,11 +52,7 @@ urlpatterns = [
 前の章で訪れたadminのURLについてはすでに書いてありますね。
 
 
-
-{% filename %}mysite/urls.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[mysite/urls.py][python]{
     path('admin/', admin.site.urls),
 //}
 
@@ -86,11 +78,7 @@ urlpatterns = [
 @<tt>{mysite/urls.py} ファイルはこのようになります：
 
 
-
-{% filename %}mysite/urls.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[mysite/urls.py][python]{
 from django.urls import path, include
 from django.contrib import admin
 
@@ -110,11 +98,7 @@ urlpatterns = [
 @<tt>{blog} ディレクトリの下に、新しく @<tt>{urls.py} という空のファイルを作って、コードエディタで開いて下さい。そして最初の2行を以下のように書きます：
 
 
-
-{% filename %}blog/urls.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/urls.py][python]{
 from django.urls import path
 from . import views
 //}
@@ -127,11 +111,7 @@ from . import views
 その後、最初のURLパターンを追加します。
 
 
-
-{% filename %}blog/urls.py{% endfilename %}
-
-
-//emlist[][python]{
+//emlist[blog/urls.py][python]{
 urlpatterns = [
     path('', views.post_list, name='post_list'),
 ]
@@ -150,7 +130,7 @@ urlpatterns = [
 
 
 
-//image[error1][エラー]{
+//image[error1][]{
 //}
 
 
