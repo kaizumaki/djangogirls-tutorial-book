@@ -234,7 +234,7 @@ Running migrations:
 Chromebookを使用している場合は、代わりに次のコマンドを使用します。
 
 
-//emlist[Cloud 9]{
+//cmd{
 (myvenv) ~/djangogirls$ python manage.py runserver 0.0.0.0:8080
 //}
 

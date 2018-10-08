@@ -34,7 +34,7 @@
 
 では、実際にコマンドラインを開いて、触ってみることとしましょう。
 
-//blankline
+
 //panelsection[Opening: Windows]{
 
 
@@ -46,7 +46,7 @@
 
 //}
 
-//blankline
+
 //panelsection[Opening: OS X]{
 
 
@@ -55,7 +55,7 @@
 
 //}
 
-//blankline
+
 //panelsection[Opening: Linux]{
 
 
@@ -69,7 +69,7 @@
 
 おそらく今、真っ白または真っ黒な画面が開かれていることでしょう。この画面はあなたの命令を待っています。
 
-//blankline
+
 //panelsection[Prompt: OS X and Linux]{
 
 
@@ -82,7 +82,7 @@ MacあるいはLinuxの方は、次のように @<tt>{$} と表示されてい�
 $
 //}
 
-//blankline
+
 //panelsection[Prompt: Windows]{
 
 
@@ -118,7 +118,7 @@ Windowsの方は、 @<tt>{>} という記号が表示されていることでし
 
 次のようにコマンドを入力してみましょう。:
 
-//blankline
+
 //codepanelsection[Your first command: OS X and Linux]{
 
 
@@ -127,7 +127,7 @@ $ whoami
 
 //}
 
-//blankline
+
 //codepanelsection[Your first command: Windows]{
 
 
@@ -165,7 +165,7 @@ OSによってコマンドが若干違います。あなたのコンピュータ
 
 今どこのディレクトリにいるか（どのフォルダで作業をしているか）、知りたいですよね？では、このようにキーボードで入力して、@<tt>{Enterキー}をおしてください。
 
-//blankline
+
 //codepanelsection[Current directory: OS X and Linux]{
 
 
@@ -181,7 +181,7 @@ $ pwd
 
 //}
 
-//blankline
+
 //codepanelsection[Current directory: Windows]{
 
 
@@ -206,7 +206,7 @@ C:\Users\olasitarska
 
 では、その中には何があるのでしょうか？表示させてみましょう。
 
-//blankline
+
 //codepanelsection[List files and directories: OS X and Linux]{
 
 $ ls
@@ -224,7 +224,7 @@ Music
 
 //}
 
-//blankline
+
 //codepanelsection[List files and directories: Windows]{
 
 
@@ -256,7 +256,7 @@ Music
 
 次に、デスクトップのディレクトリに移動してみましょう。
 
-//blankline
+
 //codepanelsection[Change current directory: OS X and Linux]{
 
 
@@ -265,7 +265,7 @@ $ cd Desktop
 
 //}
 
-//blankline
+
 //codepanelsection[Change current directory: Windows]{
 
 
@@ -277,7 +277,7 @@ $ cd Desktop
 
 本当に変更されたかどうか確認してみてください：
 
-//blankline
+
 //codepanelsection[Check if changed: OS X and Linux]{
 
 
@@ -288,7 +288,7 @@ $ pwd
 
 //}
 
-//blankline
+
 //codepanelsection[Check if changed: Windows]{
 
 
@@ -314,7 +314,7 @@ PRO tip: @<tt>{cd D}と入力して、キーボードの@<tt>{tab}ボタンを�
 
 それでは、Django Girlsのディレクトリをデスクトップに新規作成してみましょう。
 
-//blankline
+
 //codepanelsection[Create directory: OS X and Linux]{
 
 
@@ -323,7 +323,7 @@ $ mkdir practice
 
 //}
 
-//blankline
+
 //codepanelsection[Create directory: Windows]{
 
 
@@ -350,7 +350,7 @@ PRO tip: 同じコマンドを何度もなんども入力したくない時は�
 
 ==== 解答:
 
-//blankline
+
 //codepanelsection[Exercise solution: OS X and Linux]{
 
 
@@ -365,7 +365,7 @@ test
 
 //}
 
-//blankline
+
 //codepanelsection[Exercise solution: Windows]{
 
 
@@ -393,7 +393,7 @@ test
 
 はじめに、作業するディレクトリをデスクトップに戻しましょう。
 
-//blankline
+
 //codepanelsection[Clean up: OS X and Linux]{
 
 
@@ -402,7 +402,7 @@ $ cd ..
 
 //}
 
-//blankline
+
 //codepanelsection[Clean up: Windows]{
 
 
@@ -418,7 +418,7 @@ $ cd ..
 
 現在の作業ディレクトリを確認しておきましょう。
 
-//blankline
+
 //codepanelsection[Check location: OS X and Linux]{
 
 
@@ -429,7 +429,7 @@ $ pwd
 
 //}
 
-//blankline
+
 //codepanelsection[Check location: Windows]{
 
 
@@ -449,7 +449,7 @@ C:\Users\olasitarska\Desktop
 
 //}
 
-//blankline
+
 //codepanelsection[Delete directory: Windows Powershell、OS X and Linux]{
 
 
@@ -458,7 +458,7 @@ $ rm -r practice
 
 //}
 
-//blankline
+
 //codepanelsection[Delete directory: Windows Command Prompt]{
 
 
@@ -472,7 +472,7 @@ practice, Are you sure <Y/N>? Y
 
 できました! 本当に削除されたか、確認してみましょう。:
 
-//blankline
+
 //codepanelsection[Check deletion: OS X and Linux]{
 
 
@@ -481,7 +481,7 @@ $ ls
 
 //}
 
-//blankline
+
 //codepanelsection[Check deletion: Windows]{
 
 
@@ -496,7 +496,7 @@ $ ls
 
 ここまでです。それではコマンドラインを終了しましょう。かっこいいやり方で終わりたいですよね? :)
 
-//blankline
+
 //codepanelsection[Exit: OS X and Linux]{
 
 
@@ -505,7 +505,7 @@ $ exit
 
 //}
 
-//blankline
+
 //codepanelsection[Exit: Windows]{
 
 

@@ -32,8 +32,8 @@ Bootstrap をインストールするため、@<tt>{.html} ファイル (blog/te
 
 
 //emlist[blog/templates/blog/post_list.html][html]{
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+@<seqsplit>{<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">}
+@<seqsplit>{<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">}
 //}
 
 
@@ -124,7 +124,7 @@ CSSファイルには、HTMLファイルの各要素のスタイルを指定し�
 
 
 //emlist[][html]{
-<a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">
+@<seqsplit>{<a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">}
 //}
 
 
@@ -160,8 +160,8 @@ CSSセレクタについては@<href>{http://www.w3schools.com/cssref/css_select
 <html>
     <head>
         <title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        @<seqsplit>{<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">}
+        @<seqsplit>{<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">}
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
@@ -215,7 +215,7 @@ body {
 
 
 //emlist[blog/templates/blog/post_list.html][html]{
-<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+@<seqsplit>{<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">}
 //}
 
 
@@ -280,7 +280,10 @@ h1 a {
     padding: 20px 20px 20px 40px;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;

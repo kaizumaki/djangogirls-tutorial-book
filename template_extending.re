@@ -36,9 +36,9 @@ blog
 <html>
     <head>
         <title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        @<seqsplit>{<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">}
+        @<seqsplit>{<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">}
+        @<seqsplit>{<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>}
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
@@ -86,7 +86,7 @@ blog
 //}
 
 
-{% raw %}@<tt>{{% for post in posts %\}} から @<tt>{{% endfor %\}} が以下のように置き換えられたことに気づいたでしょうか。 {% endraw %}
+@<tt>{{% for post in posts %\}} から @<tt>{{% endfor %\}} が以下のように置き換えられたことに気づいたでしょうか。
 
 
 //emlist[blog/templates/blog/base.html][html]{
@@ -99,7 +99,7 @@ blog
 
 
 
-@<tt>{base.html}を保存し、もう一度@<tt>{blog/templates/blog/post_list.html}をコードエディタで開きます。 {% raw %} @<tt>{{% for post in posts %\}} の上と @<tt>{{% endfor %\}} の下すべてを削除しましょう。 それが終わったら以下のようになっていると思います。{% endraw %}
+@<tt>{base.html}を保存し、もう一度@<tt>{blog/templates/blog/post_list.html}をコードエディタで開きます。@<tt>{{% for post in posts %\}} の上と @<tt>{{% endfor %\}} の下すべてを削除しましょう。 それが終わったら以下のようになっていると思います。
 
 
 //emlist[blog/templates/blog/post_list.html][html]{
@@ -119,7 +119,7 @@ blog
 
 
 
-{% raw %}追加するblockタグは @<tt>{base.html} ファイル中のタグにマッチしてほしいですよね。 また、blockタグにはcontentブロックに属するすべてのコードを含めたいですよね。 そうするには、すべてを @<tt>{{% block content %\}} と @<tt>{{% endblock %\}} の間に入れてあげればよいです。 このように:{% endraw %}
+追加するblockタグは @<tt>{base.html} ファイル中のタグにマッチしてほしいですよね。 また、blockタグにはcontentブロックに属するすべてのコードを含めたいですよね。 そうするには、すべてを @<tt>{{% block content %\}} と @<tt>{{% endblock %\}} の間に入れてあげればよいです。 このように:
 
 
 //emlist[blog/templates/blog/post_list.html][html]{

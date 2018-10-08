@@ -86,7 +86,7 @@ Djangoはposts変数をオブジェクトのリストと認識します。 @<str
 //}
 
 
-{% raw %}@<tt>{{% for %\}} と @<tt>{{% endfor %\}} の間に書いたものはリスト中の各オブジェクトの分だけ繰り返されます。ページをリロードしてみましょう。{% endraw %}
+@<tt>{{% for %\}} と @<tt>{{% endfor %\}} の間に書いたものはリスト中の各オブジェクトの分だけ繰り返されます。ページをリロードしてみましょう。
 
 
 
@@ -121,7 +121,7 @@ $ git push
  * そしたら、@<href>{https://www.pythonanywhere.com/consoles/,PythonAnywhere}に戻って、@<strong>{Bashコンソール}（か、新しいコンソール）に入って、次のようにコマンドを打ちましょう：
 
 
-//emlist[PythonAnywhere command-line]{
+//cmd{
 $ cd $USER.pythonanywhere.com
 $ git pull
 [...]

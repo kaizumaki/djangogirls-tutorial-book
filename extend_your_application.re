@@ -40,15 +40,15 @@
 //}
 
 
-{% raw %}投稿リストの投稿のタイトルから投稿の詳細ページへのリンクを作りたいです。 投稿の詳細ページにリンクするように@<tt>{<h1><a href="">{{ post.title \}\}</a></h1>}を変更しましょう。{% endraw %}
+投稿リストの投稿のタイトルから投稿の詳細ページへのリンクを作りたいです。 投稿の詳細ページにリンクするように@<tt>{<h1><a href="">{{ post.title \}\}</a></h1>}を変更しましょう。
 
 
 //emlist[blog/templates/blog/post_list.html][html]{
-<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+@<seqsplit>{<h1><a href="{% url 'post_detail' pk=post.pk %\}">{{ post.title }}</a></h1>}
 //}
 
 
-{% raw %}不思議な@<tt>{{％ url 'post_detail' pk = post.pk ％\}}を説明します。 気づいたかもしれませんが、@<tt>{{% %\}}という表記はDjangoのテンプレートタグを使用していることを意味しています。 今私たちはこれをURLを作るために使います！{% endraw %}
+不思議な@<tt>{{％ url 'post_detail' pk = post.pk ％\}}を説明します。 気づいたかもしれませんが、@<tt>{{% %\}}という表記はDjangoのテンプレートタグを使用していることを意味しています。 今私たちはこれをURLを作るために使います！
 
 
 
@@ -239,7 +239,7 @@ def post_detail(request, pk):
 
 
 
-{% raw %}@<tt>{{% if ... %\} ...  {％endif％\}}は、何かをチェックしたいときに使用できるテンプレートタグです。 (@<tt>{if ... else...} を@<strong>{Python入門}のチャプターでやったのを覚えていますか？) この場合、私たちは投稿の@<tt>{公開日（published_date）}が空でないかを確認したいです。{% endraw %}
+@<tt>{{% if ... %\} ...  {％endif％\}}は、何かをチェックしたいときに使用できるテンプレートタグです。 (@<tt>{if ... else...} を@<strong>{Python入門}のチャプターでやったのを覚えていますか？) この場合、私たちは投稿の@<tt>{公開日（published_date）}が空でないかを確認したいです。
 
 
 
@@ -266,7 +266,7 @@ def post_detail(request, pk):
 $ git status
 $ git add --all .
 $ git status
-$ git commit -m "Added view and template for detailed blog post as well as CSS for the site."
+@<seqsplit>{$ git commit -m "Added view and template for detailed blog post as well as CSS for the site."}
 $ git push
 //}
 

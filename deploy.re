@@ -160,7 +160,7 @@ Untracked files:
         mysite/
         requirements.txt
 
-nothing added to commit but untracked files present (use "git add" to track)
+@<seqsplit>{nothing added to commit but untracked files present (use "git add" to track)}
 //}
 
 
@@ -218,7 +218,7 @@ $ git commit -m "My Django Girls app, first commit"
 
 
 //cmd{
-$ git remote add origin https://github.com/<your-github-username>/my-first-blog.git
+@<seqsplit>{$ git remote add origin https://github.com/<your-github-username>/my-first-blog.git}
 $ git push -u origin master
 //}
 
@@ -305,7 +305,7 @@ PythonAnywhere で「Beginner」アカウントにサインアップしましょ
 PythonAnywhereにWebアプリケーションをデプロイするには、コードをGitHubからプルし、PythonAnywhereがそれを認識してWebアプリケーションのサーバを動かし始めるように設定する必要があります。 それを手動で行う方法もありますが、PythonAnywhereはそれをすべて行うヘルパーツールを提供しています。 まず、インストールしてみましょう。
 
 
-//emlist[PythonAnywhere command-line]{
+//cmd{
 $ pip3.6 install --user pythonanywhere
 //}
 
@@ -317,8 +317,8 @@ $ pip3.6 install --user pythonanywhere
 GitHub からアプリを自動的に構成するためのヘルパーを実行します。 PythonAnywhereのコンソールに次のように入力します（GitHubからクローンしたときのURLと一致するように、@<tt>{<your-github-username>}の代わりにGitHubユーザー名を使用することを忘れないでください）：
 
 
-//emlist[PythonAnywhere command-line]{
-$ pa_autoconfigure_django.py https://github.com/<your-github-username>/my-first-blog.git
+//cmd{
+@<seqsplit>{$ pa_autoconfigure_django.py https://github.com/<your-github-username>/my-first-blog.git}
 //}
 
 
@@ -340,7 +340,7 @@ PythonAnywhereではこれらすべてのステップは自動化されていま
 その結果、自分のコンピュータで行ったように、@<tt>{createsuperuser}で管理者アカウントを初期化する必要があります。 PythonAnywhereがあなたのためにあなたのvirtualenvを自動的に起動したので、あなたがする必要があるのは以下の通りです：
 
 
-//emlist[PythonAnywhere command-line]{
+//cmd{
 (ola.pythonanywhere.com) $ python manage.py createsuperuser
 //}
 
@@ -352,7 +352,7 @@ PythonAnywhereではこれらすべてのステップは自動化されていま
 PythonAnywhereのコードを@<tt>{ls}を使って見てみることもできます：
 
 
-//emlist[PythonAnywhere command-line]{
+//cmd{
 (ola.pythonanywhere.com) $ ls
 blog db.sqlite3 manage.py mysite requirements.txt static
 (ola.pythonanywhere.com) $ ls blog/

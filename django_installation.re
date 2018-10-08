@@ -108,9 +108,9 @@ $ python3 -m venv myvenv
 
 
 //cmd{
-The virtual environment was not created successfully because ensurepip is not available.  On Debian/Ubuntu systems, you need to install the python3-venv package using the following command.
+@<seqsplit>{The virtual environment was not created successfully because ensurepip is not available.  On Debian/Ubuntu systems, you need to install the python3-venv package using the following command.}
    apt install python3-venv
-You may need to use sudo with that command.  After installing the python3-venv package, recreate your virtual environment.
+@<seqsplit>{You may need to use sudo with that command.  After installing the python3-venv package, recreate your virtual environment.}
 //}
 
 
@@ -138,7 +138,7 @@ $ sudo apt install python3-venv
 
 
 //cmd{
-Error: Command '['/home/eddie/Slask/tmp/venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1
+@<seqsplit>{Error: Command '['/home/eddie/Slask/tmp/venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1}
 //}
 
 
@@ -214,15 +214,10 @@ C:\Users\Name\djangogirls > myvenv\Scripts\activate
 //cmd{
 C:\WINDOWS\system32> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
     Execution Policy Change
-    The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic at http://go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy? [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A
+    @<seqsplit>{The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic at http://go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy? [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A}
 //}
 
 
-//emlist{
-XXX: BLOCK_HTML: YOU SHOULD REWRITE IT
-<!--sec data-title="Working with virtualenv: Linux and OS X" data-id="virtualenv_linuxosx"
-data-collapse=true ces-->
-//}
 //panelsection[Working with virtualenv: Linux and OS X]{
 
 
@@ -312,8 +307,8 @@ Django~={{ book.django_version }}
 
 //cmd{
 (myvenv) ~$ pip install -r requirements.txt
-Collecting Django~={{ book.django_version }} (from -r requirements.txt (line 1))
-  Downloading Django-{{ book.django_version }}-py3-none-any.whl (7.1MB)
+@<seqsplit>{Collecting Django~={{ book.django_version }\} (from -r requirements.txt (line 1))}
+Downloading Django-{{ book.django_version }}-py3-none-any.whl (7.1MB)
 Installing collected packages: Django
 Successfully installed Django-{{ book.django_version }}
 //}

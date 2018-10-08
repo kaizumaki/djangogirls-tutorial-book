@@ -130,7 +130,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 
 //cmd{
 >>> Post.objects.all()
-<QuerySet [<Post: my post title>, <Post: another post title>, <Post: Sample title>]>
+@<seqsplit>{<QuerySet [<Post: my post title>, <Post: another post title>, <Post: Sample title>]>}
 //}
 
 
@@ -151,7 +151,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 
 //cmd{
 >>> Post.objects.filter(author=me)
-<QuerySet [<Post: Sample title>, <Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>]>
+@<seqsplit>{<QuerySet [<Post: Sample title>, <Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>]>}
 //}
 
 
@@ -211,7 +211,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 
 //cmd{
 >>> Post.objects.order_by('created_date')
-<QuerySet [<Post: Sample title>, <Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>]>
+@<seqsplit>{<QuerySet [<Post: Sample title>, <Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>]>}
 //}
 
 
@@ -220,7 +220,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 
 //cmd{
 >>> Post.objects.order_by('-created_date')
-<QuerySet [<Post: 4th title of post>,  <Post: My 3rd post!>, <Post: Post number 2>, <Post: Sample title>]>
+@<seqsplit>{<QuerySet [<Post: 4th title of post>,  <Post: My 3rd post!>, <Post: Post number 2>, <Post: Sample title>]>}
 //}
 
 === クエリセットをつなげる
@@ -230,8 +230,8 @@ QuerySetsを @<strong>{つなげて} 組み合わせることも出来ます。
 
 
 //cmd{
->>> Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-<QuerySet [<Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>, <Post: Sample title>]>
+@<seqsplit>{>>> Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')}
+@<seqsplit>{<QuerySet [<Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>, <Post: Sample title>]>}
 //}
 
 

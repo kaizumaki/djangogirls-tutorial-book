@@ -73,7 +73,7 @@ class PostForm(forms.ModelForm):
 
 
 //emlist[blog/templates/blog/base.html][html]{
-<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+@<seqsplit>{<a href="{% url 'post_new' %\}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>}
 //}
 
 
@@ -89,14 +89,14 @@ class PostForm(forms.ModelForm):
 <html>
     <head>
         <title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        @<seqsplit>{<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">}
+        @<seqsplit>{<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">}
+        @<seqsplit>{<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>}
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
         <div class="page-header">
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            @<seqsplit>{<a href="{% url 'post_new' %\}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>}
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
         <div class="content container">
@@ -173,10 +173,10 @@ def post_new(request):
 
 @<tt>{blog/templates/blog}ディレクトリに@<tt>{post_edit.html}ファイルを作り、コードエディタで開きましょう。フォームを動かすにはいくつかやることがあります。
 
- * フォームを表示する必要があります。 私たちは（例えば）{% raw %}@<tt>{{{ form.as_p \}\}}{% endraw %} でこれを行うことができます。
+ * フォームを表示する必要があります。 私たちは（例えば）@<tt>{{{ form.as_p \}\}} でこれを行うことができます。
  * 上記の行は HTMLのformタグでラップする必要があります：@<tt>{<form method="POST">...</form>}
  * @<tt>{Save} ボタンが必要です。これをHTMLのbuttonタグで行います：@<tt>{<button type="submit">Save</button>}
- * 最後に@<tt>{<form ...>} タグの開始直後に、 @<tt>{{% raw %\}{% csrf_token %\}{% endraw %\}}を追加する必要があります。 フォームをセキュアにするためこれは非常に重要です！ これを忘れると、Djangoはフォームを保存しようとすると文句を言うでしょう：
+ * 最後に@<tt>{<form ...>} タグの開始直後に、 @<tt>{{% csrf_token %\}}を追加する必要があります。 フォームをセキュアにするためこれは非常に重要です！ これを忘れると、Djangoはフォームを保存しようとすると文句を言うでしょう：
 
 
 
@@ -371,7 +371,7 @@ Djangoはフォームのすべてのフィールドが正しいことを検証�
 
 
 //emlist[blog/templates/blog/post_detail.html][html]{
-<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+@<seqsplit>{<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %\}"><span class="glyphicon glyphicon-pencil"></span></a>}
 //}
 
 
@@ -388,7 +388,7 @@ Djangoはフォームのすべてのフィールドが正しいことを検証�
                 {{ post.published_date }}
             </div>
         {% endif %}
-        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        @<seqsplit>{<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %\}"><span class="glyphicon glyphicon-pencil"></span></a>}
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
@@ -486,7 +486,7 @@ Djangoのフォームについてもっと知りたい場合、Django Projectの
 
 
 //emlist[blog/templates/blog/base.html][html]{
-<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+@<seqsplit>{<a href="{% url 'post_new' %\}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>}
 //}
 
 
@@ -495,7 +495,7 @@ Djangoのフォームについてもっと知りたい場合、Django Projectの
 
 //emlist[blog/templates/blog/base.html][html]{
 {% if user.is_authenticated %}
-    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    @<seqsplit>{<a href="{% url 'post_new' %\}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>}
 {% endif %}
 //}
 
@@ -512,7 +512,7 @@ Djangoのフォームについてもっと知りたい場合、Django Projectの
 
 
 //emlist[blog/templates/blog/post_detail.html][html]{
-<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+@<seqsplit>{<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %\}"><span class="glyphicon glyphicon-pencil"></span></a>}
 //}
 
 
@@ -521,7 +521,7 @@ Djangoのフォームについてもっと知りたい場合、Django Projectの
 
 //emlist[blog/templates/blog/post_detail.html][html]{
 {% if user.is_authenticated %}
-     <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+     @<seqsplit>{<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %\}"><span class="glyphicon glyphicon-pencil"></span></a>}
 {% endif %}
 //}
 

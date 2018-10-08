@@ -9,6 +9,7 @@ module ReVIEW
 
   ## インライン命令「@<clearpage>{}」を宣言
   Compiler.definline :clearpage         ## 改ページ
+  Compiler.definline :seqsplit          ## 行の折り返し
 
   ## ブロック命令「//textleft{ ... //}」等を宣言
   ## （ここでは第2引数が「0」なので、引数なしのブロック命令になる。
@@ -27,6 +28,12 @@ module ReVIEW
     ## 改ページ
     def inline_clearpage(str)
       '\clearpage'
+    end
+
+    ## 行の折り返し
+    def inline_seqsplit(str)
+      escaped_str = escape_latex(str)
+      "\\seqsplit{#{escaped_str}}"
     end
 
     ## 左寄せ
@@ -50,8 +57,10 @@ module ReVIEW
       puts '\end{center}'
     end
 
+    ## panel-collapse
     def panelsection(lines, heading)
       blank
+      puts '\vspace*{\baselineskip}'
       puts '\begin{tcolorbox}[sharp corners,
                               colframe=gray,
                               colback=white,
@@ -64,8 +73,10 @@ module ReVIEW
       blank
     end
 
+    ## panel-collapse（コマンドのみ）
     def codepanelsection(lines, heading)
       blank
+      puts '\vspace*{\baselineskip}'
       puts '\begin{tcolorbox}[sharp corners,
                               colframe=gray,
                               colback=black,

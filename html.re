@@ -284,7 +284,7 @@ $ git push
  * @<href>{https://www.pythonanywhere.com/consoles/,PythonAnywhereのコンソールページ}を開き、@<strong>{Bash コンソール}に移動してください (または新たなBash コンソールを開始してください)。それから次を実行してください。
 
 
-//emlist[PythonAnywhere command-line]{
+//cmd{
 $ cd ~/<your-pythonanywhere-username>.pythonanywhere.com
 $ git pull
 [...]
