@@ -16,11 +16,11 @@ Pythonは1980年台の終わりに、人間が読みやすい（機械だけで�
 == Pythonのインストール
 
 //quote{
-@<strong>{注意：}Chromebookをお使いの場合、このチャプターは飛ばして、@<href>{../chromebook_setup/README.md,Chromebookのセットアップ}の章をすすめてください。
+@<strong>{注意：} Chromebookをお使いの場合、このチャプターは飛ばして、@<chapref>{chromebook_setup}の章をすすめてください。
 
 
 
-@<strong>{注意：}すでにインストール手順を実行している場合は、これをもう一度行う必要はありません。次の章に進んでください。
+@<strong>{注意：} すでにインストール手順を実行している場合は、これをもう一度行う必要はありません。次の章に進んでください。
 
 
 
@@ -36,7 +36,7 @@ Pythonは1980年台の終わりに、人間が読みやすい（機械だけで�
 Django は、Pythonで開発されています。なにをするにせよ、まずはPythonが必要です。インストールしましょう！ Python 3.6 をインストールします。3.5以前のバージョンをインストール済みの場合は、アップグレードしてください。
 
 
-//panelsection[Install Python: Windows]{
+====[column][Install Python: Windows]
 
 
 Windowsをお使いのかたは、まずシステム情報を開き、システムの種類が32-bitバージョンか64-bitバージョンかを確認します（システム情報の開き方：Windowsキー + Pause/Break キー　もしくは　コントロールパネル＞システムとセキュリティ＞システムを開く）。 Python for Windowsは、https://www.python.org/downloads/windows/ からダウンロードできます。 「Latest Python 3 Release - Python x.x.x」のリンクをクリックしてください。 お使いのコンピュータが@<strong>{64ビット}版のWindowsを実行している場合は、@<strong>{Windows x86-64 executable installer}をダウンロードしてください。 32ビット版の場合は、@<strong>{Windows x86 executable installer}をダウンロードします。 インストーラをダウンロードしたら、それを実行して（ダブルクリックして）インストーラの指示に従ってください。
@@ -46,7 +46,7 @@ Windowsをお使いのかたは、まずシステム情報を開き、システ�
 @<strong>{インストール時に必ず「Add Python 3.6 to PATH」にチェックをいれましょう}：
 
 
-//}
+====[/column]
 
 
 //image[python-installation-options][Pythonのパスを通すのを忘れないようにしてください。]{
