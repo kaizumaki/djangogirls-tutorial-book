@@ -107,7 +107,7 @@ post変数がさっきと違って、@<tt>{{{ post.title \}\}} や @<tt>{{{ post
  * まず、GithubにあなたのコードをPushしましょう
 
 
-//cmd{
+//cmd[command-line]{
 $ git status
 [...]
 $ git add --all .
@@ -121,7 +121,7 @@ $ git push
  * そしたら、@<href>{https://www.pythonanywhere.com/consoles/,PythonAnywhere}に戻って、@<strong>{Bashコンソール}（か、新しいコンソール）に入って、次のようにコマンドを打ちましょう：
 
 
-//cmd{
+//cmd[PythonAnywhere command-line]{
 $ cd $USER.pythonanywhere.com
 $ git pull
 [...]

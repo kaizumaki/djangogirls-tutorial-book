@@ -21,7 +21,7 @@
 コンソール画面を開いて（PythonAnywhereのコンソールではないですよ）、次のコマンドを入力してみましょう。
 
 
-//cmd{
+//cmd[command-line]{
 (myvenv) ~/djangogirls$ python manage.py shell
 //}
 
@@ -29,7 +29,7 @@
 次のような表示に切り替わるでしょう。
 
 
-//cmd{
+//cmd[command-line]{
 (InteractiveConsole)
 >>>
 //}
@@ -44,7 +44,7 @@
 最初に、ポストデータを全部表示させてみましょう。次のコマンドで、ポストのデータを全部表示させることが出来ます。
 
 
-//cmd{
+//cmd[command-line]{
 >>> Post.objects.all()
 Traceback (most recent call last):
       File "<console>", line 1, in <module>
@@ -55,7 +55,7 @@ NameError: name 'Post' is not defined
 ごめんなさい、エラーになってしまいましたね。Postがないというエラーです。その通りなんです。最初にインポートをしなくてはならないのに、忘れていました。
 
 
-//cmd{
+//cmd[command-line]{
 >>> from blog.models import Post
 //}
 
@@ -63,7 +63,7 @@ NameError: name 'Post' is not defined
 こんな風に書くだけで、@<tt>{blog.models} から @<tt>{Post} モデルをインポート出来ます。それでは、もう一度試してみましょう。
 
 
-//cmd{
+//cmd[command-line]{
 >>> Post.objects.all()
 <QuerySet [<Post: my post title>, <Post: another post title>]>
 //}
@@ -78,7 +78,7 @@ NameError: name 'Post' is not defined
 データベースに、新しいPostを作成するには、次のようにします。
 
 
-//cmd{
+//cmd[command-line]{
 >>> Post.objects.create(author=me, title='Sample title', text='Test')
 //}
 
@@ -90,7 +90,7 @@ NameError: name 'Post' is not defined
 そうです、さっきと同じです。Userモデルも先にインポートしておきましょう。
 
 
-//cmd{
+//cmd[command-line]{
 >>> from django.contrib.auth.models import User
 //}
 
@@ -98,7 +98,7 @@ NameError: name 'Post' is not defined
 どんなユーザが、データベースに登録されてましたっけ？覗いてみましょうか。
 
 
-//cmd{
+//cmd[command-line]{
 >>> User.objects.all()
 <QuerySet [<User: ola>]>
 //}
@@ -107,7 +107,7 @@ NameError: name 'Post' is not defined
 作成しておいたスーパーユーザがいますね。このユーザを取り出してみましょう（この行をご自身で作ったスーパーユーザのユーザ名に変更して取り出してくださいね）。
 
 
-//cmd{
+//cmd[command-line]{
 >>> me = User.objects.get(username='ola')
 //}
 
@@ -119,7 +119,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 さあ、遂にコンソール画面から、最初のポストを作成出来ますね。
 
 
-//cmd{
+//cmd[command-line]{
 >>> Post.objects.create(author=me, title='Sample title', text='Test')
 <Post: Sample title>
 //}
@@ -128,7 +128,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 どうでしょうか？ちゃんと出来ているか、確認しておきましょうね。
 
 
-//cmd{
+//cmd[command-line]{
 >>> Post.objects.all()
 @<seqsplit>{<QuerySet [<Post: my post title>, <Post: another post title>, <Post: Sample title>]>}
 //}
@@ -149,7 +149,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 クエリセットの大部分は、抽出機能だと言えるでしょう。 ユーザolaさんのポストを全部確認してみましょうか。 全部のポストを取り出すのではなく、olaさんのポストだけを取り出したい場合は、@<tt>{Post.objects.all()} の @<tt>{all} を @<tt>{filter} に変更します。 取り出されるブログポストが満たす条件を、カッコ()の中に指定します。 今回の例では、@<tt>{author} が @<tt>{me} と等しいという条件です。 Djangoでの表し方は、@<tt>{author=me} となります。 このようになりますね。
 
 
-//cmd{
+//cmd[command-line]{
 >>> Post.objects.filter(author=me)
 @<seqsplit>{<QuerySet [<Post: Sample title>, <Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>]>}
 //}
@@ -158,7 +158,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 もしかすると @<tt>{title} フィールドに title という単語が含まれているポストだけを取り出したくなるかもしれませんね。
 
 
-//cmd{
+//cmd[command-line]{
 >>> Post.objects.filter(title__contains='title')
 <QuerySet [<Post: Sample title>, <Post: 4th title of post>]>
 //}
@@ -172,7 +172,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 また、公開済みの全ポストを取り出すことも出来ます。それには、@<tt>{published_date} が現在以前の全ポストを取り出します。
 
 
-//cmd{
+//cmd[command-line]{
 >>> from django.utils import timezone
 >>> Post.objects.filter(published_date__lte=timezone.now())
 <QuerySet []>
@@ -182,7 +182,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 そうでした、残念なことに、コンソールから追加したポストはまだ公開されていませんね。じゃあ、ポストを公開してみるとしましょう。まず公開するポストを決めましょう。
 
 
-//cmd{
+//cmd[command-line]{
 >>> post = Post.objects.get(title="Sample title")
 //}
 
@@ -190,7 +190,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 そして、@<tt>{publish} メソッドを呼び出します。
 
 
-//cmd{
+//cmd[command-line]{
 >>> post.publish()
 //}
 
@@ -198,7 +198,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 じゃあ、もう一度公開済みのポストを取り出しましょう。(上方向キーを3回押せば、さっきのコマンドを呼び出せるでしょう。コマンドを表示出来たら、@<tt>{Enter} キーを押してみましょう)
 
 
-//cmd{
+//cmd[command-line]{
 >>> Post.objects.filter(published_date__lte=timezone.now())
 <QuerySet [<Post: Sample title>]>
 //}
@@ -209,7 +209,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 クエリセットは、オブジェクトのリストの並べ替えもやってくれます。試しに @<tt>{created_date} フィールドで並べ替えてみましょう。
 
 
-//cmd{
+//cmd[command-line]{
 >>> Post.objects.order_by('created_date')
 @<seqsplit>{<QuerySet [<Post: Sample title>, <Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>]>}
 //}
@@ -218,7 +218,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 逆順、つまり新しく追加した順に並べ替えることも出来ます。それには、@<tt>{-}（ハイフン）を使います。
 
 
-//cmd{
+//cmd[command-line]{
 >>> Post.objects.order_by('-created_date')
 @<seqsplit>{<QuerySet [<Post: 4th title of post>,  <Post: My 3rd post!>, <Post: Post number 2>, <Post: Sample title>]>}
 //}
@@ -229,7 +229,7 @@ ola という @<tt>{ユーザ名} の @<tt>{User} モデルのインスタンス
 QuerySetsを @<strong>{つなげて} 組み合わせることも出来ます。
 
 
-//cmd{
+//cmd[command-line]{
 @<seqsplit>{>>> Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')}
 @<seqsplit>{<QuerySet [<Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>, <Post: Sample title>]>}
 //}
@@ -242,7 +242,7 @@ QuerySetsを @<strong>{つなげて} 組み合わせることも出来ます。
 いいですね！次の章への準備は万端ですね！このプロンプトを閉じるには、以下のようにします。
 
 
-//cmd{
+//cmd[command-line]{
 >>> exit()
 $
 //}

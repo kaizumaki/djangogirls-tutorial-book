@@ -244,7 +244,7 @@ class Post(models.Model):
 最後のステップは新しいモデルをデータベースに追加することです。 まず、モデルに少し変更があったこと（今作ったこと）をDjangoに知らせましょう。 コンソールで @<tt>{python manage.py makemigrations blog} とタイプします。 こんな感じですね。
 
 
-//cmd{
+//cmd[command-line]{
 (myvenv) ~/djangogirls$ python manage.py makemigrations blog
 Migrations for 'blog':
   blog/migrations/0001_initial.py:
@@ -260,7 +260,7 @@ Migrations for 'blog':
 Djangoが作ってくれた移行ファイルを私たちがデータベースに追加すれば完了です。@<tt>{python manage.py migrate blog} とタイプするとこうなるでしょう。
 
 
-//cmd{
+//cmd[command-line]{
 (myvenv) ~/djangogirls$ python manage.py migrate blog
 Operations to perform:
   Apply all migrations: blog

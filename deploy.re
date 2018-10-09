@@ -103,7 +103,7 @@ Gitはコードリポジトリ（または略して「リポジトリ」）と�
 //}
 
 
-//cmd{
+//cmd[command-line]{
 $ git init
 Initialized empty Git repository in ~/djangogirls/.git/
 $ git config --global user.name "Your Name"
@@ -145,7 +145,7 @@ db.sqlite3
 @<tt>{git add} コマンドを実行する前や、どのような変更を加えたか定かでない時は、 @<tt>{git status} コマンドを使用する事をおすすめします。 これは間違ったファイルを追加またはコミットなど思いもかけない事を止めるために役立ちます。 @<tt>{git status} コマンドは、あらゆる追跡されていない/変更されている/ステージされている（untracked/modifed/staged）ファイルや、ブランチの状態などさまざまな情報を返します。 出力は次のようになります。
 
 
-//cmd{
+//cmd[command-line]{
 $ git status
 On branch master
 
@@ -167,7 +167,7 @@ Untracked files:
 最後に、変更内容を保存します。コンソールに移動し、これらのコマンドを実行します。
 
 
-//cmd{
+//cmd[command-line]{
 $ git add --all .
 $ git commit -m "My Django Girls app, first commit"
  [...]
@@ -217,7 +217,7 @@ $ git commit -m "My Django Girls app, first commit"
 コンソールに次のように入力します（@<tt>{<your-github-username>}をGitHubアカウントの作成時に入力したユーザー名に置き換えます。山カッコ&lt;&gt;を残さないでください。このURLはさっき見たクローンURLと一致する必要があります）。
 
 
-//cmd{
+//cmd[command-line]{
 @<seqsplit>{$ git remote add origin https://github.com/<your-github-username>/my-first-blog.git}
 $ git push -u origin master
 //}
@@ -226,7 +226,7 @@ $ git push -u origin master
 あなたのGitHubのユーザー名とパスワードを入力すると、次のように表示されます：
 
 
-//cmd{
+//cmd[command-line]{
 Username for 'https://github.com': ola
 Password for 'https://ola@github.com':
 Counting objects: 6, done.
@@ -305,7 +305,7 @@ PythonAnywhere で「Beginner」アカウントにサインアップしましょ
 PythonAnywhereにWebアプリケーションをデプロイするには、コードをGitHubからプルし、PythonAnywhereがそれを認識してWebアプリケーションのサーバを動かし始めるように設定する必要があります。 それを手動で行う方法もありますが、PythonAnywhereはそれをすべて行うヘルパーツールを提供しています。 まず、インストールしてみましょう。
 
 
-//cmd{
+//cmd[PythonAnywhere command-line]{
 $ pip3.6 install --user pythonanywhere
 //}
 
@@ -317,7 +317,7 @@ $ pip3.6 install --user pythonanywhere
 GitHub からアプリを自動的に構成するためのヘルパーを実行します。 PythonAnywhereのコンソールに次のように入力します（GitHubからクローンしたときのURLと一致するように、@<tt>{<your-github-username>}の代わりにGitHubユーザー名を使用することを忘れないでください）：
 
 
-//cmd{
+//cmd[PythonAnywhere command-line]{
 @<seqsplit>{$ pa_autoconfigure_django.py https://github.com/<your-github-username>/my-first-blog.git}
 //}
 
@@ -340,7 +340,7 @@ PythonAnywhereではこれらすべてのステップは自動化されていま
 その結果、自分のコンピュータで行ったように、@<tt>{createsuperuser}で管理者アカウントを初期化する必要があります。 PythonAnywhereがあなたのためにあなたのvirtualenvを自動的に起動したので、あなたがする必要があるのは以下の通りです：
 
 
-//cmd{
+//cmd[PythonAnywhere command-line]{
 (ola.pythonanywhere.com) $ python manage.py createsuperuser
 //}
 
@@ -352,7 +352,7 @@ PythonAnywhereではこれらすべてのステップは自動化されていま
 PythonAnywhereのコードを@<tt>{ls}を使って見てみることもできます：
 
 
-//cmd{
+//cmd[PythonAnywhere command-line]{
 (ola.pythonanywhere.com) $ ls
 blog db.sqlite3 manage.py mysite requirements.txt static
 (ola.pythonanywhere.com) $ ls blog/

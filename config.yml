@@ -6,7 +6,7 @@
 
 # この設定ファイルでサポートするRe:VIEWのバージョン番号。
 # major versionが違うときにはエラーを出す。
-review_version: 2.0
+review_version: 2.5.0
 
 # ほかの設定ファイルの継承を指定できる。同じパラメータに異なる値がある場合は、
 # 呼び出し元の値が優先される。
@@ -68,9 +68,7 @@ prt:
 # a-ths, ths: 監督者
 # a-trc, trc: 筆記・タイプ作業者
 # a-trl, trl: 翻訳者
- a-trl:
-    trl:
-      name: Django Girls Japan
+trl: Django Girls Japan
 
 # 刊行日(省略した場合は実行時の日付)
 # date: 2018-10-08
@@ -288,7 +286,7 @@ texstyle: [reviewmacro, framed, tcolorbox, seqsplit, starter, mystyle]
 # LaTeX用のdocumentclassを指定する
 #texdocumentclass: ["jsbook", "uplatex,twoside,b5j,10pt,openright"] # B5 10pt 右起こし
 #texdocumentclass: ["jsbook", "uplatex,twoside,a5j,9pt,openany"]    # A5 9pt 両起こし
-texdocumentclass: ["jsbook", "uplatex,twoside,b5j,10pt,openright"]
+texdocumentclass: ["jsbook", "uplatex,twoside,b5j,9pt,openright"]
 #
 # LaTeX用のコマンドを指定する
 # texcommand: "uplatex"

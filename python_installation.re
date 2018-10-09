@@ -110,7 +110,7 @@ Webサイトからダウンロードしてインストールしましょう。 h
 //}
 
 
-//cmd{
+//cmd[command-line]{
 $ python3 --version
 Python 3.6.5
 //}
@@ -134,7 +134,7 @@ Python 3.6.5
 //}
 
 
-//cmd{
+//cmd[command-line]{
 $ sudo apt install python3.6
 //}
 
@@ -148,7 +148,7 @@ $ sudo apt install python3.6
 //}
 
 
-//cmd{
+//cmd[command-line]{
 $ sudo dnf install python3
 //}
 
@@ -171,7 +171,7 @@ $ sudo dnf install python3
 //}
 
 
-//cmd{
+//cmd[command-line]{
 $ sudo zypper install python3
 //}
 
@@ -179,7 +179,7 @@ $ sudo zypper install python3
 インストールされているか確認するために、コマンドプロンプトを開いて次のように@<tt>{Python3}コマンドを入力してください。
 
 
-//cmd{
+//cmd[command-line]{
 $ python3 --version
 Python 3.6.1
 //}
