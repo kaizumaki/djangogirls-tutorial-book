@@ -4,7 +4,6 @@
 ## Re:VIEWを拡張し、インライン命令とブロック命令を追加する
 ##
 
-
 module ReVIEW
 
   ## インライン命令「@<clearpage>{}」を宣言
@@ -22,8 +21,42 @@ module ReVIEW
   Compiler.defblock :panelsection, 0..1  ## panel-collapse
   Compiler.defblock :codepanelsection, 0..1  ## panel-collapse（コマンドのみ）
 
+
+  module LATEXBuilderOverride
+
+    def column_begin(level, label, caption)
+      blank
+      @doc_status[:column] = true
+
+      target = nil
+      if label
+        target = "\\hypertarget{#{column_label(label)}}{}"
+      else
+        target = "\\hypertarget{#{column_label(caption)}}{}"
+      end
+
+      @doc_status[:caption] = true
+      puts '\\begin{reviewcolumn}[' + caption + ']'
+      puts target
+      @doc_status[:caption] = nil
+
+      if level <= @book.config['toclevel'].to_i
+        puts "\\addcontentsline{toc}{#{HEADLINE[level]}}{#{compile_inline(caption)}}"
+      end
+    end
+
+    def column_end(_level)
+      puts '\\end{reviewcolumn}'
+      blank
+      @doc_status[:column] = nil
+    end
+
+  end
+
   ## LaTeX用の定義
   class LATEXBuilder
+
+    prepend LATEXBuilderOverride
 
     ## 改ページ
     def inline_clearpage(str)
@@ -125,6 +158,5 @@ module ReVIEW
     end
 
   end
-
 
 end

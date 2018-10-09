@@ -36,37 +36,24 @@ Pythonは1980年台の終わりに、人間が読みやすい（機械だけで�
 Django は、Pythonで開発されています。なにをするにせよ、まずはPythonが必要です。インストールしましょう！ Python 3.6 をインストールします。3.5以前のバージョンをインストール済みの場合は、アップグレードしてください。
 
 
-====[column][Install Python: Windows]
+====[column] Install Python: Windows
 
 
 Windowsをお使いのかたは、まずシステム情報を開き、システムの種類が32-bitバージョンか64-bitバージョンかを確認します（システム情報の開き方：Windowsキー + Pause/Break キー　もしくは　コントロールパネル＞システムとセキュリティ＞システムを開く）。 Python for Windowsは、https://www.python.org/downloads/windows/ からダウンロードできます。 「Latest Python 3 Release - Python x.x.x」のリンクをクリックしてください。 お使いのコンピュータが@<strong>{64ビット}版のWindowsを実行している場合は、@<strong>{Windows x86-64 executable installer}をダウンロードしてください。 32ビット版の場合は、@<strong>{Windows x86 executable installer}をダウンロードします。 インストーラをダウンロードしたら、それを実行して（ダブルクリックして）インストーラの指示に従ってください。
 
 
-
 @<strong>{インストール時に必ず「Add Python 3.6 to PATH」にチェックをいれましょう}：
-
-
-====[/column]
 
 
 //image[python-installation-options][Pythonのパスを通すのを忘れないようにしてください。]{
 //}
 
 
-//panelsection[]{
-
-
 次のステップでは、Windowsコマンドラインを使用します（コマンドラインについては後ほど詳しく教えます）。 現時点では、コマンドを入力する必用がある場合、スタートメニューから検索フィールドに「コマンドプロンプト」入力してください。 （Windwosのバージョンが古い場合、「スタートメニュー」をクリックして、表示されるアプリ一覧から「Windowsシステムツール」を選んで、「コマンドプロンプト」をクリックしてください。）あるいは、「Windowsキー」を押しながら「R」キーを押すと、「ファイル名を指定して実行」が現れます。 コマンドプロンプトを開くには、そこに "cmd" と入力してenterキーを押します。
-
-
-//}
 
 
 //image[windows-plus-r]["ファイル名を指定して実行"で、"cmd"と入力してください]{
 //}
-
-
-//panelsection[]{
 
 
 注意：古いバージョンのWindows（7、Vista、またはそれ以前のバージョン）を使用していて、Python 3.6.xインストーラがエラーで失敗した場合、次のいずれかを試みることができます：
@@ -79,11 +66,11 @@ Windowsをお使いのかたは、まずシステム情報を開き、システ�
 古いバージョンのPythonをインストールする場合、インストール画面は上記のものとは多少異なる場合があります。 下にスクロールして「Add python.exe to Path」のところを左クリックして「Will be installed on local hard drive（ローカルハードドライブにインストールされます）」を選択してください：
 
 
-//}
-
-
 //image[add_python_to_windows_path][古いバージョンのパスを追加してください]{
 //}
+
+
+====[/column]
 
 
 //panelsection[Install Python: OS X]{

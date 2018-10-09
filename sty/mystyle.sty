@@ -18,15 +18,13 @@
 \fancyhead[RO]{\gtfamily\sffamily\bfseries\upshape \leftmark}
 \cfoot{\thepage}
 
-\renewenvironment{reviewcolumn}{%
-     \begin{tcolorbox}[sharp corners,
-                                   colframe=gray,
-                                   colback=white,
-                                   colbacktitle=gray,
-                                   coltitle=white, fonttitle=\ttfamily\bfseries, title=test]
+\tcbuselibrary{breakable}
+\renewenvironment{reviewcolumn}[1][]{%
+     \begin{tcolorbox}[breakable,
+                       sharp corners,
+                       colframe=gray,
+                       colback=white,
+                       colbacktitle=gray,
+                       coltitle=white, fonttitle=\ttfamily\bfseries, title=#1]
   }{%
-     \end{tcolorbox}
-  \vspace{2zw}}
-
-\renewcommand{\reviewcolumnhead}[2]{%
-}
+     \end{tcolorbox}}
