@@ -36,7 +36,7 @@ Gitはたくさんのプログラマが利用する「バージョン管理シ�
 === Gitのインストール
 
 
-//panelsection[Installing Git: Windows]{
+====[column] Installing Git: Windows
 
 
 @<href>{https://git-scm.com/,git-scm.com} からGitをダウンロードすることができます。 1つのステップを除いて「次へ」を押して進んで大丈夫です。「PATH環境を調整する(Adjusting your PATH environment)」というステップでは、「WindowsコマンドプロンプトからGitとオプションのUnixツールを使用する(Use Git and optional Unix tools from the Windows Command Prompt)」（一番下の選択肢）を選択します。 それ以外はデフォルトの設定値で構いません。 改行コードの変換(Configuring the line ending conversions)については、「Checkout Windows-style, commit Unix-style line endings」の選択で大丈夫です。
@@ -46,16 +46,13 @@ Gitはたくさんのプログラマが利用する「バージョン管理シ�
 インストールが正常に終了した後、コマンドプロンプトまたはPowerShellを再起動することを忘れないでください。
 
 
-//}
+====[/column]
 
 
-//panelsection[Installing Git: OS X]{
+====[column] Installing Git: OS X
 
 
 @<href>{https://git-scm.com/,git-scm.com} からGitをダウンロードし、指示に従ってください。
-
-
-//}
 
 
 //quote{
@@ -64,31 +61,40 @@ Gitはたくさんのプログラマが利用する「バージョン管理シ�
 //}
 
 
-//codepanelsection[Installing Git: Debian or Ubuntu]{
+====[/column]
 
 
+====[column] Installing Git: Debian or Ubuntu
+
+
+//cmd{
 $ sudo apt install git
-
-
 //}
 
 
-//codepanelsection[Installing Git: Fedora]{
+====[/column]
 
 
+====[column] Installing Git: Fedora
+
+
+//cmd{
 $ sudo dnf install git
-
-
 //}
 
 
-//codepanelsection[Installing Git: openSUSE]{
+====[/column]
 
 
+====[column] Installing Git: openSUSE
+
+
+//cmd{
 $ sudo zypper install git
-
-
 //}
+
+
+====[/column]
 
 
 === Gitリポジトリを始める

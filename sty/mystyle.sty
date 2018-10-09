@@ -6,6 +6,8 @@
 %%%   starterが自動生成する「starter.sty」とは別ファイルにしている）
 %%%
 
+\tcbuselibrary{breakable}
+
 %%% 「//quote」のスタイル
 \renewenvironment{quote}{%
   \def\FrameCommand{\textcolor{lightgray}{\vrule width 3pt} \hspace{10pt}}%
@@ -18,13 +20,15 @@
 \fancyhead[RO]{\gtfamily\sffamily\bfseries\upshape \leftmark}
 \cfoot{\thepage}
 
-\tcbuselibrary{breakable}
+
 \renewenvironment{reviewcolumn}[1][]{%
      \begin{tcolorbox}[breakable,
+                       nofloat,
                        sharp corners,
                        colframe=gray,
                        colback=white,
                        colbacktitle=gray,
                        coltitle=white, fonttitle=\ttfamily\bfseries, title=#1]
+     \textcolor{black}{#1}
   }{%
      \end{tcolorbox}}

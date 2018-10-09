@@ -28,21 +28,15 @@ virtualenv（仮想環境）を実行しているでしょうか。 もしコン
 //}
 
 
-//panelsection[Create project: OS X or Linux]{
+====[column] Create project: OS X or Linux
 
 
 MacOS や Linux の場合は、コンソールで以下のコマンドを実行します。最後のピリオド(ドット) @<tt>{.} を忘れないようにしてください！
 
 
-//}
-
-
 //cmd[command-line]{
 (myvenv) ~/djangogirls$ django-admin startproject mysite .
 //}
-
-
-//panelsection[]{
 
 
 コマンドの最後にピリオド @<tt>{.} を入力したことを確認してくださいね。このピリオドは、現在の作業ディレクトリに Django をインストールするということを示しています (ピリオド @<tt>{.} は、現在のディレクトリを表す省略表記です)。
@@ -51,16 +45,14 @@ MacOS や Linux の場合は、コンソールで以下のコマンドを実行�
 
 @<strong>{メモ:} 上記のコマンドを入力するときは、@<tt>{django-admin} で始まる部分のみを入力することを忘れないでください。 ここに書いた @<tt>{(myvenv) ~/djangogirls$} の部分は、コマンドライン上で入力を受け付けることを示しているプロンプトの一例なので、人によって違うかもしれません。
 
-//}
+
+====[/column]
 
 
-//panelsection[Create project: Windows]{
+====[column] Create project: Windows
 
 
 Windows の場合は、以下のコマンドを実行しないといけません。(最後にピリオド (ドット) @<tt>{.\} を書いてください)
-
-
-//}
 
 
 //cmd[command-line]{
@@ -68,14 +60,13 @@ Windows の場合は、以下のコマンドを実行しないといけません
 //}
 
 
-//panelsection[]{
 コマンドの最後にピリオド (.) があることを確認してくださいね。これば、現在の作業ディレクトリにDjangoをインストールするということを示すので、とても重要なのです。(ピリオドは簡略表記です).
 
 
 
 @<strong>{メモ:} 上記のコマンドを入力するときは、@<tt>{django-admin} で始まる部分のみを入力することを忘れないでください。 ここに書いた @<tt>{(myvenv) ~/djangogirls$} の部分は、コマンドライン上で入力を受け付けることを示しているプロンプトの一例なので、人によって違うかもしれません。
 
-//}
+====[/column]
 
 
 django-admin.py は、必要なディレクトリとファイルを作成するスクリプトです。次のようなファイル構造が作成されましたね。:

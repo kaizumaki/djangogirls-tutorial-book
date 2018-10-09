@@ -40,22 +40,26 @@ Webサーバーを実行しているときに新しいコマンドを入力し�
 //}
 
 
-//codepanelsection[Mac OS X または Linux:]{
+====[column] Mac OS X または Linux:
 
 
+//cmd{
 (myvenv) ~/djangogirls$ python manage.py createsuperuser
-
-
 //}
 
 
-//codepanelsection[Windows:]{
+====[/column]
 
 
+====[column] Windows:
+
+
+//cmd{
 (myvenv) C:\Users\Name\djangogirls> python manage.py createsuperuser
-
-
 //}
+
+
+====[/column]
 
 
 プロンプトが表示されたら、ユーザー名 (小文字、スペースなし)、電子メール アドレス、およびパスワードを入力します。 @<strong>{タイプしてる間パスワードは見えなくても大丈夫、それが正常です。}タイプして@<tt>{Enter}を押して続けましょう。 そうすればこのように見えるはずです。（ユーザーネームとパスワードは今あなたがタイプしたものです。）

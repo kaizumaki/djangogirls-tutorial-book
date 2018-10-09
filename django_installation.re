@@ -55,13 +55,10 @@ $ python3 -m venv myvenv
 //}
 
 
-//panelsection[Virtual environment: Windows]{
+====[column] Virtual environment: Windows
 
 
 新しい@<tt>{virtualenv}を作成するために、コマンドプロンプトを開き（コマンドプロンプトについては何章か前にお話ししましたね。覚えてますか？）、@<tt>{python -m venv myvenv}を実行して下さい。たとえばこのように入力します：
-
-
-//}
 
 
 //cmd[command-line]{
@@ -69,22 +66,16 @@ C:\Users\Name\djangogirls> python -m venv myvenv
 //}
 
 
-//panelsection[]{
-
-
 @<tt>{myvenv} というところが、あなたの@<tt>{virtualenv（仮想環境）} の名前です。 どんな名前でも使うことができますが、必ず小文字で表記し、スペース・アクセント記号・特殊文字は入れないでください。 短い名前にしておくのもいいアイデアですーあなたはこの名前を何度も参照しますから！
 
 
-//}
+====[/column]
 
 
-//panelsection[Virtual environment: Linux and OS X]{
+====[column] Virtual environment: Linux and OS X
 
 
 LinuxやOS Xで@<tt>{virtualenv}を作るときは、@<tt>{python3 -m venv myvenv}と実行するだけです。 たとえばこんな感じです：
-
-
-//}
 
 
 //cmd[command-line]{
@@ -92,13 +83,7 @@ $ python3 -m venv myvenv
 //}
 
 
-//panelsection[]{
-
-
 @<tt>{myvenv} は、あなたの @<tt>{仮想環境(virtualenvironment)} の名前です。 どんな名前でも使うことができますが、必ず小文字で表記し、スペースは入れないでください。 短い名前にしておくのもいいアイデアですーあなたはこの名前を何度も参照しますから！
-
-
-//}
 
 
 //quote{
@@ -114,13 +99,7 @@ $ python3 -m venv myvenv
 //}
 
 
-//panelsection[]{
-
-
 この場合、エラー内の指示にしたがって、@<tt>{python3-venv}のパッケージをインストールしましょう。
-
-
-//}
 
 
 //cmd[command-line]{
@@ -128,13 +107,7 @@ $ sudo apt install python3-venv
 //}
 
 
-//panelsection[]{
-
-
 @<strong>{補足：}DebianやUbuntuのバージョンによっては、この仮想環境を実行すると、次のようなエラーがでます。
-
-
-//}
 
 
 //cmd[command-line]{
@@ -142,13 +115,7 @@ $ sudo apt install python3-venv
 //}
 
 
-//panelsection[]{
-
-
 このエラーを回避するために、代わりに@<tt>{virtualenv}コマンドを使います。
-
-
-//}
 
 
 //cmd[command-line]{
@@ -157,13 +124,7 @@ $ virtualenv --python=python3.6 myvenv
 //}
 
 
-//panelsection[]{
-
-
 @<strong>{補足：}もし以下のようなエラーがでたら、
-
-
-//}
 
 
 //cmd[command-line]{
@@ -171,18 +132,15 @@ E: Unable to locate package python3-venv
 //}
 
 
-//panelsection[]{
-
-
 代わりに次のコマンドを実行してください。
 
 
-//}
-
-
 //cmd[command-line]{
-sudo apt install python3.6-venv
+$ sudo apt install python3.6-venv
 //}
+
+
+====[/column]
 
 
 == 仮想環境の操作
@@ -191,13 +149,10 @@ sudo apt install python3.6-venv
 上に示したコマンドは仮想環境（基本的には一連のディレクトリとファイル）を含む@<tt>{myvenv} という名前（あるいはあなたが選んだ名前）のディレクトリを生成します。次に我々がしたいのは、これを実行し、開始することです。
 
 
-//panelsection[Working with virtualenv: Windows]{
+====[column] Working with virtualenv: Windows
 
 
 実行して、仮想環境を起動します。
-
-
-//}
 
 
 //cmd[command-line]{
@@ -218,13 +173,13 @@ C:\WINDOWS\system32> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 //}
 
 
-//panelsection[Working with virtualenv: Linux and OS X]{
+====[/column]
+
+
+====[column] Working with virtualenv: Linux and OS X
 
 
 実行して、仮想環境を起動します。
-
-
-//}
 
 
 //cmd[command-line]{
@@ -232,13 +187,7 @@ $ source myvenv/bin/activate
 //}
 
 
-//panelsection[]{
-
-
 @<tt>{myvenv}のところをあながた選んだ@<tt>{仮想環境(virtualenvironment)}名に置き換えることを忘れないで下さいね！
-
-
-//}
 
 
 //quote{
@@ -250,6 +199,9 @@ $ source myvenv/bin/activate
 //cmd[command-line]{
 $ . myvenv/bin/activate
 //}
+
+
+====[/column]
 
 
 @<tt>{virtualenv} が起動すると、プロンプトの行頭に@<tt>{(myvenv)}が現れます。
@@ -314,22 +266,19 @@ Successfully installed Django-{{ book.django_version }}
 //}
 
 
-//panelsection[Installing Django: Windows]{
+====[column] Installing Django: Windows
 
 
 Windowsでpipを呼んだときにエラーが起きた場合は、あなたのプロジェクトのパス名がスペース・アクセント・特殊文字を含んでいないか確認してみて下さい （例 @<tt>{C:\Users\User Name\djangogirls}）。 もし含まれている場合は、ディレクトリを他のスペース・アクセント・特殊文字が含まれていない場所（@<tt>{C:\djangogirls}など）で作成することを検討してみてください。 新しいディレクトリに新しい仮想環境を作成してから、古いディレクトリを削除して、上記のコマンドを試してください。 （仮想環境のディレクトリは、絶対パスが使われているので、移動させてもうごきません。）
 
 
-//}
+====[/column]
 
 
-//panelsection[Installing Django: Windows 8 and Windows 10]{
+====[column] Installing Django: Windows 8 and Windows 10
 
 
 Djangoをインストールしようとしてコマンドラインがフリーズして動かなくなってしまうことがあります。その時は、以下のコマンドを代わりに入力してみてください。
-
-
-//}
 
 
 //cmd[command-line]{
@@ -337,13 +286,16 @@ C:\Users\Name\djangogirls> python -m pip install -r requirements.txt
 //}
 
 
-//panelsection[Installing Django: Linux]{
+====[/column]
+
+
+====[column] Installing Django: Linux
 
 
 Ubuntu 12.04でpipを呼んだときにエラーが起きた場合は、仮想環境(virtualenv) 内にpipを再インストールするために@<tt>{python -m pip install -U --force-reinstall pip} を実行して下さい。
 
 
-//}
+====[/column]
 
 
 以上です！あなたは（ついに）Djangoアプリケーションを作成する準備が整いました！

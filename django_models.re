@@ -98,22 +98,26 @@ Djangoのモデルは特別なオブジェクトで、@<tt>{データベース} 
 全部をきちんと整理しておくため、プロジェクトの中に別のアプリケーションを作ります。 初めから全てを整理しておくのはとっても良いことです。 アプリケーションを作るために、次のコマンドをコンソールの中で走らせましょう。（@<tt>{manage.py} ファイルがある @<tt>{djangogirls} ディレクトリでコマンドをタイプしてくださいね）
 
 
-//codepanelsection[Mac OS X and Linux:]{
+====[column] Mac OS X and Linux:
 
 
+//cmd{
 (myvenv) ~/djangogirls$ python manage.py startapp blog
-
-
 //}
 
 
-//codepanelsection[Windows:]{
+====[/column]
 
 
+====[column] Windows:
+
+
+//cmd{
 (myvenv) C:\Users\Name\djangogirls> python manage.py startapp blog
-
-
 //}
+
+
+====[/column]
 
 
 新しく @<tt>{blog} ディレクトリが作られて、今沢山のファイルがそこに入っているのに気がついたでしょう。ディレクトリとファイルはこんな風に見えるはずです：
