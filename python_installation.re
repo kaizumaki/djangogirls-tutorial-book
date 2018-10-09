@@ -73,7 +73,7 @@ Windowsをお使いのかたは、まずシステム情報を開き、システ�
 ====[/column]
 
 
-//panelsection[Install Python: OS X]{
+====[column] Install Python: OS X
 
 
 @<strong>{注意}：OS XにPythonをインストールする前に、Macの設定でApp Store以外のパッケージをインストールできるようにする必要があります。 「システム環境設定」（「アプリケーション」フォルダ内）に移動し、「セキュリティとプライバシー」、「一般」タブの順にクリックします。 「ダウンロードしたアプリを許可する」が「Mac App Store」に設定されている場合は、「Mac App Storeと識別された開発者」に変更します。
@@ -85,16 +85,13 @@ Webサイトからダウンロードしてインストールしましょう。 h
  * @<b>{python-3.6.5-macosx10.6.pkg}をダブルクリックしてインストーラーを実行してください。
 
 
-//}
+====[/column]
 
 
-//panelsection[Install Python: Linux]{
+====[column] Install Python: Linux
 
 
 おそらくほとんどの場合、すぐに使えるPythonがすでにインストールされているでしょう。インストールされているか（とそれがどのバージョンか）を確認するため、コンソールを起動して次のコマンドを打ってください。
-
-
-//}
 
 
 //cmd[command-line]{
@@ -103,22 +100,16 @@ Python 3.6.5
 //}
 
 
-//panelsection[]{
-
-
 このとき、バージョンの数字の最後が違っていたとしても（例えば、3.6.0など）、アップグレードする必要はありません。 もし、Pythonがインストールされていない場合、あるいはバージョンが古い場合は、次の指示に従ってインストールしてください。
 
 
-//}
+====[/column]
 
 
-//panelsection[Install Python: Debian or Ubuntu]{
+====[column] Install Python: Debian or Ubuntu
 
 
 次のコマンドをコンソールに打って下さい。
-
-
-//}
 
 
 //cmd[command-line]{
@@ -126,13 +117,13 @@ $ sudo apt install python3.6
 //}
 
 
-//panelsection[Install Python: Fedora]{
+====[/column]
+
+
+====[column] Install Python: Fedora
 
 
 次のコマンドをコンソールに打って下さい。
-
-
-//}
 
 
 //cmd[command-line]{
@@ -140,27 +131,24 @@ $ sudo dnf install python3
 //}
 
 
-//panelsection[]{
-
-
 古いバージョンのFedoraの場合は、コマンド @<tt>{dnf} が見つからないというエラーが表示されます。その場合は、代わりに yum を使用してください。
 
 
-//}
+====[/column]
 
 
-//panelsection[Install Python: openSUSE]{
+====[column] Install Python: openSUSE
 
 
 次のコマンドをコンソールに打って下さい。
 
 
-//}
-
-
 //cmd[command-line]{
 $ sudo zypper install python3
 //}
+
+
+====[/column]
 
 
 インストールされているか確認するために、コマンドプロンプトを開いて次のように@<tt>{Python3}コマンドを入力してください。

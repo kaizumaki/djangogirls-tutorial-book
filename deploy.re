@@ -67,7 +67,7 @@ Gitはたくさんのプログラマが利用する「バージョン管理シ�
 ====[column] Installing Git: Debian or Ubuntu
 
 
-//cmd{
+//cmd[command-line]{
 $ sudo apt install git
 //}
 
@@ -78,7 +78,7 @@ $ sudo apt install git
 ====[column] Installing Git: Fedora
 
 
-//cmd{
+//cmd[command-line]{
 $ sudo dnf install git
 //}
 
@@ -89,7 +89,7 @@ $ sudo dnf install git
 ====[column] Installing Git: openSUSE
 
 
-//cmd{
+//cmd[command-line]{
 $ sudo zypper install git
 //}
 

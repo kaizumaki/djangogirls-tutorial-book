@@ -764,41 +764,38 @@ print('Hello, Django girls!')
 ファイルを保存したら、実行してみましょう！コマンドラインのセクションで学んだことを思い出して、ターミナルの @<strong>{ディレクトリを変更} して、デスクトップにしましょう。
 
 
-//panelsection[Change directory: OS X]{
+====[column] Change directory: OS X
 
 
 Macでは、コマンドは次のようになります。
 
 
-//}
-
-
 //cmd[command-line]{
 $ cd ~/Desktop
 //}
 
 
-//panelsection[Change directory: Linux]{
+====[/column]
+
+
+====[column] Change directory: Linux
 
 
 Linuxでは、次のようになります。("Desktop"のところは"デスクトップ"と表示されているかも知れません)
 
 
-//}
-
-
 //cmd[command-line]{
 $ cd ~/Desktop
 //}
 
 
-//panelsection[Change directory: Windows Command Prompt]{
+====[/column]
+
+
+====[column] Change directory: Windows Command Prompt
 
 
 Windowsのコマンドプロンプトでは、次のようになります。
-
-
-//}
 
 
 //cmd[command-line]{
@@ -806,18 +803,21 @@ Windowsのコマンドプロンプトでは、次のようになります。
 //}
 
 
-//panelsection[Change directory: Windows Powershell]{
+====[/column]
+
+
+====[column] Change directory: Windows Powershell
 
 
 WindowsのPowerShellでは、次のようになります。
 
 
-//}
-
-
 //cmd[command-line]{
 > cd $Home\Desktop
 //}
+
+
+====[/column]
 
 
 うまくできない時は、質問してください。まさにそのためにコーチがここにいます！

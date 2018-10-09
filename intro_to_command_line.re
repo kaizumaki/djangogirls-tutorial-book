@@ -35,7 +35,7 @@
 では、実際にコマンドラインを開いて、触ってみることとしましょう。
 
 
-//panelsection[Opening: Windows]{
+====[column] Opening: Windows
 
 
 ［スタート］→［Windowsシステムツール］→［コマンドプロンプト］を選択しましょう
@@ -44,25 +44,26 @@
 @<strong>{備考：} Windowsの古いバージョンの場合、[スタート] → [アクセサリ] → [コマンドプロンプト] です。
 
 
-//}
+====[/column]
 
 
-//panelsection[Opening: OS X]{
+====[column] Opening: OS X
 
 
 ［アプリケーション］→［ユーティリティ］→［ターミナル］を選択しましょう。
 
 
-//}
+====[/column]
 
 
-//panelsection[Opening: Linux]{
+====[column] Opening: Linux
 
 
 おそらく ［アプリケーション］→［アクセサリ］→［ターミナル］と選択し起動できるでしょう。あなたのシステムによってはこの通りではないことがあります。見つからないときは、Google先生にきいてみましょう. :)
 
 
-//}
+====[/column]
+
 
 == プロンプト
 
@@ -70,31 +71,32 @@
 おそらく今、真っ白または真っ黒な画面が開かれていることでしょう。この画面はあなたの命令を待っています。
 
 
-//panelsection[Prompt: OS X and Linux]{
+====[column] Prompt: OS X and Linux
 
 
 MacあるいはLinuxの方は、次のように @<tt>{$} と表示されているのがわかりますか？
 
-
-//}
 
 //cmd[command-line]{
 $
 //}
 
 
-//panelsection[Prompt: Windows]{
+====[/column]
+
+
+====[column] Prompt: Windows
 
 
 Windowsの方は、 @<tt>{>} という記号が表示されていることでしょう。
 
 
-//}
-
-
 //cmd[command-line]{
 >
 //}
+
+
+====[/column]
 
 
 各コマンドの先頭には、この記号とスペースがつきます。あなたのコンピューターが表示してくれるので、自分で入力する必要はありません. :)
@@ -119,22 +121,26 @@ Windowsの方は、 @<tt>{>} という記号が表示されていることでし
 次のようにコマンドを入力してみましょう。:
 
 
-//codepanelsection[Your first command: OS X and Linux]{
+====[column] Your first command: OS X and Linux
 
 
+//cmd[command-line]{
 $ whoami
-
-
 //}
 
 
-//codepanelsection[Your first command: Windows]{
+====[/column]
 
 
+====[column] Your first command: Windows
+
+
+//cmd[command-line]{
 > whoami
-
-
 //}
+
+
+====[/column]
 
 
 そして最後にEnterキーを押して下さい。このような結果が返ってきます
@@ -154,6 +160,7 @@ olasitarska
 
 //}
 
+
 == 基本
 
 
@@ -166,15 +173,14 @@ OSによってコマンドが若干違います。あなたのコンピュータ
 今どこのディレクトリにいるか（どのフォルダで作業をしているか）、知りたいですよね？では、このようにキーボードで入力して、@<tt>{Enterキー}をおしてください。
 
 
-//codepanelsection[Current directory: OS X and Linux]{
+====[column] Current directory: OS X and Linux
 
 
+//cmd[command-line]{
 $ pwd
-
 /Users/olasitarska
-
-
 //}
+
 
 //quote{
 補足: 'pwd' は'print working directory'を意味しており、現在いる作業ディレクトリを取得することです。
@@ -182,20 +188,25 @@ $ pwd
 //}
 
 
-//codepanelsection[Current directory: Windows]{
+====[/column]
 
 
+====[column] Current directory: Windows
+
+
+//cmd[command-line]{
 > cd
-
 C:\Users\olasitarska
-
-
 //}
+
 
 //quote{
 補足: 'cd' は、'change directory' を意味しています。Powershellを使うと、LinuxやMac OS Xのようにpwdコマンドを使えます。
 
 //}
+
+
+====[/column]
 
 
 おそらく、似たようなものがあなたの画面に表示されたのではないでしょうか。コマンドラインを起動した最初は、通常ユーザーのホームディレクトリが表示されます。
@@ -207,41 +218,34 @@ C:\Users\olasitarska
 では、その中には何があるのでしょうか？表示させてみましょう。
 
 
-//codepanelsection[List files and directories: OS X and Linux]{
+====[column] List files and directories: OS X and Linux
 
+
+//cmd[command-line]{
 $ ls
-
 Applications
-
 Desktop
-
 Downloads
-
 Music
-
 ...
-
 
 //}
 
 
-//codepanelsection[List files and directories: Windows]{
+====[/column]
 
 
+====[column] List files and directories: Windows
+
+
+//cmd[command-line]{
 > dir
-
  Directory of C:\Users\olasitarska
-
 05/08/2014 07:28 PM <DIR>      Applications
-
 05/08/2014 07:28 PM <DIR>      Desktop
-
 05/08/2014 07:28 PM <DIR>      Downloads
-
 05/08/2014 07:28 PM <DIR>      Music
-
 ...
-
 
 //}
 
@@ -251,53 +255,62 @@ Music
 //}
 
 
+====[/column]
+
+
 === カレントディレクトリの変更
 
 
 次に、デスクトップのディレクトリに移動してみましょう。
 
 
-//codepanelsection[Change current directory: OS X and Linux]{
+====[column] Change current directory: OS X and Linux
 
 
+//cmd[command-line]{
 $ cd Desktop
-
-
 //}
 
 
-//codepanelsection[Change current directory: Windows]{
+====[/column]
 
 
+====[column] Change current directory: Windows
+
+
+//cmd[command-line]{
 > cd Desktop
-
-
 //}
+
+
+====[/column]
 
 
 本当に変更されたかどうか確認してみてください：
 
 
-//codepanelsection[Check if changed: OS X and Linux]{
+====[column] Check if changed: OS X and Linux
 
 
+//cmd[command-line]{
 $ pwd
-
 /Users/olasitarska/Desktop
-
-
 //}
 
 
-//codepanelsection[Check if changed: Windows]{
+====[/column]
 
 
+====[column] Check if changed: Windows
+
+
+//cmd[command-line]{
 > cd
-
 C:\Users\olasitarska\Desktop
-
-
 //}
+
+
+====[/column]
 
 
 できていますね！
@@ -315,22 +328,26 @@ PRO tip: @<tt>{cd D}と入力して、キーボードの@<tt>{tab}ボタンを�
 それでは、Django Girlsのディレクトリをデスクトップに新規作成してみましょう。
 
 
-//codepanelsection[Create directory: OS X and Linux]{
+====[column] Create directory: OS X and Linux
 
 
+//cmd[command-line]{
 $ mkdir practice
-
-
 //}
 
 
-//codepanelsection[Create directory: Windows]{
+====[/column]
 
 
+====[column] Create directory: Windows
+
+
+//cmd[command-line]{
 > mkdir practice
-
-
 //}
+
+
+====[/column]
 
 
 この短いコマンドで、デスクトップにpracticeという名前の新しいフォルダが作成されました。 あなたのデスクトップを見てフォルダが作成されていることを確認してみましょう。あるいは、先ほど学んだコマンド @<tt>{ls} や @<tt>{dir} を使って確認しましょう。 やってみてください。 :)
@@ -351,34 +368,32 @@ PRO tip: 同じコマンドを何度もなんども入力したくない時は�
 ==== 解答:
 
 
-//codepanelsection[Exercise solution: OS X and Linux]{
+====[column] Exercise solution: OS X and Linux
 
 
+//cmd[command-line]{
 $ cd practice
-
 $ mkdir test
-
 $ ls
-
 test
-
-
 //}
 
 
-//codepanelsection[Exercise solution: Windows]{
+====[/column]
 
 
+====[column] Exercise solution: Windows
+
+
+//cmd[command-line]{
 > cd practice
-
 > mkdir test
-
 > dir
-
 05/08/2014 07:28 PM <DIR>      test
-
-
 //}
+
+
+====[/column]
 
 
 おめでとうございます！よくできました！
@@ -394,22 +409,26 @@ test
 はじめに、作業するディレクトリをデスクトップに戻しましょう。
 
 
-//codepanelsection[Clean up: OS X and Linux]{
+====[column] Clean up: OS X and Linux
 
 
+//cmd[command-line]{
 $ cd ..
-
-
 //}
 
 
-//codepanelsection[Clean up: Windows]{
+====[/column]
 
 
+====[column] Clean up: Windows
+
+
+//cmd[command-line]{
 > cd ..
-
-
 //}
+
+
+====[/column]
 
 
 @<tt>{cd} の後にある@<tt>{..} で、現在の親ディレクトリに移動します。（今作業しているフォルダのひとつ上のフォルダに移動するということですね。）
@@ -419,26 +438,28 @@ $ cd ..
 現在の作業ディレクトリを確認しておきましょう。
 
 
-//codepanelsection[Check location: OS X and Linux]{
+====[column] Check location: OS X and Linux
 
 
+//cmd[command-line]{
 $ pwd
-
 /Users/olasitarska/Desktop
-
-
 //}
 
 
-//codepanelsection[Check location: Windows]{
+====[/column]
 
 
+====[column] Check location: Windows
+
+
+//cmd[command-line]{
 > cd
-
 C:\Users\olasitarska\Desktop
-
-
 //}
+
+
+====[/column]
 
 
 では、practiceディレクトリを削除しましょう。
@@ -450,45 +471,52 @@ C:\Users\olasitarska\Desktop
 //}
 
 
-//codepanelsection[Delete directory: Windows Powershell、OS X and Linux]{
+====[column] Delete directory: Windows Powershell、OS X and Linux
 
 
+//cmd[command-line]{
 $ rm -r practice
-
-
 //}
 
 
-//codepanelsection[Delete directory: Windows Command Prompt]{
+====[/column]
 
 
+====[column] Delete directory: Windows Command Prompt
+
+
+//cmd[command-line]{
 > rmdir /S practice
-
 practice, Are you sure <Y/N>? Y
-
-
 //}
+
+
+====[/column]
 
 
 できました! 本当に削除されたか、確認してみましょう。:
 
 
-//codepanelsection[Check deletion: OS X and Linux]{
+====[column] Check deletion: OS X and Linux
 
 
+//cmd[command-line]{
 $ ls
-
-
 //}
 
 
-//codepanelsection[Check deletion: Windows]{
+====[/column]
 
 
+====[column] Check deletion: Windows
+
+
+//cmd[command-line]{
 > dir
-
-
 //}
+
+
+====[/column]
 
 
 === 終了
@@ -497,22 +525,26 @@ $ ls
 ここまでです。それではコマンドラインを終了しましょう。かっこいいやり方で終わりたいですよね? :)
 
 
-//codepanelsection[Exit: OS X and Linux]{
+====[column] Exit: OS X and Linux
 
 
+//cmd[command-line]{
 $ exit
-
-
 //}
 
 
-//codepanelsection[Exit: Windows]{
+====[/column]
 
 
+====[column] Exit: Windows
+
+
+//cmd[command-line]{
 > exit
-
-
 //}
+
+
+====[/column]
 
 
 かっこいいですね? :)

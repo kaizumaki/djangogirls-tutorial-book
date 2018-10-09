@@ -101,7 +101,7 @@ Djangoのモデルは特別なオブジェクトで、@<tt>{データベース} 
 ====[column] Mac OS X and Linux:
 
 
-//cmd{
+//cmd[command-line]{
 (myvenv) ~/djangogirls$ python manage.py startapp blog
 //}
 
@@ -112,7 +112,7 @@ Djangoのモデルは特別なオブジェクトで、@<tt>{データベース} 
 ====[column] Windows:
 
 
-//cmd{
+//cmd[command-line]{
 (myvenv) C:\Users\Name\djangogirls> python manage.py startapp blog
 //}
 

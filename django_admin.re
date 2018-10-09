@@ -43,7 +43,7 @@ Webサーバーを実行しているときに新しいコマンドを入力し�
 ====[column] Mac OS X または Linux:
 
 
-//cmd{
+//cmd[command-line]{
 (myvenv) ~/djangogirls$ python manage.py createsuperuser
 //}
 
@@ -54,7 +54,7 @@ Webサーバーを実行しているときに新しいコマンドを入力し�
 ====[column] Windows:
 
 
-//cmd{
+//cmd[command-line]{
 (myvenv) C:\Users\Name\djangogirls> python manage.py createsuperuser
 //}
 

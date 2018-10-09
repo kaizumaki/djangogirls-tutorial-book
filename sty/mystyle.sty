@@ -22,6 +22,7 @@
 
 
 \renewenvironment{reviewcolumn}[1][]{%
+     \textcolor{white}{#1}
      \begin{tcolorbox}[breakable,
                        nofloat,
                        sharp corners,
@@ -29,6 +30,5 @@
                        colback=white,
                        colbacktitle=gray,
                        coltitle=white, fonttitle=\ttfamily\bfseries, title=#1]
-     \textcolor{black}{#1}
   }{%
      \end{tcolorbox}}
