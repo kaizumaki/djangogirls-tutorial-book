@@ -31,7 +31,7 @@ admin.site.register(Post)
 
 
 
-ログインするには、*superuser *（サイトの全てを管理するユーザー）を作る必要があります。 コマンドラインに戻り、@<tt>{python manage.py createsuperuser} と入力し、enter キーを押します。
+ログインするには、@<i>{superuser}（サイトの全てを管理するユーザー）を作る必要があります。 コマンドラインに戻り、@<tt>{python manage.py createsuperuser} と入力し、enter キーを押します。
 
 
 //quote{

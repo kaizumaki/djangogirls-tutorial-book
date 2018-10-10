@@ -169,7 +169,10 @@ blog
 
 
 
-いろんな要素をまとめたテンプレートの例がこれです。コピーして@<tt>{blog/templates/blog/post_list.html}に貼り付けてみましょう:
+いろんな要素をまとめたテンプレートの例がこれです。
+
+
+コピーして@<tt>{blog/templates/blog/post_list.html}に貼り付けてみましょう:
 
 
 //emlist[blog/templates/blog/post_list.html][html]{

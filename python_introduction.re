@@ -434,7 +434,10 @@ Maria
 
 
 
-ご参考に、こちらのドキュメントにリストメソッドがすべて記されています。 https://docs.python.org/3/tutorial/datastructures.html
+ご参考に、こちらのドキュメントにリストメソッドがすべて記されています。
+
+
+https://docs.python.org/3/tutorial/datastructures.html
 
 
 == 辞書（ディクショナリ）

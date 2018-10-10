@@ -32,5 +32,5 @@
  * @<href>{http://learnpythonthehardway.org/book/,Learn Python The Hard Way book}
  * @<href>{http://www.gettingstartedwithdjango.com/,Getting Started With Django video lessons}
  * @<href>{https://www.twoscoopspress.com/products/two-scoops-of-django-1-11,Two Scoops of Django 1.11: Best Practices for Django Web Framework book}
- * @<href>{https://hellowebapp.com/,Hello Web App: Learn How to Build a Web App} - 著者のTracy Osborn (@<href>{tracy@limedaring.com}) に連絡して無料のeBookライセンスをリクエストすることもできます
+ * @<href>{https://hellowebapp.com/,Hello Web App: Learn How to Build a Web App} - 著者のTracy Osborn (tracy@limedaring.com) に連絡して無料のeBookライセンスをリクエストすることもできます
 

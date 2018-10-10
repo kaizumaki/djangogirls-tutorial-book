@@ -39,11 +39,13 @@ MacOS や Linux の場合は、コンソールで以下のコマンドを実行�
 //}
 
 
+//quote{
 コマンドの最後にピリオド @<tt>{.} を入力したことを確認してくださいね。このピリオドは、現在の作業ディレクトリに Django をインストールするということを示しています (ピリオド @<tt>{.} は、現在のディレクトリを表す省略表記です)。
 
 
 
 @<strong>{メモ:} 上記のコマンドを入力するときは、@<tt>{django-admin} で始まる部分のみを入力することを忘れないでください。 ここに書いた @<tt>{(myvenv) ~/djangogirls$} の部分は、コマンドライン上で入力を受け付けることを示しているプロンプトの一例なので、人によって違うかもしれません。
+//}
 
 
 ====[/column]
@@ -60,11 +62,14 @@ Windows の場合は、以下のコマンドを実行しないといけません
 //}
 
 
+//quote{
 コマンドの最後にピリオド (.) があることを確認してくださいね。これば、現在の作業ディレクトリにDjangoをインストールするということを示すので、とても重要なのです。(ピリオドは簡略表記です).
 
 
 
 @<strong>{メモ:} 上記のコマンドを入力するときは、@<tt>{django-admin} で始まる部分のみを入力することを忘れないでください。 ここに書いた @<tt>{(myvenv) ~/djangogirls$} の部分は、コマンドライン上で入力を受け付けることを示しているプロンプトの一例なので、人によって違うかもしれません。
+//}
+
 
 ====[/column]
 
@@ -156,7 +161,10 @@ ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 //}
 
 //quote{
-@<strong>{メモ}: Chromebook を使っている人は、次の1行を settings.py ファイルの最後に追加してください。 @<tt>{MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'}
+@<strong>{メモ}: Chromebook を使っている人は、次の1行を settings.py ファイルの最後に追加してください。
+
+
+@<tt>{MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'}
 
 
 

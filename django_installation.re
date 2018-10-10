@@ -99,7 +99,9 @@ $ python3 -m venv myvenv
 //}
 
 
+//quote{
 この場合、エラー内の指示にしたがって、@<tt>{python3-venv}のパッケージをインストールしましょう。
+//}
 
 
 //cmd[command-line]{
@@ -107,7 +109,9 @@ $ sudo apt install python3-venv
 //}
 
 
+//quote{
 @<strong>{補足：}DebianやUbuntuのバージョンによっては、この仮想環境を実行すると、次のようなエラーがでます。
+//}
 
 
 //cmd[command-line]{
@@ -115,7 +119,9 @@ $ sudo apt install python3-venv
 //}
 
 
+//quote{
 このエラーを回避するために、代わりに@<tt>{virtualenv}コマンドを使います。
+//}
 
 
 //cmd[command-line]{
@@ -124,7 +130,9 @@ $ virtualenv --python=python3.6 myvenv
 //}
 
 
+//quote{
 @<strong>{補足：}もし以下のようなエラーがでたら、
+//}
 
 
 //cmd[command-line]{
@@ -132,7 +140,9 @@ E: Unable to locate package python3-venv
 //}
 
 
+//quote{
 代わりに次のコマンドを実行してください。
+//}
 
 
 //cmd[command-line]{
@@ -269,7 +279,9 @@ Successfully installed Django-{{ book.django_version }}
 ====[column] Installing Django: Windows
 
 
+//quote{
 Windowsでpipを呼んだときにエラーが起きた場合は、あなたのプロジェクトのパス名がスペース・アクセント・特殊文字を含んでいないか確認してみて下さい （例 @<tt>{C:\Users\User Name\djangogirls}）。 もし含まれている場合は、ディレクトリを他のスペース・アクセント・特殊文字が含まれていない場所（@<tt>{C:\djangogirls}など）で作成することを検討してみてください。 新しいディレクトリに新しい仮想環境を作成してから、古いディレクトリを削除して、上記のコマンドを試してください。 （仮想環境のディレクトリは、絶対パスが使われているので、移動させてもうごきません。）
+//}
 
 
 ====[/column]
@@ -278,7 +290,9 @@ Windowsでpipを呼んだときにエラーが起きた場合は、あなたの�
 ====[column] Installing Django: Windows 8 and Windows 10
 
 
+//quote{
 Djangoをインストールしようとしてコマンドラインがフリーズして動かなくなってしまうことがあります。その時は、以下のコマンドを代わりに入力してみてください。
+//}
 
 
 //cmd[command-line]{
@@ -292,7 +306,9 @@ C:\Users\Name\djangogirls> python -m pip install -r requirements.txt
 ====[column] Installing Django: Linux
 
 
+//quote{
 Ubuntu 12.04でpipを呼んだときにエラーが起きた場合は、仮想環境(virtualenv) 内にpipを再インストールするために@<tt>{python -m pip install -U --force-reinstall pip} を実行して下さい。
+//}
 
 
 ====[/column]
