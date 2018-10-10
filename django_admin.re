@@ -25,7 +25,7 @@ admin.site.register(Post)
 
 
 
-//image[login_page2][ログインページ]{
+//image[login_page2][]{
 //}
 
 
@@ -78,7 +78,7 @@ Superuser created successfully.
 
 
 
-//image[django_admin3][Django admin]{
+//image[django_admin3][]{
 //}
 
 
@@ -92,7 +92,7 @@ Postsに行って少し試してみてください。5～6のブログポスト�
 
 
 
-//image[edit_post3][Django admin]{
+//image[edit_post3][]{
 //}
 
 
