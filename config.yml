@@ -78,7 +78,7 @@ trl: Django Girls Japan
 # 日付の後ろを空白文字で区切り、任意の文字列を置くことも可能。
 history: [["2018-XX-XX ver 1.0"]]
 # 権利表記(配列で複数指定可)
-rights: (C) 2018 Django Girls Japan
+# rights: (C) 2018 Django Girls Japan
 # description: 説明
 # subject: 短い説明用タグ(配列で複数指定可)
 # type: 書籍のカテゴリーなど(配列で複数指定可)
@@ -325,7 +325,7 @@ pdfmaker:
   # image_scale2width: true
   #
   # 奥付を作成するか。trueを指定するとデフォルトの奥付、ファイル名を指定するとそれがcolophon.htmlとしてコピーされる
-  colophon: true
+  colophon: "colophon.tex"
   #
   # 表紙に配置し、書籍の影絵にも利用する画像ファイル。同人誌の印刷では一般的に、表紙は本文と別ファイルにするので、ここはnullにする。
   coverimage: null
