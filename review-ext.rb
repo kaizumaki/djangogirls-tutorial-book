@@ -51,6 +51,15 @@ module ReVIEW
       @doc_status[:column] = nil
     end
 
+    def quote(lines)
+      puts '\begin{quote}'
+      lines.each do |line|
+        puts '\noindent'
+        puts detab(line)
+      end
+      puts '\end{quote}'
+    end
+
   end
 
   ## LaTeX用の定義
