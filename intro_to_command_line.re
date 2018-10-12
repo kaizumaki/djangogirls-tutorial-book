@@ -19,7 +19,7 @@
 
 
 //quote{
-@<strong>{備考：} このチュートリアルでは、”ディレクトリ”や"フォルダ"という用語が出てきますが、同じ意味です。
+@<strong>{備考：} このチュートリアルでは、“ディレクトリ”や“フォルダ”という用語が出てきますが、同じ意味です。
 
 //}
 
@@ -473,7 +473,7 @@ C:\Users\olasitarska\Desktop
 //}
 
 
-====[column] Delete directory: Windows Powershell、OS X and Linux
+====[column] Delete directory: Windows Powershell，OS X and Linux
 
 
 //cmd[command-line]{
