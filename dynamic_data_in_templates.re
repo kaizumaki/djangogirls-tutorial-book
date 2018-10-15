@@ -44,7 +44,7 @@ from .models import Post
 == クエリセット
 
 
-もう、クエリセットの働きについては、知っていますよね。@<href>{../django_orm/README.md,Django ORM（クエリセット）} チャプター で勉強しました。
+もう、クエリセットの働きについては、知っていますよね。@<chapref>{django_orm}で勉強しました。
 
 
 
