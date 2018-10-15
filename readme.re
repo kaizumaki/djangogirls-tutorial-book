@@ -3,7 +3,9 @@
 
 
 //quote{
-これは、Creative Commons Attribution-ShareAlike 4.0 International License のライセンスの下で提供しています。ライセンスについてはこちらをご確認ください。 https://creativecommons.org/licenses/by-sa/4.0/
+これは、Creative Commons Attribution-ShareAlike 4.0 International License のライセンスの下で提供しています。ライセンスについてはこちらをご確認ください。
+
+https://creativecommons.org/licenses/by-sa/4.0/
 
 //}
 

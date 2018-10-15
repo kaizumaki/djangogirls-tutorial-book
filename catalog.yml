@@ -2,6 +2,7 @@ PREDEF:
 
 CHAPS:
   - readme.re
+  - installation.re
   - chromebook_setup.re
   - how_the_internet_works.re
   - intro_to_command_line.re
