@@ -262,7 +262,7 @@ def post_detail(request, pk):
 あなたのウェブサイトがまだPythonAnywhere上で動くとしたらいいでしょう？またデプロイしてみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ git status
 $ git add --all .
 $ git status
@@ -274,7 +274,7 @@ $ git push
 それから、@<href>{https://www.pythonanywhere.com/consoles/,PythonAnywhere Bash コンソール}で：
 
 
-//cmd[PythonAnywhere command-line]{
+//emlist[PythonAnywhere command-line]{
 $ cd ~/<your-pythonanywhere-username>.pythonanywhere.com
 $ git pull
 [...]
@@ -294,7 +294,7 @@ PythonAnywhereのようなサーバは、（CSSファイルのような）「静
 もし仮想環境（virtualenv）が有効になっていなければ有効化するところから始めましょう (PythonAnywhereではこれを行うために@<tt>{workon}というコマンドを使用します。これはあなたが自身のコンピュータで使用している@<tt>{source myenv/bin/activate}コマンドと同じようなものです) 。
 
 
-//cmd[PythonAnywhere command-line]{
+//emlist[PythonAnywhere command-line]{
 $ workon <your-pythonanywhere-username>.pythonanywhere.com
 (ola.pythonanywhere.com)$ python manage.py collectstatic
 [...]

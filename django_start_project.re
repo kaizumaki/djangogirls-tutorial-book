@@ -34,7 +34,7 @@ virtualenv（仮想環境）を実行しているでしょうか。 もしコン
 MacOS や Linux の場合は、コンソールで以下のコマンドを実行します。最後のピリオド(ドット) @<tt>{.} を忘れないようにしてください！
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 (myvenv) ~/djangogirls$ django-admin startproject mysite .
 //}
 
@@ -57,7 +57,7 @@ MacOS や Linux の場合は、コンソールで以下のコマンドを実行�
 Windows の場合は、以下のコマンドを実行しないといけません。(最後にピリオド (ドット) @<tt>{.\} を書いてください)
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 (myvenv) C:\Users\Name\djangogirls> django-admin.exe startproject mysite .
 //}
 
@@ -195,7 +195,7 @@ DATABASES = {
 ブログのデータベースを作成するには、コンソールで次のコードを実行してみましょう： @<tt>{python manage.py migrate} (@<tt>{manage.py}ファイルのある@<tt>{djangogirls}ディレクトリにいる必要があります) 。 うまくいったら次のように表示されるでしょう：
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 (myvenv) ~/djangogirls$ python manage.py migrate
 Operations to perform:
   Apply all migrations: auth, admin, contenttypes, sessions
@@ -225,7 +225,7 @@ Running migrations:
 コマンドラインやコマンドプロンプトで@<tt>{manage.py}ファイルを含むディレクトリ（@<tt>{djangogirls}ディレクトリ）に移動してください。 @<tt>{python manage.py runserver}を実行してWebサーバーを起動できます。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 (myvenv) ~/djangogirls$ python manage.py runserver
 //}
 
@@ -233,7 +233,7 @@ Running migrations:
 Chromebookを使用している場合は、代わりに次のコマンドを使用します。
 
 
-//cmd[Cloud 9]{
+//emlist[Cloud 9]{
 (myvenv) ~/djangogirls$ python manage.py runserver 0.0.0.0:8080
 //}
 
@@ -241,7 +241,7 @@ Chromebookを使用している場合は、代わりに次のコマンドを使�
 Windows上で、@<tt>{UnicodeDecodeError}で失敗した場合は、代わりに次のコマンドを使用します。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 (myvenv) ~/djangogirls$ python manage.py runserver 0:8000
 //}
 

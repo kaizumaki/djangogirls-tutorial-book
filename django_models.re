@@ -101,7 +101,7 @@ Djangoのモデルは特別なオブジェクトで、@<tt>{データベース} 
 ====[column] Mac OS X and Linux:
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 (myvenv) ~/djangogirls$ python manage.py startapp blog
 //}
 
@@ -112,7 +112,7 @@ Djangoのモデルは特別なオブジェクトで、@<tt>{データベース} 
 ====[column] Windows:
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 (myvenv) C:\Users\Name\djangogirls> python manage.py startapp blog
 //}
 
@@ -248,7 +248,7 @@ class Post(models.Model):
 最後のステップは新しいモデルをデータベースに追加することです。 まず、モデルに少し変更があったこと（今作ったこと）をDjangoに知らせましょう。 コンソールで @<tt>{python manage.py makemigrations blog} とタイプします。 こんな感じですね。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 (myvenv) ~/djangogirls$ python manage.py makemigrations blog
 Migrations for 'blog':
   blog/migrations/0001_initial.py:
@@ -264,7 +264,7 @@ Migrations for 'blog':
 Djangoが作ってくれた移行ファイルを私たちがデータベースに追加すれば完了です。@<tt>{python manage.py migrate blog} とタイプするとこうなるでしょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 (myvenv) ~/djangogirls$ python manage.py migrate blog
 Operations to perform:
   Apply all migrations: blog

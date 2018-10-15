@@ -30,7 +30,7 @@ Pythonコンソールを開きましょう。Windowsなら @<tt>{python} 、Mac 
 
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3
 Python 3.6.1 (...)
 Type "help", "copyright", "credits" or "license" for more information.
@@ -52,7 +52,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> 2 + 3
 5
 //}
@@ -69,7 +69,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 2の3乗のような指数の計算は、次のようにタイプします。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> 2 ** 3
 8
 //}
@@ -89,7 +89,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> "Ola"
 'Ola'
 //}
@@ -103,7 +103,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> "Hi there " + "Ola"
 'Hi there Ola'
 //}
@@ -113,7 +113,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> "Ola" * 3
 'OlaOlaOla'
 //}
@@ -127,7 +127,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> "Runnin' down the hill"
 "Runnin' down the hill"
 //}
@@ -136,7 +136,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 あるいは、バックスラッシュ (``) を使う方法もあります。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> 'Runnin\' down the hill'
 "Runnin' down the hill"
 //}
@@ -146,7 +146,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> "Ola".upper()
 'OLA'
 //}
@@ -160,7 +160,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> len("Ola")
 3
 //}
@@ -190,7 +190,7 @@ Pythonコンソールを終わる時は、@<tt>{exit()} とタイプするか、
 さて、新しいことをやってみましょう。あなたの名前の文字数を数えたように、数字の文字数は数えられるでしょうか？ @<tt>{len(304023)} と記述して、@<tt>{Enter} キーを押してみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> len(304023)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -205,7 +205,7 @@ TypeError: object of type 'int' has no len()
 オブジェクトタイプ"int" (integers, 数値) は文字数がありませんと言っています。では、どうすればよいでしょうか？この数字を文字列として扱えれば、文字数を数えられるはずですよね？
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> len(str(304023))
 6
 //}
@@ -232,7 +232,7 @@ TypeError: object of type 'int' has no len()
 変数 @<tt>{name} を新しくつくってみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> name = "Ola"
 //}
 
@@ -244,7 +244,7 @@ name イコール（=）"Ola" とタイプします。
 見てのとおり、プログラムは、なにも返してくれませんね。では、変数がきちんとあるか、どうやって確かめたらいいのでしょうか？ @<tt>{name} とタイプして、@<tt>{Enter} キーを押してください。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> name
 'Ola'
 //}
@@ -253,7 +253,7 @@ name イコール（=）"Ola" とタイプします。
 やりました！あなたのはじめての変数ができましたね！代入する値を変えることもできます。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> name = "Sonja"
 >>> name
 'Sonja'
@@ -263,7 +263,7 @@ name イコール（=）"Ola" とタイプします。
 変数には関数も使えます。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> len(name)
 5
 //}
@@ -272,7 +272,7 @@ name イコール（=）"Ola" とタイプします。
 素晴らしいですね！変数は、数値にも使えますよ。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> a = 4
 >>> b = 6
 >>> a * b
@@ -283,7 +283,7 @@ name イコール（=）"Ola" とタイプします。
 もしも、間違えた変数名を使ってしまったら、どうなるでしょうか？予想できますか？やってみましょう！
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> city = "Tokyo"
 >>> ctiy
 Traceback (most recent call last):
@@ -305,7 +305,7 @@ NameError: name 'ctiy' is not defined
 次に挑戦してみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> name = 'Maria'
 >>> name
 'Maria'
@@ -331,7 +331,7 @@ Maria
 まずはリストを作りましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> []
 []
 //}
@@ -341,7 +341,7 @@ Maria
 
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> lottery = [3, 42, 12, 19, 30, 59]
 //}
 
@@ -349,7 +349,7 @@ Maria
 よし、これでリストができました！このリストで何をしましょうか？では、くじ引きの番号がいくつあるか、数えてみましょう。何の関数を使えばいいか、予想できますか？すでに知っていますよね！
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> len(lottery)
 6
 //}
@@ -358,7 +358,7 @@ Maria
 そうです！@<tt>{len()} がリストにあるオブジェクトの数を取得できます。便利ですね。では、くじ引きの番号をソートしてみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> lottery.sort()
 //}
 
@@ -366,7 +366,7 @@ Maria
 これは何も返してきません。これはリストに表示される番号を、順番に並べ替えただけです。再度出力して、確かめてみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> print(lottery)
 [3, 12, 19, 30, 42, 59]
 //}
@@ -379,7 +379,7 @@ Maria
 逆順に並び替えてみたくなりましたか？やってみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> lottery.reverse()
 >>> print(lottery)
 [59, 42, 30, 19, 12, 3]
@@ -389,7 +389,7 @@ Maria
 リストに何かを追加したいときは、次のようにコマンドを記述してください。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> lottery.append(199)
 >>> print(lottery)
 [59, 42, 30, 19, 12, 3, 199]
@@ -399,7 +399,7 @@ Maria
 最初の数字だけを出力したいときは、@<strong>{インデックス(index)} を使って指定することができます。 インデックスは、アイテムがリストのどこにあるかを指す番号です。 リストの先頭の要素から順に「０」、次に「１」と割り当てられています。 次のとおり試してみてください。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> print(lottery[0])
 59
 >>> print(lottery[1])
@@ -414,7 +414,7 @@ Maria
 リストから要素を消すには、これまで学んできたインデックスと @<tt>{pop()} メソッドを使います。 例で試してみましょう。リストの最初の要素を削除しています。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> print(lottery)
 [59, 42, 30, 19, 12, 3, 199]
 >>> print(lottery[0])
@@ -451,7 +451,7 @@ https://docs.python.org/3/tutorial/datastructures.html
 辞書(ディクショナリ)について確認しましょう。リストに似ていますが、インデックスのかわりにキーと呼ばれる識別子で値を参照します。キーは文字列も数値も使えます。ディクショナリは次のように @<tt>{{\}} 括弧で囲んで作成します。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> {}
 {}
 //}
@@ -464,7 +464,7 @@ https://docs.python.org/3/tutorial/datastructures.html
 では、つぎのコマンドを記述してみましょう。 (あなた自身の情報に値をおきかえてみてもいいですよ）
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> participant = {'name': 'Ola', 'country': 'Poland', 'favorite_numbers': [7, 42, 92]}
 //}
 
@@ -480,7 +480,7 @@ https://docs.python.org/3/tutorial/datastructures.html
 次のように書くと各キーの値を確認できます。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> print(participant['name'])
 Ola
 //}
@@ -493,7 +493,7 @@ Ola
 もし存在しないキーを参照しようとすると、どうなるでしょうか？予想できますか？実際にやってみましょう！
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> participant['age']
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -515,7 +515,7 @@ KeyError: 'age'
 ディクショナリやリストは、作ったあとに変更できるオブジェクトです。これを @<b>{mutable} と呼びます。次のように、ディクショナリを作ったあとで、新しいキーと値を追加することができます。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> participant['favorite_language'] = 'Python'
 //}
 
@@ -523,7 +523,7 @@ KeyError: 'age'
 リストと同様に、@<tt>{len()} 関数をディクショナリに使ってみましょう。ディクショナリでは、キーと値のペアの数を返します。コマンドを入力してやってみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> len(participant)
 4
 //}
@@ -536,7 +536,7 @@ KeyError: 'age'
 ディクショナリの要素を削除する時は、@<tt>{pop()} メソッドを使います。 例えば、 キー @<tt>{'favorite_numbers'} の要素を削除するには、次のように記述してください。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> participant.pop('favorite_numbers')
 [7, 42, 92]
 >>> participant
@@ -551,7 +551,7 @@ KeyError: 'age'
 同様に、次のように記述することで、すでにあるキーの値を変更することができます。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> participant['country'] = 'Germany'
 >>> participant
 {'country': 'Germany', 'favorite_language': 'Python', 'name': 'Ola'}
@@ -587,7 +587,7 @@ KeyError: 'age'
 比較することは、プログラミングの醍醐味の１つです。簡単に比較できるものといえば、何でしょうか？そうです、数字ですね。さっそくやってみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> 5 > 2
 True
 >>> 3 < 1
@@ -612,7 +612,7 @@ Pythonにいくつか比較する数字をあたえてみました。数字を�
 次の２つはどうでしょうか。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> 6 >= 12 / 2
 True
 >>> 3 <= 2
@@ -632,7 +632,7 @@ False
 すばらしい! もう少しやってみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> 6 > 2 and 2 < 3
 True
 >>> 3 > 2 and 2 < 1
@@ -652,7 +652,7 @@ True
 "comparing apples to oranges"という英語の表現を聞いたことはありますか？文字通り訳すと「リンゴとオレンジを比較する」となり、「比較にならないものを比較する」という意味です。Pythonでも同じようなことをやってみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> 1 > 'django'
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -684,7 +684,7 @@ Pythonを記述するときは、Trueの最初は大文字のT、残りは小文
 ブール型は、次のように変数に代入することもできます。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> a = True
 >>> a
 True
@@ -694,7 +694,7 @@ True
 このようなこともできます。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> a = 2 > 5
 >>> a
 False
@@ -733,7 +733,7 @@ False
 これまで使っていたPythonインタプリタを終了しましょう。@<tt>{exit()} 関数を記述してください。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >>> exit()
 $
 //}
@@ -773,7 +773,7 @@ print('Hello, Django girls!')
 Macでは、コマンドは次のようになります。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ cd ~/Desktop
 //}
 
@@ -787,7 +787,7 @@ $ cd ~/Desktop
 Linuxでは、次のようになります。("Desktop"のところは"デスクトップ"と表示されているかも知れません)
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ cd ~/Desktop
 //}
 
@@ -801,7 +801,7 @@ $ cd ~/Desktop
 Windowsのコマンドプロンプトでは、次のようになります。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > cd %HomePath%\Desktop
 //}
 
@@ -815,7 +815,7 @@ Windowsのコマンドプロンプトでは、次のようになります。
 WindowsのPowerShellでは、次のようになります。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > cd $Home\Desktop
 //}
 
@@ -830,7 +830,7 @@ WindowsのPowerShellでは、次のようになります。
 次に、ファイルのコードを実行します。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 Hello, Django girls!
 //}
@@ -839,7 +839,7 @@ Hello, Django girls!
 メモ：Windowsでファイルのコードを実行するときは、'python3' の代わりに 'python' とタイプしましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > python python_intro.py
 //}
 
@@ -869,7 +869,7 @@ if 3 > 2:
 これを保存して実行すると、次のようなエラーがでます。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 File "python_intro.py", line 2
          ^
@@ -894,7 +894,7 @@ if 3 > 2:
 
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 It works!
 //}
@@ -920,7 +920,7 @@ else:
 これを実行した場合、次のように出力されます。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 5 is indeed greater than 2
 //}
@@ -943,7 +943,7 @@ else:
 実行すると...
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 Hey Sonja!
 //}
@@ -976,7 +976,7 @@ else:
 Pythonは上から順番に各条件をテスト、実行し、出力します。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 Perfect, I can hear all the details
 //}
@@ -1053,7 +1053,7 @@ hi()
 では実行して、どうなるか見てみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 Hi there!
 How are you?
@@ -1095,7 +1095,7 @@ hi()
 @<tt>{if} 文では @<tt>{print} 関数は４つのスペースでインデントしていましたね。条件式が True のときに print 関数が実行されました。関数の中の if 文で実行する print 関数の前には、上記のように、スペースを８ついれて２回分インデントします。 実行して、どのように動くか見てみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 Traceback (most recent call last):
 File "python_intro.py", line 10, in <module>
@@ -1115,7 +1115,7 @@ hi("Ola")
 実行してください。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 Hi Ola!
 //}
@@ -1132,7 +1132,7 @@ hi("Sonja")
 再度実行してください。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 Hi Sonja!
 //}
@@ -1141,7 +1141,7 @@ Hi Sonja!
 では、OlaやSonja以外の名前を入れた時、どうなるかわかりますか？やってみて、予測が正しいか確認して下さい。このように出力されましたか。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 Hi anonymous!
 //}
 
@@ -1164,7 +1164,7 @@ hi("Rachel")
 では、実行してみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 Hi Rachel!
 //}
@@ -1226,7 +1226,7 @@ for name in girls:
 実行してみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 python_intro.py
 Hi Rachel!
 Next girl
@@ -1257,7 +1257,7 @@ for i in range(1, 6):
 これを実行すると、次のように出力されます。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 1
 2
 3

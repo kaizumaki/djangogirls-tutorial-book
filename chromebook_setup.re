@@ -27,7 +27,7 @@ Cloud 9 はコードエディタや、インストール、書き込み、およ
 インターフェイスには、サイドバー、テキストが書かれた大きなメインウィンドウ、下部に小さなウィンドウがあり、次の表示が見えると思います。
 
 
-//cmd[Cloud 9]{
+//emlist[Cloud 9]{
 yourusername:~/workspace $
 //}
 
@@ -45,7 +45,7 @@ yourusername:~/workspace $
 Cloud 9のインターフェイスのうち、下部のターミナルで次を実行します。
 
 
-//cmd[Cloud 9]{
+//emlist[Cloud 9]{
 sudo apt update
 sudo apt install python3.6-venv
 //}
@@ -58,7 +58,7 @@ sudo apt install python3.6-venv
 次に、以下を実行します：
 
 
-//cmd[Cloud 9]{
+//emlist[Cloud 9]{
 mkdir djangogirls
 cd djangogirls
 python3.6 -mvenv myvenv

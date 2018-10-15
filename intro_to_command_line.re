@@ -79,7 +79,7 @@ Windowsの古いバージョンの場合、[スタート] → [アクセサリ] 
 MacあるいはLinuxの方は、次のように @<tt>{$} と表示されているのがわかりますか？
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $
 //}
 
@@ -93,7 +93,7 @@ $
 Windowsの方は、 @<tt>{>} という記号が表示されていることでしょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 >
 //}
 
@@ -126,7 +126,7 @@ Windowsの方は、 @<tt>{>} という記号が表示されていることでし
 ====[column] Your first command: OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ whoami
 //}
 
@@ -137,7 +137,7 @@ $ whoami
 ====[column] Your first command: Windows
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > whoami
 //}
 
@@ -148,7 +148,7 @@ $ whoami
 そして最後にEnterキーを押して下さい。このような結果が返ってきます
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ whoami
 olasitarska
 //}
@@ -178,7 +178,7 @@ OSによってコマンドが若干違います。あなたのコンピュータ
 ====[column] Current directory: OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ pwd
 /Users/olasitarska
 //}
@@ -196,7 +196,7 @@ $ pwd
 ====[column] Current directory: Windows
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > cd
 C:\Users\olasitarska
 //}
@@ -223,7 +223,7 @@ C:\Users\olasitarska
 ====[column] List files and directories: OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ ls
 Applications
 Desktop
@@ -240,7 +240,7 @@ Music
 ====[column] List files and directories: Windows
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > dir
  Directory of C:\Users\olasitarska
 05/08/2014 07:28 PM <DIR>      Applications
@@ -269,7 +269,7 @@ Music
 ====[column] Change current directory: OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ cd Desktop
 //}
 
@@ -280,7 +280,7 @@ $ cd Desktop
 ====[column] Change current directory: Windows
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > cd Desktop
 //}
 
@@ -294,7 +294,7 @@ $ cd Desktop
 ====[column] Check if changed: OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ pwd
 /Users/olasitarska/Desktop
 //}
@@ -306,7 +306,7 @@ $ pwd
 ====[column] Check if changed: Windows
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > cd
 C:\Users\olasitarska\Desktop
 //}
@@ -333,7 +333,7 @@ PRO tip: @<tt>{cd D}と入力して、キーボードの@<tt>{tab}ボタンを�
 ====[column] Create directory: OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ mkdir practice
 //}
 
@@ -344,7 +344,7 @@ $ mkdir practice
 ====[column] Create directory: Windows
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > mkdir practice
 //}
 
@@ -373,7 +373,7 @@ PRO tip: 同じコマンドを何度もなんども入力したくない時は�
 ====[column] Exercise solution: OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ cd practice
 $ mkdir test
 $ ls
@@ -387,7 +387,7 @@ test
 ====[column] Exercise solution: Windows
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > cd practice
 > mkdir test
 > dir
@@ -414,7 +414,7 @@ test
 ====[column] Clean up: OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ cd ..
 //}
 
@@ -425,7 +425,7 @@ $ cd ..
 ====[column] Clean up: Windows
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > cd ..
 //}
 
@@ -443,7 +443,7 @@ $ cd ..
 ====[column] Check location: OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ pwd
 /Users/olasitarska/Desktop
 //}
@@ -455,7 +455,7 @@ $ pwd
 ====[column] Check location: Windows
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > cd
 C:\Users\olasitarska\Desktop
 //}
@@ -476,7 +476,7 @@ C:\Users\olasitarska\Desktop
 ====[column] Delete directory: Windows Powershell，OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ rm -r practice
 //}
 
@@ -487,7 +487,7 @@ $ rm -r practice
 ====[column] Delete directory: Windows Command Prompt
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > rmdir /S practice
 practice, Are you sure <Y/N>? Y
 //}
@@ -502,7 +502,7 @@ practice, Are you sure <Y/N>? Y
 ====[column] Check deletion: OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ ls
 //}
 
@@ -513,7 +513,7 @@ $ ls
 ====[column] Check deletion: Windows
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > dir
 //}
 
@@ -530,7 +530,7 @@ $ ls
 ====[column] Exit: OS X and Linux
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ exit
 //}
 
@@ -541,7 +541,7 @@ $ exit
 ====[column] Exit: Windows
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 > exit
 //}
 

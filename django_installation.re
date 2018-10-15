@@ -41,7 +41,7 @@ Django をインストールする前に、あなたのコーディング環境�
 このチュートリアルのために、ホームディレクトリに新しいディレクトリ@<tt>{djangogirls}を作成します。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ mkdir djangogirls
 $ cd djangogirls
 //}
@@ -50,7 +50,7 @@ $ cd djangogirls
 @<tt>{myvenv}という仮想環境（virtual environment）を作成します。一般的なコマンドは以下のようになります：
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 -m venv myvenv
 //}
 
@@ -61,7 +61,7 @@ $ python3 -m venv myvenv
 新しい@<tt>{virtualenv}を作成するために、コマンドプロンプトを開き（コマンドプロンプトについては何章か前にお話ししましたね。覚えてますか？）、@<tt>{python -m venv myvenv}を実行して下さい。たとえばこのように入力します：
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 C:\Users\Name\djangogirls> python -m venv myvenv
 //}
 
@@ -78,7 +78,7 @@ C:\Users\Name\djangogirls> python -m venv myvenv
 LinuxやOS Xで@<tt>{virtualenv}を作るときは、@<tt>{python3 -m venv myvenv}と実行するだけです。 たとえばこんな感じです：
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 -m venv myvenv
 //}
 
@@ -92,7 +92,7 @@ $ python3 -m venv myvenv
 //}
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 @<seqsplit>{The virtual environment was not created successfully because ensurepip is not available.  On Debian/Ubuntu systems, you need to install the python3-venv package using the following command.}
    apt install python3-venv
 @<seqsplit>{You may need to use sudo with that command.  After installing the python3-venv package, recreate your virtual environment.}
@@ -104,7 +104,7 @@ $ python3 -m venv myvenv
 //}
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ sudo apt install python3-venv
 //}
 
@@ -114,7 +114,7 @@ $ sudo apt install python3-venv
 //}
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 @<seqsplit>{Error: Command '['/home/eddie/Slask/tmp/venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1}
 //}
 
@@ -124,7 +124,7 @@ $ sudo apt install python3-venv
 //}
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ sudo apt install python-virtualenv
 $ virtualenv --python=python3.6 myvenv
 //}
@@ -135,7 +135,7 @@ $ virtualenv --python=python3.6 myvenv
 //}
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 E: Unable to locate package python3-venv
 //}
 
@@ -145,7 +145,7 @@ E: Unable to locate package python3-venv
 //}
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ sudo apt install python3.6-venv
 //}
 
@@ -165,7 +165,7 @@ $ sudo apt install python3.6-venv
 実行して、仮想環境を起動します。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 C:\Users\Name\djangogirls > myvenv\Scripts\activate
 //}
 
@@ -176,7 +176,7 @@ C:\Users\Name\djangogirls > myvenv\Scripts\activate
 //}
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 C:\WINDOWS\system32> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
     Execution Policy Change
     @<seqsplit>{The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic at http://go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy? [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A}
@@ -192,7 +192,7 @@ C:\WINDOWS\system32> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 実行して、仮想環境を起動します。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ source myvenv/bin/activate
 //}
 
@@ -206,7 +206,7 @@ $ source myvenv/bin/activate
 //}
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ . myvenv/bin/activate
 //}
 
@@ -235,7 +235,7 @@ OK,これでDjangoのインストール前に入れておきたい依存関係�
 これを行う前に、Djangoのインストールに使用する最新バージョンの@<tt>{pip}がインストールされている必要があります。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 (myvenv) ~$ python3 -m pip install --upgrade pip
 //}
 
@@ -267,7 +267,7 @@ Django~={{ book.django_version }}
 そして、@<tt>{pip install -r requirements.txt} を実行してDjangoをインストールします。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 (myvenv) ~$ pip install -r requirements.txt
 @<seqsplit>{Collecting Django~={{ book.django_version }\} (from -r requirements.txt (line 1))}
 Downloading Django-{{ book.django_version }}-py3-none-any.whl (7.1MB)
@@ -295,7 +295,7 @@ Djangoをインストールしようとしてコマンドラインがフリー�
 //}
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 C:\Users\Name\djangogirls> python -m pip install -r requirements.txt
 //}
 

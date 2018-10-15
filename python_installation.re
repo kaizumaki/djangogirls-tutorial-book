@@ -100,7 +100,7 @@ https://www.python.org/downloads/
 おそらくほとんどの場合、すぐに使えるPythonがすでにインストールされているでしょう。インストールされているか（とそれがどのバージョンか）を確認するため、コンソールを起動して次のコマンドを打ってください。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 --version
 Python 3.6.5
 //}
@@ -118,7 +118,7 @@ Python 3.6.5
 次のコマンドをコンソールに打って下さい。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ sudo apt install python3.6
 //}
 
@@ -132,7 +132,7 @@ $ sudo apt install python3.6
 次のコマンドをコンソールに打って下さい。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ sudo dnf install python3
 //}
 
@@ -149,7 +149,7 @@ $ sudo dnf install python3
 次のコマンドをコンソールに打って下さい。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ sudo zypper install python3
 //}
 
@@ -160,7 +160,7 @@ $ sudo zypper install python3
 インストールされているか確認するために、コマンドプロンプトを開いて次のように@<tt>{Python3}コマンドを入力してください。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ python3 --version
 Python 3.6.1
 //}

@@ -237,7 +237,7 @@ blog
 まずは、最後に実行したときから、どのファイルを変更したか見てみましょう(以下のコマンドを、PythonAnywhereではなく、自分のパソコンで実行してください。)。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ git status
 //}
 
@@ -245,7 +245,7 @@ $ git status
 @<tt>{djangogirls} ディレクトリにいることを確認して、 @<tt>{git} に対してこのディレクトリ内の変更を全て反映させるよう指示してください:
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ git add --all .
 //}
 
@@ -258,7 +258,7 @@ $ git add --all .
 全てのファイルをアップロードする前に、@<tt>{git}が何をアップロードするのかチェックしておきましょう(@<tt>{git}がアップロードする全ファイルは緑で表示されます):
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ git status
 //}
 
@@ -266,7 +266,7 @@ $ git status
 ほぼ完了です。どこを変更したかを履歴に保存するよう指示してみましょう。 何を変更したのか説明するコミットメッセージを残しましょう。 この時、どんな内容を好みで打ち込んでも構いませんが、何をしたかを具体的に書き込んでおけば、将来、作業内容を思い出す助けになるでしょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ git commit -m "Changed the HTML for the site."
 //}
 
@@ -279,7 +279,7 @@ $ git commit -m "Changed the HTML for the site."
 ここまで終われば、GitHubに変更部分をアップロード(push) しましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ git push
 //}
 
@@ -287,7 +287,7 @@ $ git push
  * @<href>{https://www.pythonanywhere.com/consoles/,PythonAnywhereのコンソールページ}を開き、@<strong>{Bash コンソール}に移動してください (または新たなBash コンソールを開始してください)。それから次を実行してください。
 
 
-//cmd[PythonAnywhere command-line]{
+//emlist[PythonAnywhere command-line]{
 $ cd ~/<your-pythonanywhere-username>.pythonanywhere.com
 $ git pull
 [...]

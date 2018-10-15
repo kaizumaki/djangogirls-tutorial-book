@@ -537,7 +537,7 @@ Djangoのフォームについてもっと知りたい場合、Django Projectの
  * まず、Githubにあなたの新しく書いたコードをCommitして、Pushしてみましょう。
 
 
-//cmd[command-line]{
+//emlist[command-line]{
 $ git status
 $ git add --all .
 $ git status
@@ -548,7 +548,7 @@ $ git push
  * それから、@<href>{https://www.pythonanywhere.com/consoles/,PythonAnywhereのbashコンソール}で：
 
 
-//cmd[PythonAnywhere command-line]{
+//emlist[PythonAnywhere command-line]{
 $ cd ~/<your-pythonanywhere-username>.pythonanywhere.com
 $ git pull
 [...]
