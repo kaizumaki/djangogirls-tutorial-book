@@ -41,7 +41,7 @@
 
 %% 「@<tt>」のスタイル
 \newcommand{\reviewtt}{}
-\renewcommand*{\reviewtt}{%
+\renewcommand{\reviewtt}{%
   \begingroup
     \let\do\@makeother
     \dospecials
@@ -53,7 +53,7 @@
     \frenchspacing
     \@reviewtt
 }
-\newcommand*{\@reviewtt}[1]{%
+\newcommand{\@reviewtt}[1]{%
     #1%
   \endgroup
 }
