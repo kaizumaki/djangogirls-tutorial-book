@@ -60,6 +60,10 @@ module ReVIEW
       puts '\end{quote}'
     end
 
+    def inline_tt(str)
+      macro('reviewtt', escape(str))
+    end
+
   end
 
   ## LaTeX用の定義

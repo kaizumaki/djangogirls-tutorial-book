@@ -6,6 +6,7 @@
 %%%   starterが自動生成する「starter.sty」とは別ファイルにしている）
 %%%
 
+\usepackage{alltt}
 \tcbuselibrary{breakable}
 
 %%% 「//quote」のスタイル
@@ -32,3 +33,27 @@
                        coltitle=white, fonttitle=\ttfamily\bfseries, title=#1]
   }{%
      \end{tcolorbox}}
+
+%% シングルクォート対応
+\usepackage{upquote,textcomp}
+\xspcode`'=0
+
+
+%% 「@<tt>」のスタイル
+\newcommand{\reviewtt}{}
+\renewcommand*{\reviewtt}{%
+  \begingroup
+    \let\do\@makeother
+    \dospecials
+    \catcode`\\=\z@
+    \catcode`\{=\@ne
+    \catcode`\}=\tw@
+    \verbatim@font\@noligs
+    \@vobeyspaces
+    \frenchspacing
+    \@reviewtt
+}
+\newcommand*{\@reviewtt}[1]{%
+    #1%
+  \endgroup
+}
