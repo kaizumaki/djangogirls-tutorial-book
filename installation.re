@@ -84,7 +84,7 @@ mkdir djangogirls
 cd djangogirls
 python3.6 -mvenv myvenv
 source myvenv/bin/activate
-pip install django~={{ book.django_version }}
+pip install django~=2.0.6
 //}
 
 
@@ -578,7 +578,7 @@ djangogirls
 
 
 //emlist[djangogirls/requirements.txt]{
-Django~={{ book.django_version }}
+Django~=2.0.6
 //}
 
 
@@ -587,10 +587,10 @@ Django~={{ book.django_version }}
 
 //emlist[command-line]{
 (myvenv) ~$ pip install -r requirements.txt
-@<seqsplit>{Collecting Django~={{ book.django_version }\} (from -r requirements.txt (line 1))}
-Downloading Django-{{ book.django_version }}-py3-none-any.whl (7.1MB)
+@<seqsplit>{Collecting Django~=2.0.6 (from -r requirements.txt (line 1))}
+Downloading Django-2.0.6-py3-none-any.whl (7.1MB)
 Installing collected packages: Django
-Successfully installed Django-{{ book.django_version }}
+Successfully installed Django-2.0.6
 //}
 
 
