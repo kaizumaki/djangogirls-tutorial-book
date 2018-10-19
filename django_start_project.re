@@ -54,7 +54,7 @@ MacOS や Linux の場合は、コンソールで以下のコマンドを実行�
 ====[column] Create project: Windows
 
 
-Windows の場合は、以下のコマンドを実行しないといけません。(最後にピリオド (ドット) @<tt>{.\} を書いてください)
+Windows の場合は、以下のコマンドを実行しないといけません。(最後にピリオド (ドット) @<tt>{.} を書いてください)
 
 
 //emlist[command-line]{
